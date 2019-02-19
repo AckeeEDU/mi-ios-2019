@@ -71,6 +71,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 887BDFBB221C672D008C37A4 /* Build configuration list for PBXNativeTarget "mi-ios-2019" */;
 			buildPhases = (
+				888A33D4221C938200420C3A /* Generate preprocess header */,
 				887BDFA5221C672C008C37A4 /* Sources */,
 				887BDFA6221C672C008C37A4 /* Frameworks */,
 				887BDFA7221C672C008C37A4 /* Resources */,
@@ -129,6 +130,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		888A33D4221C938200420C3A /* Generate preprocess header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate preprocess header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Lépe přesunout do souboru a zavolat zde jako bash script\n# Zde je to jako součást project file a blbě se to verzuje v gitu 👎 \n\nCOMMITS=`git rev-list HEAD --count`\nHEADER_FILE=\"$PROJECT_DIR/info_preprocess_header.h\"\n\necho \"// Auto-generated\" > $HEADER_FILE\necho \"\" >> $HEADER_FILE\necho \"#define BUILD_NUMBER $COMMITS\" >> $HEADER_FILE\n\ntouch $INFOPLIST_FILE\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		887BDFA5221C672C008C37A4 /* Sources */ = {
