@@ -6,6 +6,20 @@
 	objectVersion = 51;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		888A33DB221C9EB100420C3A /* Localization */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 888A33DF221C9EB100420C3A /* Build configuration list for PBXAggregateTarget "Localization" */;
+			buildPhases = (
+				888A33E0221C9EC200420C3A /* Download strings */,
+			);
+			dependencies = (
+			);
+			name = Localization;
+			productName = Localization;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		887BDFAD221C672C008C37A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887BDFAC221C672C008C37A4 /* AppDelegate.swift */; };
 		887BDFAF221C672C008C37A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887BDFAE221C672C008C37A4 /* ViewController.swift */; };
@@ -51,7 +65,6 @@
 				6D1473B44E24DD0A17289E5A /* Pods-mi-ios-2019.release.xcconfig */,
 				AAA5668B71824F04B9618A0D /* Pods-mi-ios-2019.adhoc.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,6 +143,9 @@
 					887BDFA8221C672C008C37A4 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					888A33DB221C9EB100420C3A = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 887BDFA4221C672C008C37A4 /* Build configuration list for PBXProject "mi-ios-2019" */;
@@ -147,6 +163,7 @@
 			projectRoot = "";
 			targets = (
 				887BDFA8221C672C008C37A4 /* mi-ios-2019 */,
+				888A33DB221C9EB100420C3A /* Localization */,
 			);
 		};
 /* End PBXProject section */
@@ -205,6 +222,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Lépe přesunout do souboru a zavolat zde jako bash script\n# Zde je to jako součást project file a blbě se to verzuje v gitu 👎 \n\nCOMMITS=`git rev-list HEAD --count`\nHEADER_FILE=\"$PROJECT_DIR/info_preprocess_header.h\"\n\necho \"// Auto-generated\" > $HEADER_FILE\necho \"\" >> $HEADER_FILE\necho \"#define BUILD_NUMBER $COMMITS\" >> $HEADER_FILE\n\ntouch $INFOPLIST_FILE\n";
+			showEnvVarsInLog = 0;
+		};
+		888A33E0221C9EC200420C3A /* Download strings */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Download strings";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Download from spreadsheet\n# https://docs.google.com/spreadsheets/d/1iMQP3Fe0N5IpODQyCCbjKq0kRxyY5pAvKYkd4Uhr6J0/edit?usp=sharing\n\n\"$PROJECT_DIR/Pods/ACKLocalization/Localization\" \"1vQXEwgCxAE9w9R6fyyNjh7dGyo0O_9Kf7lm6iFK5LCaDRrI6rUdQzYsq-H0F4n2ZHZPVu3C-jlmAkc3\" \"key_ios\" '{\"EN\": \"en\", \"CS\": \"cs\"}' \"$PROJECT_DIR/mi-ios-2019\" \"Localizable.strings\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -492,6 +529,30 @@
 			};
 			name = AdHoc;
 		};
+		888A33DC221C9EB100420C3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		888A33DD221C9EB100420C3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		888A33DE221C9EB100420C3A /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = AdHoc;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -511,6 +572,16 @@
 				887BDFBC221C672D008C37A4 /* Debug */,
 				887BDFBD221C672D008C37A4 /* Release */,
 				888A33D2221C89CE00420C3A /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		888A33DF221C9EB100420C3A /* Build configuration list for PBXAggregateTarget "Localization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				888A33DC221C9EB100420C3A /* Debug */,
+				888A33DD221C9EB100420C3A /* Release */,
+				888A33DE221C9EB100420C3A /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
