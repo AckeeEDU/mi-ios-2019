@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  mi-ios-2019
+
+  Created by Jan Misar on 19/02/2019.
+  Copyright © 2019 ČVUT. All rights reserved.
+*/
+
+"start.app_version" = "App version";
+"start.build_number" = "Build number";

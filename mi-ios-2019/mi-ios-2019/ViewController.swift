@@ -16,8 +16,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        versionLabel.text = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
-        buildNumberLabel.text = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String
+        let versionText = (Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String) ?? ""
+        let buildNumberText = (Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String) ?? ""
+        
+        versionLabel.text = "\(NSLocalizedString("start.app_version", comment: "")): \(versionText)"
+        buildNumberLabel.text = "\(NSLocalizedString("start.build_number", comment: "")): \(buildNumberText)"
     }
 
 
