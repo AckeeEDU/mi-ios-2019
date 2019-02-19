@@ -1,0 +1,6 @@
+strings:
+  inputs: mi-ios-2019/en.lproj
+  filter: .+\.strings$
+  outputs:
+    - templateName: structured-swift4
+      output: mi-ios-2019/Generated/Strings.swift

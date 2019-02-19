@@ -7,5 +7,6 @@ target 'mi-ios-2019' do
 
   # Pods for mi-ios-2019
   pod 'ACKLocalization', '~> 0.1'
+  pod 'SwiftGen', '~> 6.0'
 
 end

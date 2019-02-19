@@ -73,3 +73,4 @@ DerivedData/
 # End of https://www.gitignore.io/api/macos,xcode,cocoapods
 
 mi-ios-2019/info_preprocess_header.h
+mi-ios-2019/mi-ios-2019/Generated/*

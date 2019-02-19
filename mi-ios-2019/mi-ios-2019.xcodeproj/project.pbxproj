@@ -27,6 +27,7 @@
 		887BDFB4221C672D008C37A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 887BDFB3221C672D008C37A4 /* Assets.xcassets */; };
 		887BDFB7221C672D008C37A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887BDFB5221C672D008C37A4 /* LaunchScreen.storyboard */; };
 		888A33D7221C972C00420C3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 888A33D9221C972C00420C3A /* Localizable.strings */; };
+		888A33E3221CA33000420C3A /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A33E2221CA33000420C3A /* Strings.swift */; };
 		B5F551874FA33172116FF089 /* Pods_mi_ios_2019.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFC1CB71F3F3E687778A233 /* Pods_mi_ios_2019.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		887BDFB8221C672D008C37A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		888A33D8221C972C00420C3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		888A33DA221C973F00420C3A /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		888A33E2221CA33000420C3A /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		9AFC1CB71F3F3E687778A233 /* Pods_mi_ios_2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mi_ios_2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA5668B71824F04B9618A0D /* Pods-mi-ios-2019.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019.adhoc.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.adhoc.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 		887BDFAB221C672C008C37A4 /* mi-ios-2019 */ = {
 			isa = PBXGroup;
 			children = (
+				888A33E1221CA33000420C3A /* Generated */,
 				887BDFAC221C672C008C37A4 /* AppDelegate.swift */,
 				887BDFAE221C672C008C37A4 /* ViewController.swift */,
 				887BDFB0221C672C008C37A4 /* Main.storyboard */,
@@ -98,6 +101,14 @@
 				888A33D9221C972C00420C3A /* Localizable.strings */,
 			);
 			path = "mi-ios-2019";
+			sourceTree = "<group>";
+		};
+		888A33E1221CA33000420C3A /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				888A33E2221CA33000420C3A /* Strings.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		B2DF619E97AC5AA7500897BF /* Frameworks */ = {
@@ -117,6 +128,7 @@
 			buildPhases = (
 				3D0CCE5FE979B7D20585D02F /* [CP] Check Pods Manifest.lock */,
 				888A33D4221C938200420C3A /* Generate preprocess header */,
+				888A33E4221CA39D00420C3A /* SwiftGen */,
 				887BDFA5221C672C008C37A4 /* Sources */,
 				887BDFA6221C672C008C37A4 /* Frameworks */,
 				887BDFA7221C672C008C37A4 /* Resources */,
@@ -243,6 +255,26 @@
 			shellScript = "# Download from spreadsheet\n# https://docs.google.com/spreadsheets/d/1iMQP3Fe0N5IpODQyCCbjKq0kRxyY5pAvKYkd4Uhr6J0/edit?usp=sharing\n\n\"$PROJECT_DIR/Pods/ACKLocalization/Localization\" \"1vQXEwgCxAE9w9R6fyyNjh7dGyo0O_9Kf7lm6iFK5LCaDRrI6rUdQzYsq-H0F4n2ZHZPVu3C-jlmAkc3\" \"key_ios\" '{\"EN\": \"en\", \"CS\": \"cs\"}' \"$PROJECT_DIR/mi-ios-2019\" \"Localizable.strings\"\n";
 			showEnvVarsInLog = 0;
 		};
+		888A33E4221CA39D00420C3A /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(PROJECT_DIR)/mi-ios-2019/Generated/Strings.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$PROJECT_DIR/Pods/SwiftGen/bin/swiftgen\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -251,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				887BDFAF221C672C008C37A4 /* ViewController.swift in Sources */,
+				888A33E3221CA33000420C3A /* Strings.swift in Sources */,
 				887BDFAD221C672C008C37A4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

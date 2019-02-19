@@ -1,16 +1,20 @@
 PODS:
   - ACKLocalization (0.3.1)
+  - SwiftGen (6.1.0)
 
 DEPENDENCIES:
   - ACKLocalization (~> 0.1)
+  - SwiftGen (~> 6.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ACKLocalization
+    - SwiftGen
 
 SPEC CHECKSUMS:
   ACKLocalization: 0f0bfec2c25feed1803ca06a3737b67673c196d9
+  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
 
-PODFILE CHECKSUM: c4270fa607ab18ab4cfd2484ad77a1d35391603c
+PODFILE CHECKSUM: 6a01dd2bf2517e5ea798d0c86238d1935140ed84
 
 COCOAPODS: 1.6.0

@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		4252E2020177038221935763D4BF73B3 /* SwiftGen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 07ED6DCFB6A46534473D1C6E847B8EB4 /* Build configuration list for PBXAggregateTarget "SwiftGen" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftGen;
+		};
 		94713D9C57DBBD6BBEF28F15E0B69207 /* ACKLocalization */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 1AF3BAC7E94A61F32CE0E39D4501CBFB /* Build configuration list for PBXAggregateTarget "ACKLocalization" */;
@@ -19,27 +28,35 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		033C37CA7AB697D9F08F330DE9EA3736 /* Pods-mi-ios-2019-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39BF980E1CF075F0F9D542D4A18C561A /* Pods-mi-ios-2019-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C13DF1096B52D0E701CF1478EDBEF80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		F2B3E97F1DC334976BB797ECF173159A /* Pods-mi-ios-2019-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C2040896261974CD1326A9DE462D7F /* Pods-mi-ios-2019-dummy.m */; };
+		32814F418996F0C46ED7443CC31EC380 /* Pods-mi-ios-2019-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C2040896261974CD1326A9DE462D7F /* Pods-mi-ios-2019-dummy.m */; };
+		3BBE8463262AC5C70F88BF6CB03E08B5 /* Pods-mi-ios-2019-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39BF980E1CF075F0F9D542D4A18C561A /* Pods-mi-ios-2019-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE4D954C5329BD811E5F25876AA24CD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F2E87E08C82131EBDFDA10E335616034 /* PBXContainerItemProxy */ = {
+		1A4EFB58D1ED8191625710705C188601 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 94713D9C57DBBD6BBEF28F15E0B69207;
 			remoteInfo = ACKLocalization;
 		};
+		83DA042FE6E8B68DB13792C9B8175520 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4252E2020177038221935763D4BF73B3;
+			remoteInfo = SwiftGen;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0FCBA25A87FA9C9AD1B8FD304D9DEE91 /* Pods-mi-ios-2019.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-mi-ios-2019.modulemap"; sourceTree = "<group>"; };
+		297A1D27763FA50641CCC3879D5B411B /* ACKLocalization.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ACKLocalization.xcconfig; sourceTree = "<group>"; };
 		39BF980E1CF075F0F9D542D4A18C561A /* Pods-mi-ios-2019-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-mi-ios-2019-umbrella.h"; sourceTree = "<group>"; };
 		42DA979352D89A7B8BB7AE30BFA09EB2 /* Pods-mi-ios-2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mi-ios-2019.debug.xcconfig"; sourceTree = "<group>"; };
 		455486BD84EBAAF0171DD76693CF4874 /* Pods-mi-ios-2019-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-mi-ios-2019-acknowledgements.markdown"; sourceTree = "<group>"; };
-		60653666F722168FE8D231021ABF4298 /* ACKLocalization.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ACKLocalization.xcconfig; sourceTree = "<group>"; };
+		4567F38D18A0DF74C5E4BC485808144B /* SwiftGen.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGen.xcconfig; sourceTree = "<group>"; };
 		675DD3834AAAA1A83DC0C6C934ACA1B9 /* Pods-mi-ios-2019-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mi-ios-2019-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A18926284E3421332F8CF7D873BDA314 /* Pods_mi_ios_2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_mi_ios_2019.framework; path = "Pods-mi-ios-2019.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,24 +68,33 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6A7272D9916B548EC35C62D179F8862F /* Frameworks */ = {
+		8D7860DC2AEBD5A3D346E8E9EAFB0863 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C13DF1096B52D0E701CF1478EDBEF80 /* Foundation.framework in Frameworks */,
+				DE4D954C5329BD811E5F25876AA24CD1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		592786B0D825E35A5CD737B3AA3C6F45 /* ACKLocalization */ = {
+		3775F65F2B1D4300A54A9EA15281710D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F6966464370219AB76AD0CE24901DEBD /* Support Files */,
+				F9DB4FF1462AB149B6FC3B2AE91D2DD7 /* ACKLocalization */,
+				4C081F90DE2F78E62382EE33CA2FDF71 /* SwiftGen */,
 			);
-			name = ACKLocalization;
-			path = ACKLocalization;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4C081F90DE2F78E62382EE33CA2FDF71 /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				EAD5FD222C2A75B04B68D5BF5212272E /* Support Files */,
+			);
+			name = SwiftGen;
+			path = SwiftGen;
 			sourceTree = "<group>";
 		};
 		70401F59C9C85CD042DF7B6BC280AC02 /* Pods-mi-ios-2019 */ = {
@@ -112,12 +138,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C8CF99437017D1E3747EC2290A3299AB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				297A1D27763FA50641CCC3879D5B411B /* ACKLocalization.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ACKLocalization";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				E82997C8472E5F11A11B58F9B934D745 /* Pods */,
+				3775F65F2B1D4300A54A9EA15281710D /* Pods */,
 				A29A789DB0F1DFA6BCFC7F50FE71C5EB /* Products */,
 				965AAAF922105B4B74160D40CD0E2D02 /* Targets Support Files */,
 			);
@@ -131,50 +166,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E82997C8472E5F11A11B58F9B934D745 /* Pods */ = {
+		EAD5FD222C2A75B04B68D5BF5212272E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				592786B0D825E35A5CD737B3AA3C6F45 /* ACKLocalization */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		F6966464370219AB76AD0CE24901DEBD /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				60653666F722168FE8D231021ABF4298 /* ACKLocalization.xcconfig */,
+				4567F38D18A0DF74C5E4BC485808144B /* SwiftGen.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/ACKLocalization";
+			path = "../Target Support Files/SwiftGen";
+			sourceTree = "<group>";
+		};
+		F9DB4FF1462AB149B6FC3B2AE91D2DD7 /* ACKLocalization */ = {
+			isa = PBXGroup;
+			children = (
+				C8CF99437017D1E3747EC2290A3299AB /* Support Files */,
+			);
+			name = ACKLocalization;
+			path = ACKLocalization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		75CB8C531BBBFED78189BCE25CE82FFF /* Headers */ = {
+		D67A2CB8A150859F9C5C479207265C7B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				033C37CA7AB697D9F08F330DE9EA3736 /* Pods-mi-ios-2019-umbrella.h in Headers */,
+				3BBE8463262AC5C70F88BF6CB03E08B5 /* Pods-mi-ios-2019-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C822BD998B3709A81EA97A4C765623A9 /* Pods-mi-ios-2019 */ = {
+		18851604D373175D3C1C425002B543A7 /* Pods-mi-ios-2019 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 68744BD72AE7C4D01161659888A399A8 /* Build configuration list for PBXNativeTarget "Pods-mi-ios-2019" */;
+			buildConfigurationList = ECC3A50C97BEA5629BD2C84AC23BA375 /* Build configuration list for PBXNativeTarget "Pods-mi-ios-2019" */;
 			buildPhases = (
-				75CB8C531BBBFED78189BCE25CE82FFF /* Headers */,
-				964C23E20B62129AA006B099D6637E16 /* Sources */,
-				6A7272D9916B548EC35C62D179F8862F /* Frameworks */,
-				33500912319A5D7F49B301D9DB584D56 /* Resources */,
+				D67A2CB8A150859F9C5C479207265C7B /* Headers */,
+				CB2CA660CCFDC7331B5F8EFEA0BD408F /* Sources */,
+				8D7860DC2AEBD5A3D346E8E9EAFB0863 /* Frameworks */,
+				05B6CD5E66F990A381B6E318D8C23394 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9D53BFDFA2B04F04A0A62498BEFE726F /* PBXTargetDependency */,
+				92113730B83D492B01408013ACB793A3 /* PBXTargetDependency */,
+				543382419E96A5C0E76822118889D1F1 /* PBXTargetDependency */,
 			);
 			name = "Pods-mi-ios-2019";
 			productName = "Pods-mi-ios-2019";
@@ -203,13 +240,14 @@
 			projectRoot = "";
 			targets = (
 				94713D9C57DBBD6BBEF28F15E0B69207 /* ACKLocalization */,
-				C822BD998B3709A81EA97A4C765623A9 /* Pods-mi-ios-2019 */,
+				18851604D373175D3C1C425002B543A7 /* Pods-mi-ios-2019 */,
+				4252E2020177038221935763D4BF73B3 /* SwiftGen */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		33500912319A5D7F49B301D9DB584D56 /* Resources */ = {
+		05B6CD5E66F990A381B6E318D8C23394 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -219,29 +257,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		964C23E20B62129AA006B099D6637E16 /* Sources */ = {
+		CB2CA660CCFDC7331B5F8EFEA0BD408F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2B3E97F1DC334976BB797ECF173159A /* Pods-mi-ios-2019-dummy.m in Sources */,
+				32814F418996F0C46ED7443CC31EC380 /* Pods-mi-ios-2019-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9D53BFDFA2B04F04A0A62498BEFE726F /* PBXTargetDependency */ = {
+		543382419E96A5C0E76822118889D1F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftGen;
+			target = 4252E2020177038221935763D4BF73B3 /* SwiftGen */;
+			targetProxy = 83DA042FE6E8B68DB13792C9B8175520 /* PBXContainerItemProxy */;
+		};
+		92113730B83D492B01408013ACB793A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ACKLocalization;
 			target = 94713D9C57DBBD6BBEF28F15E0B69207 /* ACKLocalization */;
-			targetProxy = F2E87E08C82131EBDFDA10E335616034 /* PBXContainerItemProxy */;
+			targetProxy = 1A4EFB58D1ED8191625710705C188601 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		06227591630D4B9789F5A0F7B1B9E12A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60653666F722168FE8D231021ABF4298 /* ACKLocalization.xcconfig */;
+			baseConfigurationReference = 297A1D27763FA50641CCC3879D5B411B /* ACKLocalization.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -256,9 +300,158 @@
 			};
 			name = Release;
 		};
+		1024130EA48A5E93D41B1CB52E579B2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCC072F5961C76FE2A048B059BE95F8B /* Pods-mi-ios-2019.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2D9B1B2784FCD3404E041198F22AABEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42DA979352D89A7B8BB7AE30BFA09EB2 /* Pods-mi-ios-2019.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4393BBA3B8A0714B8D3015E2C84C9549 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4567F38D18A0DF74C5E4BC485808144B /* SwiftGen.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
 		84E39C0A95E98A6C83ECC1FCBF6312ED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60653666F722168FE8D231021ABF4298 /* ACKLocalization.xcconfig */;
+			baseConfigurationReference = 297A1D27763FA50641CCC3879D5B411B /* ACKLocalization.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8967C274BBC3F6DDF1C852213566EBE3 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A322D9E4A6235F1B8EB5E67129209D8D /* Pods-mi-ios-2019.adhoc.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AdHoc;
+		};
+		9A62B19B7B07488F6AD8E0FA97977F9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4567F38D18A0DF74C5E4BC485808144B /* SwiftGen.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -274,7 +467,7 @@
 		};
 		9B4EDA37622F1BD89F9903EC97E8FACD /* AdHoc */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60653666F722168FE8D231021ABF4298 /* ACKLocalization.xcconfig */;
+			baseConfigurationReference = 297A1D27763FA50641CCC3879D5B411B /* ACKLocalization.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -349,44 +542,22 @@
 			};
 			name = Release;
 		};
-		B7F05058BAD9314EF226DF29B760D0DF /* AdHoc */ = {
+		A53A9685FF08543EE9CB1B17F2A9AB38 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A322D9E4A6235F1B8EB5E67129209D8D /* Pods-mi-ios-2019.adhoc.xcconfig */;
+			baseConfigurationReference = 4567F38D18A0DF74C5E4BC485808144B /* SwiftGen.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
-			name = AdHoc;
+			name = Release;
 		};
 		C1391485F05B41BD35738A433056B7FA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -512,86 +683,19 @@
 			};
 			name = AdHoc;
 		};
-		CC4B38E4587843E12882F8DE0FD1CD59 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCC072F5961C76FE2A048B059BE95F8B /* Pods-mi-ios-2019.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D736A645BE0074FC1DBAA9939A468B47 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42DA979352D89A7B8BB7AE30BFA09EB2 /* Pods-mi-ios-2019.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		07ED6DCFB6A46534473D1C6E847B8EB4 /* Build configuration list for PBXAggregateTarget "SwiftGen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4393BBA3B8A0714B8D3015E2C84C9549 /* AdHoc */,
+				9A62B19B7B07488F6AD8E0FA97977F9C /* Debug */,
+				A53A9685FF08543EE9CB1B17F2A9AB38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1AF3BAC7E94A61F32CE0E39D4501CBFB /* Build configuration list for PBXAggregateTarget "ACKLocalization" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -612,12 +716,12 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		68744BD72AE7C4D01161659888A399A8 /* Build configuration list for PBXNativeTarget "Pods-mi-ios-2019" */ = {
+		ECC3A50C97BEA5629BD2C84AC23BA375 /* Build configuration list for PBXNativeTarget "Pods-mi-ios-2019" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7F05058BAD9314EF226DF29B760D0DF /* AdHoc */,
-				D736A645BE0074FC1DBAA9939A468B47 /* Debug */,
-				CC4B38E4587843E12882F8DE0FD1CD59 /* Release */,
+				8967C274BBC3F6DDF1C852213566EBE3 /* AdHoc */,
+				2D9B1B2784FCD3404E041198F22AABEB /* Debug */,
+				1024130EA48A5E93D41B1CB52E579B2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
