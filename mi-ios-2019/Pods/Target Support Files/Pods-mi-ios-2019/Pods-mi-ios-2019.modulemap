@@ -1,6 +1,0 @@
-framework module Pods_mi_ios_2019 {
-  umbrella header "Pods-mi-ios-2019-umbrella.h"
-
-  export *
-  module * { export * }
-}
