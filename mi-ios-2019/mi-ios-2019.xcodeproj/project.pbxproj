@@ -263,6 +263,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(PROJECT_DIR)/mi-ios-2019/en.lproj/Localizable.strings",
 			);
 			name = SwiftGen;
 			outputFileListPaths = (
@@ -272,7 +273,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PROJECT_DIR/Pods/SwiftGen/bin/swiftgen\n";
+			shellScript = "export PATH=\"${PODS_ROOT}/SwiftGen/bin:$PATH\"\n\nswiftgen strings -t structured-swift4 ${SCRIPT_INPUT_FILE_0} -o ${SCRIPT_OUTPUT_FILE_0}\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
