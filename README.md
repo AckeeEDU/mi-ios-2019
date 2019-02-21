@@ -23,4 +23,5 @@ branch: `01-advanced_xcode`
   - Run script build phase na generování swift enums pro localizable klíče
 
 ⚠️ Necheckoutujte se do commitu `Add SwiftGen.`! Něco se mi tam nepovedlo a strašne vám to rozbije git.
+
 ⚠️⚠️ Na cviku jsme nastavovali swiftgen pomocí `swiftgen.yml`. Podle dokumentace a všech dostupných informací máme všechno správně (input/output files u build phase apod.), ale stejně to nefunguje. Po odstranění konfiguráku a volání swiftgenu příkazem s parametry to funguje správně - viz poslední commit.
