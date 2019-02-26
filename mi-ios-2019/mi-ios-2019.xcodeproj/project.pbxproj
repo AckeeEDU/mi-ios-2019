@@ -22,6 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		69E563842225ACBE00132447 /* CarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563832225ACBE00132447 /* CarPickerViewController.swift */; };
+		69E563872225B61400132447 /* CarKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563862225B61400132447 /* CarKind.swift */; };
+		69E5638A2225B78000132447 /* UIAlertActionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563892225B78000132447 /* UIAlertActionExtensions.swift */; };
 		887BDFAD221C672C008C37A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887BDFAC221C672C008C37A4 /* AppDelegate.swift */; };
 		887BDFAF221C672C008C37A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887BDFAE221C672C008C37A4 /* ViewController.swift */; };
 		887BDFB2221C672C008C37A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887BDFB0221C672C008C37A4 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* Begin PBXFileReference section */
 		4BA6B2BF11B86034C99864EF /* Pods-mi-ios-2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019.debug.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.debug.xcconfig"; sourceTree = "<group>"; };
 		69E563832225ACBE00132447 /* CarPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPickerViewController.swift; sourceTree = "<group>"; };
+		69E563862225B61400132447 /* CarKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarKind.swift; sourceTree = "<group>"; };
+		69E563892225B78000132447 /* UIAlertActionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionExtensions.swift; sourceTree = "<group>"; };
 		6D1473B44E24DD0A17289E5A /* Pods-mi-ios-2019.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019.release.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.release.xcconfig"; sourceTree = "<group>"; };
 		887BDFA9221C672C008C37A4 /* mi-ios-2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mi-ios-2019.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		887BDFAC221C672C008C37A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		69E563852225B5E900132447 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				69E563862225B61400132447 /* CarKind.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		69E563882225B77000132447 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				69E563892225B78000132447 /* UIAlertActionExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		887BDFA0221C672C008C37A4 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				888A33E1221CA33000420C3A /* Generated */,
+				69E563882225B77000132447 /* Extensions */,
+				69E563852225B5E900132447 /* Model */,
 				887BDFAC221C672C008C37A4 /* AppDelegate.swift */,
 				887BDFAE221C672C008C37A4 /* ViewController.swift */,
 				69E563832225ACBE00132447 /* CarPickerViewController.swift */,
@@ -288,7 +310,9 @@
 			files = (
 				887BDFAF221C672C008C37A4 /* ViewController.swift in Sources */,
 				888A33E3221CA33000420C3A /* Strings.swift in Sources */,
+				69E563872225B61400132447 /* CarKind.swift in Sources */,
 				69E563842225ACBE00132447 /* CarPickerViewController.swift in Sources */,
+				69E5638A2225B78000132447 /* UIAlertActionExtensions.swift in Sources */,
 				887BDFAD221C672C008C37A4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -35,7 +35,9 @@ final class ViewController: UIViewController {
         switch segue.identifier {
         case "CarPickerSegue" where segue.destination is CarPickerViewController:
             let carPicker = segue.destination as! CarPickerViewController
-            carPicker.resultHandler = ViewController.handleCarPicked(from:)
+            carPicker.resultHandler = { [weak self] sender, result in
+                self?.handleCarPicked(from: sender, result: result)
+            }
         default:
             assertionFailure("Uknown segue \(segue)")
         }
@@ -43,8 +45,14 @@ final class ViewController: UIViewController {
     
     // MARK: - Private helpers
     
-    private static func handleCarPicked(from carPicker: CarPickerViewController) {
+    private func handleCarPicked(from carPicker: CarPickerViewController, result: CarKind?) {
         carPicker.dismiss(animated: true)
+        
+        guard let result = result else { return }
+        
+        let alertVC = UIAlertController(title: "Car Picker Result", message: result.title, preferredStyle: .alert)
+        alertVC.addAction(.ok)
+        present(alertVC, animated: true)
     }
 }
 

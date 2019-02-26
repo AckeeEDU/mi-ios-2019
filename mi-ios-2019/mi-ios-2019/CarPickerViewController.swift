@@ -9,7 +9,7 @@
 import UIKit
 
 final class CarPickerViewController: UIViewController {
-    typealias ResultHandler = (CarPickerViewController) -> ()
+    typealias ResultHandler = (CarPickerViewController, CarKind?) -> ()
     
     var resultHandler: ResultHandler?
     
@@ -29,24 +29,24 @@ final class CarPickerViewController: UIViewController {
     // MARK: - UI actions
     
     @IBAction func closeButtonTapped(_ sender: UIButton) {
-        resultHandler?(self)
+        resultHandler?(self, nil)
     }
 }
 
 extension CarPickerViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return CarKind.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = String(indexPath.row)
+        cell.textLabel?.text = CarKind.allCases[indexPath.row].title
         return cell
     }
 }
 
 extension CarPickerViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        resultHandler?(self)
+        resultHandler?(self, CarKind.allCases[indexPath.row])
     }
 }
