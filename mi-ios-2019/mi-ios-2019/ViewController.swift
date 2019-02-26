@@ -45,10 +45,14 @@ final class ViewController: UIViewController {
     
     // MARK: - Private helpers
     
+    private var lastCarKind: CarKind?
+    
     private func handleCarPicked(from carPicker: CarPickerViewController, result: CarKind?) {
         carPicker.dismiss(animated: true)
         
-        guard let result = result else { return }
+        guard let result = result, lastCarKind?.description != result.description else { return }
+        
+        lastCarKind = result
         
         let alertVC = UIAlertController(title: "Car Picker Result", message: result.description, preferredStyle: .alert)
         alertVC.addAction(.ok)
