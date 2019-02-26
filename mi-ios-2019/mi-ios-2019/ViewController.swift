@@ -28,5 +28,23 @@ final class ViewController: UIViewController {
         versionLabel.text = "\(L10n.Start.appVersion): \(versionText)"
         buildNumberLabel.text = "\(L10n.Start.buildNumber): \(buildNumberText)"
     }
+    
+    // MARK: - Segues
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "CarPickerSegue" where segue.destination is CarPickerViewController:
+            let carPicker = segue.destination as! CarPickerViewController
+            carPicker.resultHandler = ViewController.handleCarPicked(from:)
+        default:
+            assertionFailure("Uknown segue \(segue)")
+        }
+    }
+    
+    // MARK: - Private helpers
+    
+    private static func handleCarPicked(from carPicker: CarPickerViewController) {
+        carPicker.dismiss(animated: true)
+    }
 }
 
