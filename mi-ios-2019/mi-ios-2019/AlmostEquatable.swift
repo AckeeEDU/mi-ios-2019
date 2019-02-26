@@ -18,3 +18,4 @@ infix operator ~==: AlmostEqualPrecedence
 protocol AlmostEquatable {
     static func~==(lhs: Self, rhs: Self) -> Bool
 }
+

@@ -50,11 +50,29 @@ final class ViewController: UIViewController {
     private func handleCarPicked(from carPicker: CarPickerViewController, result: CarKind?) {
         carPicker.dismiss(animated: true)
         
-        guard let result = result, lastCarKind != result else { return }
+        guard let result = result else { return }
         
-        lastCarKind = result
+        if let last = lastCarKind, last ~== result {
+            performCarKindChange(result)
+        } else if lastCarKind != nil {
+            let confirmVC = UIAlertController(title: "Car kind change", message: "Do you want to perform change?", preferredStyle: .alert)
+            let yes = UIAlertAction(title: "Yes", style: .default) { [weak self] _ in
+                self?.performCarKindChange(result)
+            }
+            let no = UIAlertAction(title: "No", style: .cancel)
+            confirmVC.addAction(yes)
+            confirmVC.addAction(no)
+            present(confirmVC, animated: true)
+        }
+        else {
+            performCarKindChange(result)
+        }
+    }
+    
+    private func performCarKindChange(_ carKind: CarKind) {
+        lastCarKind = carKind
         
-        let alertVC = UIAlertController(title: "Car Picker Result", message: result.description, preferredStyle: .alert)
+        let alertVC = UIAlertController(title: "Car Picker Result", message: carKind.description, preferredStyle: .alert)
         alertVC.addAction(.ok)
         present(alertVC, animated: true)
     }

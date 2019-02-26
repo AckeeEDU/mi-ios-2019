@@ -55,3 +55,15 @@ extension CarKind: Equatable {
         }
     }
 }
+
+extension CarKind: AlmostEquatable {
+    static func~==(lhs: CarKind, rhs: CarKind) -> Bool {
+        switch (lhs, rhs) {
+        case (.personal, .personal): return true
+        case (.lorry, .lorry): return true
+        case (.motorbike, .motorbike): return true
+        case (.other, .other): return true
+        default: return false
+        }
+    }
+}
