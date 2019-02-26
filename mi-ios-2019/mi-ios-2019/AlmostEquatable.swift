@@ -14,8 +14,14 @@ precedencegroup AlmostEqualPrecedence {
 }
 
 infix operator ~==: AlmostEqualPrecedence
+infix operator ~!=: AlmostEqualPrecedence
 
 protocol AlmostEquatable {
     static func~==(lhs: Self, rhs: Self) -> Bool
 }
 
+extension AlmostEquatable {
+    static func~!=(lhs: Self, rhs: Self) -> Bool {
+        return !(lhs ~== rhs)
+    }
+}

@@ -52,9 +52,7 @@ final class ViewController: UIViewController {
         
         guard let result = result else { return }
         
-        if let last = lastCarKind, last ~== result {
-            performCarKindChange(result)
-        } else if lastCarKind != nil {
+        if let last = lastCarKind, last ~!= result {
             let confirmVC = UIAlertController(title: "Car kind change", message: "Do you want to perform change?", preferredStyle: .alert)
             let yes = UIAlertAction(title: "Yes", style: .default) { [weak self] _ in
                 self?.performCarKindChange(result)
@@ -63,8 +61,7 @@ final class ViewController: UIViewController {
             confirmVC.addAction(yes)
             confirmVC.addAction(no)
             present(confirmVC, animated: true)
-        }
-        else {
+        } else {
             performCarKindChange(result)
         }
     }
