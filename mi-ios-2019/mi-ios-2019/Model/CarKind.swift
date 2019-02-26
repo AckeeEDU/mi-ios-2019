@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum CarKind: CaseIterable, CustomStringConvertible {
+enum CarKind: CaseIterable, CustomStringConvertible, Pickable {
     case personal(KnownPersonalManufacturer)
     case lorry(KnownLorryManufacturer)
     case motorbike(KnownMotorbikeManufacturer)

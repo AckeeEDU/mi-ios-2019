@@ -52,10 +52,10 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p71-AL-YP0">
-                                <rect key="frame" x="154" y="84" width="67" height="30"/>
-                                <state key="normal" title="Pick a car"/>
+                                <rect key="frame" x="156" y="84" width="63" height="30"/>
+                                <state key="normal" title="Pick item"/>
                                 <connections>
-                                    <segue destination="iGj-Xr-CKc" kind="showDetail" identifier="CarPickerSegue" id="1pz-hH-ZnO"/>
+                                    <action selector="pickButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aME-Oz-BQT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -71,92 +71,13 @@
                     <navigationItem key="navigationItem" title="Home" id="m4q-qi-9ea"/>
                     <connections>
                         <outlet property="buildNumberLabel" destination="uqR-ba-hEQ" id="APh-fE-laP"/>
-                        <outlet property="pickCarButton" destination="p71-AL-YP0" id="IaR-jF-xke"/>
+                        <outlet property="pickItemButton" destination="p71-AL-YP0" id="0qQ-oZ-O5e"/>
                         <outlet property="versionLabel" destination="IQs-BF-Ncd" id="nfo-j8-lih"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="30" y="27"/>
-        </scene>
-        <!--Car picker-->
-        <scene sceneID="Cep-H9-ovl">
-            <objects>
-                <viewController storyboardIdentifier="CarPickerViewController" title="Car picker" id="iGj-Xr-CKc" customClass="CarPickerViewController" customModule="mi_ios_2019" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BUe-nx-gUo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vR1-AK-p5W">
-                                <rect key="frame" x="16" y="20" width="39" height="30"/>
-                                <state key="normal" title="Close"/>
-                                <connections>
-                                    <action selector="closeButtonTapped:" destination="iGj-Xr-CKc" eventType="touchUpInside" id="tDi-Tz-jRs"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cW3-kA-Mmy">
-                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="TRN-gx-Bhv" detailTextLabel="bl1-Ca-Rio" style="IBUITableViewCellStyleSubtitle" id="Leo-NT-eZ0">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Leo-NT-eZ0" id="J1U-XT-yxz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TRN-gx-Bhv">
-                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bl1-Ca-Rio">
-                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="iGj-Xr-CKc" id="7q3-dO-U71"/>
-                                    <outlet property="delegate" destination="iGj-Xr-CKc" id="rw3-Fq-bBe"/>
-                                </connections>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwx-pU-bp2">
-                                <rect key="frame" x="148.5" y="24.5" width="78" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="cW3-kA-Mmy" firstAttribute="leading" secondItem="BUe-nx-gUo" secondAttribute="leading" id="2Fe-3P-Z7f"/>
-                            <constraint firstItem="vR1-AK-p5W" firstAttribute="top" secondItem="SWd-5z-y8g" secondAttribute="top" id="5L8-bg-MwH"/>
-                            <constraint firstItem="lwx-pU-bp2" firstAttribute="centerX" secondItem="SWd-5z-y8g" secondAttribute="centerX" id="NLd-i9-VWX"/>
-                            <constraint firstItem="cW3-kA-Mmy" firstAttribute="top" secondItem="SWd-5z-y8g" secondAttribute="top" constant="38" id="VwT-HX-RJN"/>
-                            <constraint firstItem="lwx-pU-bp2" firstAttribute="centerY" secondItem="vR1-AK-p5W" secondAttribute="centerY" id="cd6-V2-IWu"/>
-                            <constraint firstItem="vR1-AK-p5W" firstAttribute="leading" secondItem="SWd-5z-y8g" secondAttribute="leading" constant="16" id="dEa-Fx-2NB"/>
-                            <constraint firstAttribute="bottom" secondItem="cW3-kA-Mmy" secondAttribute="bottom" id="qc4-o0-VxD"/>
-                            <constraint firstItem="vR1-AK-p5W" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="lwx-pU-bp2" secondAttribute="leading" constant="-10" id="uAe-ih-qSx"/>
-                            <constraint firstAttribute="trailing" secondItem="cW3-kA-Mmy" secondAttribute="trailing" id="wua-Ja-foc"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="SWd-5z-y8g"/>
-                    </view>
-                    <connections>
-                        <outlet property="closeButton" destination="vR1-AK-p5W" id="2Bp-gB-jjy"/>
-                        <outlet property="titleLabel" destination="lwx-pU-bp2" id="jBD-DS-AGj"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j6z-Ku-mGL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="821.60000000000002" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>

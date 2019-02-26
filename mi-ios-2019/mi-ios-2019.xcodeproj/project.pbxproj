@@ -21,7 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		69E563842225ACBE00132447 /* CarPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563832225ACBE00132447 /* CarPickerViewController.swift */; };
+		69E563842225ACBE00132447 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563832225ACBE00132447 /* PickerViewController.swift */; };
 		69E563872225B61400132447 /* CarKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563862225B61400132447 /* CarKind.swift */; };
 		69E5638A2225B78000132447 /* UIAlertActionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563892225B78000132447 /* UIAlertActionExtensions.swift */; };
 		69E5638C2225B92B00132447 /* KnownManufacturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E5638B2225B92B00132447 /* KnownManufacturer.swift */; };
@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		4BA6B2BF11B86034C99864EF /* Pods-mi-ios-2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019.debug.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.debug.xcconfig"; sourceTree = "<group>"; };
-		69E563832225ACBE00132447 /* CarPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPickerViewController.swift; sourceTree = "<group>"; };
+		69E563832225ACBE00132447 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		69E563862225B61400132447 /* CarKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarKind.swift; sourceTree = "<group>"; };
 		69E563892225B78000132447 /* UIAlertActionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionExtensions.swift; sourceTree = "<group>"; };
 		69E5638B2225B92B00132447 /* KnownManufacturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnownManufacturer.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 				69E563852225B5E900132447 /* Model */,
 				887BDFAC221C672C008C37A4 /* AppDelegate.swift */,
 				887BDFAE221C672C008C37A4 /* ViewController.swift */,
-				69E563832225ACBE00132447 /* CarPickerViewController.swift */,
+				69E563832225ACBE00132447 /* PickerViewController.swift */,
 				887BDFB0221C672C008C37A4 /* Main.storyboard */,
 				887BDFB3221C672D008C37A4 /* Assets.xcassets */,
 				887BDFB5221C672D008C37A4 /* LaunchScreen.storyboard */,
@@ -163,6 +163,7 @@
 				887BDFA5221C672C008C37A4 /* Sources */,
 				887BDFA6221C672C008C37A4 /* Frameworks */,
 				887BDFA7221C672C008C37A4 /* Resources */,
+				09EDFA2652A73F048BAE788D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,6 +227,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		09EDFA2652A73F048BAE788D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3D0CCE5FE979B7D20585D02F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,7 +342,7 @@
 				69E563872225B61400132447 /* CarKind.swift in Sources */,
 				69E5638C2225B92B00132447 /* KnownManufacturer.swift in Sources */,
 				69E5638E2225C20600132447 /* AlmostEquatable.swift in Sources */,
-				69E563842225ACBE00132447 /* CarPickerViewController.swift in Sources */,
+				69E563842225ACBE00132447 /* PickerViewController.swift in Sources */,
 				69E5638A2225B78000132447 /* UIAlertActionExtensions.swift in Sources */,
 				887BDFAD221C672C008C37A4 /* AppDelegate.swift in Sources */,
 			);
