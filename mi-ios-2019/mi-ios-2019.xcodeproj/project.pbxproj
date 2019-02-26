@@ -26,6 +26,7 @@
 		69E5638A2225B78000132447 /* UIAlertActionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563892225B78000132447 /* UIAlertActionExtensions.swift */; };
 		69E5638C2225B92B00132447 /* KnownManufacturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E5638B2225B92B00132447 /* KnownManufacturer.swift */; };
 		69E5638E2225C20600132447 /* AlmostEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E5638D2225C20600132447 /* AlmostEquatable.swift */; };
+		69E563902225D4BD00132447 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E5638F2225D4BD00132447 /* Animal.swift */; };
 		887BDFAD221C672C008C37A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887BDFAC221C672C008C37A4 /* AppDelegate.swift */; };
 		887BDFAF221C672C008C37A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887BDFAE221C672C008C37A4 /* ViewController.swift */; };
 		887BDFB2221C672C008C37A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887BDFB0221C672C008C37A4 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		69E563892225B78000132447 /* UIAlertActionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionExtensions.swift; sourceTree = "<group>"; };
 		69E5638B2225B92B00132447 /* KnownManufacturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnownManufacturer.swift; sourceTree = "<group>"; };
 		69E5638D2225C20600132447 /* AlmostEquatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlmostEquatable.swift; sourceTree = "<group>"; };
+		69E5638F2225D4BD00132447 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		6D1473B44E24DD0A17289E5A /* Pods-mi-ios-2019.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019.release.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.release.xcconfig"; sourceTree = "<group>"; };
 		887BDFA9221C672C008C37A4 /* mi-ios-2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mi-ios-2019.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		887BDFAC221C672C008C37A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				69E563862225B61400132447 /* CarKind.swift */,
 				69E5638B2225B92B00132447 /* KnownManufacturer.swift */,
+				69E5638F2225D4BD00132447 /* Animal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				887BDFAF221C672C008C37A4 /* ViewController.swift in Sources */,
 				888A33E3221CA33000420C3A /* Strings.swift in Sources */,
 				69E563872225B61400132447 /* CarKind.swift in Sources */,
+				69E563902225D4BD00132447 /* Animal.swift in Sources */,
 				69E5638C2225B92B00132447 /* KnownManufacturer.swift in Sources */,
 				69E5638E2225C20600132447 /* AlmostEquatable.swift in Sources */,
 				69E563842225ACBE00132447 /* PickerViewController.swift in Sources */,
