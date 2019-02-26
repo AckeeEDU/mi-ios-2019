@@ -9,21 +9,21 @@
 import Foundation
 
 enum KnownPersonalManufacturer: String, CaseIterable {
-    case audi
-    case bmw
-    case ferrari
-    case mercedes
-    case porsche
-    case skoda
+    case audi = "Audi"
+    case bmw = "BMW"
+    case ferrari = "Ferrari"
+    case mercedes = "Mercedes"
+    case porsche = "Porsche"
+    case skoda = "Škoda"
 }
 
 enum KnownLorryManufacturer: String, CaseIterable {
-    case tatra
+    case tatra = "Tatra"
 }
 
 enum KnownMotorbikeManufacturer: String, CaseIterable {
-    case ducati
-    case honda
-    case suzuki
-    case yamaha
+    case ducati = "Ducati"
+    case honda = "Honda"
+    case suzuki = "Suzuki"
+    case yamaha = "Yamaha"
 }
