@@ -50,7 +50,7 @@ final class ViewController: UIViewController {
     private func handleCarPicked(from carPicker: CarPickerViewController, result: CarKind?) {
         carPicker.dismiss(animated: true)
         
-        guard let result = result, lastCarKind?.description != result.description else { return }
+        guard let result = result, lastCarKind != result else { return }
         
         lastCarKind = result
         

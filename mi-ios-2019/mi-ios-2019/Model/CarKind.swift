@@ -43,3 +43,15 @@ enum CarKind: CaseIterable, CustomStringConvertible {
         return personal + lorries + motorbikes + [.other]
     }
 }
+
+extension CarKind: Equatable {
+    static func==(lhs: CarKind, rhs: CarKind) -> Bool {
+        switch (lhs, rhs) {
+        case (.personal(let m1), .personal(let m2)): return m1 == m2
+        case (.lorry(let m1), .lorry(let m2)): return m1 == m2
+        case (.motorbike(let m1), .motorbike(let m2)): return m1 == m2
+        case (.other, .other): return true
+        default: return false
+        }
+    }
+}
