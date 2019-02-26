@@ -9,12 +9,19 @@
 import UIKit
 import SnapKit
 
-protocol Pickable {
-    static var allCases: [Self] { get }
-    
+protocol HasTitle {
     var title: String { get }
+}
+
+protocol HasSubtitle {
     var subtitle: String { get }
 }
+
+protocol HasAllCases {
+    static var allCases: [Self] { get }
+}
+
+typealias Pickable = HasTitle & HasSubtitle & HasAllCases
 
 final class PickerViewController<Item: Pickable>: UIViewController, UITableViewDataSource, UITableViewDelegate {
     typealias ResultHandler = (PickerViewController, Item?) -> ()
