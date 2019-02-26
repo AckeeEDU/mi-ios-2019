@@ -50,7 +50,7 @@ final class ViewController: UIViewController {
         
         guard let result = result else { return }
         
-        let alertVC = UIAlertController(title: "Car Picker Result", message: result.title, preferredStyle: .alert)
+        let alertVC = UIAlertController(title: "Car Picker Result", message: result.description, preferredStyle: .alert)
         alertVC.addAction(.ok)
         present(alertVC, animated: true)
     }

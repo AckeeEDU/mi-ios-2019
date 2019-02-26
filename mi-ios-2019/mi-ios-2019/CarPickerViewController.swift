@@ -40,7 +40,9 @@ extension CarPickerViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = CarKind.allCases[indexPath.row].title
+        let carKind = CarKind.allCases[indexPath.row]
+        cell.textLabel?.text = carKind.title
+        cell.detailTextLabel?.text = carKind.subtitle
         return cell
     }
 }
