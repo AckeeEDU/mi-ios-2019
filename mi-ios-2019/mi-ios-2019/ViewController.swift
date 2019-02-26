@@ -9,7 +9,8 @@
 import UIKit
 
 final class ViewController: UIViewController {
-    @IBOutlet weak var pickItemButton: UIButton!
+    @IBOutlet weak var pickCarButton: UIButton!
+    @IBOutlet weak var pickAnimalButton: UIButton!
     @IBOutlet weak var versionLabel: UILabel!
     @IBOutlet weak var buildNumberLabel: UILabel!
     
@@ -31,7 +32,7 @@ final class ViewController: UIViewController {
     
     // MARK: - UI actions
     
-    @IBAction func pickButtonTapped(_ sender: Any) {
+    @IBAction func pickCarButtonTapped(_ sender: Any) {
         let pickerVC = PickerViewController<CarKind>()
         pickerVC.resultHandler = { [weak self] sender, result in
             sender.dismiss(animated: true)
@@ -40,13 +41,22 @@ final class ViewController: UIViewController {
         showDetailViewController(pickerVC, sender: sender)
     }
     
+    @IBAction func pickAnimalButtonTapped(_ sender: Any) {
+        let pickerVC = PickerViewController<Animal>()
+        pickerVC.resultHandler = { [weak self] sender, result in
+            sender.dismiss(animated: true)
+            self?.handleAnimalPicked(result)
+        }
+        showDetailViewController(pickerVC, sender: sender)
+    }
+    
     // MARK: - Private helpers
     
     private var lastCarKind: CarKind?
-
+    
     private func handleCarKindPicked(_ result: CarKind?) {
         guard let result = result else { return }
-
+        
         if let last = lastCarKind, last ~!= result {
             let confirmVC = confirmChangeAlert { [weak self] in self?.performCarKindChange(result)
             }
@@ -55,11 +65,33 @@ final class ViewController: UIViewController {
             performCarKindChange(result)
         }
     }
-
+    
     private func performCarKindChange(_ carKind: CarKind) {
         lastCarKind = carKind
-
+        
         let alertVC = UIAlertController(title: "Car Picker Result", message: carKind.description, preferredStyle: .alert)
+        alertVC.addAction(.ok)
+        present(alertVC, animated: true)
+    }
+    
+    private var lastAnimal: Animal?
+    
+    private func handleAnimalPicked(_ result: Animal?) {
+        guard let result = result else { return }
+        
+        if let last = lastAnimal, last ~!= result {
+            let confirmVC = confirmChangeAlert { [weak self] in self?.performAnimalChange(result)
+            }
+            present(confirmVC, animated: true)
+        } else {
+            performAnimalChange(result)
+        }
+    }
+    
+    private func performAnimalChange(_ animal: Animal) {
+        lastAnimal = animal
+        
+        let alertVC = UIAlertController(title: "Animal Picked", message: animal.title + " " + animal.subtitle, preferredStyle: .alert)
         alertVC.addAction(.ok)
         present(alertVC, animated: true)
     }

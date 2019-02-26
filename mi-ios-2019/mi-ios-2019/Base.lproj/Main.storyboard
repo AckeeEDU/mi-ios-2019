@@ -51,27 +51,40 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p71-AL-YP0">
-                                <rect key="frame" x="156" y="84" width="63" height="30"/>
-                                <state key="normal" title="Pick item"/>
-                                <connections>
-                                    <action selector="pickButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aME-Oz-BQT"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ogf-bc-NYA">
+                                <rect key="frame" x="148.5" y="84" width="78" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p71-AL-YP0">
+                                        <rect key="frame" x="0.0" y="0.0" width="78" height="30"/>
+                                        <state key="normal" title="Pick car"/>
+                                        <connections>
+                                            <action selector="pickCarButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7E-1D-IwI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6F-1g-Oyx">
+                                        <rect key="frame" x="0.0" y="30" width="78" height="30"/>
+                                        <state key="normal" title="Pick animal"/>
+                                        <connections>
+                                            <action selector="pickAnimalButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gUr-Ne-oR1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qdI-uj-THN" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" constant="-20" id="7t3-e8-JwC"/>
-                            <constraint firstItem="p71-AL-YP0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Mck-Lg-iQt"/>
-                            <constraint firstItem="p71-AL-YP0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="v0a-s3-5Km"/>
+                            <constraint firstItem="ogf-bc-NYA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="EEc-Iw-y5w"/>
                             <constraint firstItem="qdI-uj-THN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vSb-Cw-FOb"/>
+                            <constraint firstItem="ogf-bc-NYA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xiZ-qo-lZO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="m4q-qi-9ea"/>
                     <connections>
                         <outlet property="buildNumberLabel" destination="uqR-ba-hEQ" id="APh-fE-laP"/>
-                        <outlet property="pickItemButton" destination="p71-AL-YP0" id="0qQ-oZ-O5e"/>
+                        <outlet property="pickAnimalButton" destination="L6F-1g-Oyx" id="TUy-iP-SQc"/>
+                        <outlet property="pickCarButton" destination="p71-AL-YP0" id="HuH-ce-z9c"/>
                         <outlet property="versionLabel" destination="IQs-BF-Ncd" id="nfo-j8-lih"/>
                     </connections>
                 </viewController>
