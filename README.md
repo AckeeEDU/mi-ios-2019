@@ -25,3 +25,15 @@ branch: `01-advanced_xcode`
 ⚠️ Necheckoutujte se do commitu `Add SwiftGen.`! Něco se mi tam nepovedlo a strašne vám to rozbije git.
 
 ⚠️⚠️ Na cviku jsme nastavovali swiftgen pomocí `swiftgen.yml`. Podle dokumentace a všech dostupných informací máme všechno správně (input/output files u build phase apod.), ale stejně to nefunguje. Po odstranění konfiguráku a volání swiftgenu příkazem s parametry to funguje správně - viz poslední commit.
+
+## 02. Advanced Swift
+branch: `02-advanced_swift`
+- doplnění prvního cvika o shared schemes a shared breakpoints
+- closures
+- advanced enums
+- built-in protocols
+- custom operátory
+- protocol extensions
+- generiky
+- conditional protocol conformace
+- protocol and class composition
