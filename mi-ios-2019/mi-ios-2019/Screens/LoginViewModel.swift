@@ -39,6 +39,8 @@ class LoginViewModel {
         validationSignal = userName.combineLatest(with: password).signal.map { userName, password in
             (!userName.isEmpty && !password.isEmpty)
         }
+        
+        
     }
     
     

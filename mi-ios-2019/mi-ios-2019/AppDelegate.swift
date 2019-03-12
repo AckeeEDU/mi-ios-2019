@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let loginVC = LoginViewController()
+        let loginVM = LoginViewModel()
+        let loginVC = LoginViewController(viewModel: loginVM)
         window?.rootViewController = loginVC
         
         // Override point for customization after application launch.

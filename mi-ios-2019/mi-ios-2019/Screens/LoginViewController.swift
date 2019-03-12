@@ -9,8 +9,24 @@
 import Foundation
 import UIKit
 import SnapKit
+import ReactiveSwift
 
 class LoginViewController : UIViewController {
+    
+    private var viewModel : LoginViewModel
+    
+    weak var usernameField : UITextField!
+    weak var passwordField : UITextField!
+    weak var loginButton : UIButton!
+
+    init(viewModel: LoginViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func loadView() {
         super.loadView()
@@ -26,6 +42,7 @@ class LoginViewController : UIViewController {
             make.height.equalTo(35)
             make.leading.trailing.equalToSuperview().inset(48)
         }
+        self.usernameField = usernameField
         
         let passwordField = UITextField()
         view.addSubview(passwordField)
@@ -36,6 +53,7 @@ class LoginViewController : UIViewController {
             make.height.equalTo(usernameField)
             make.leading.trailing.equalTo(usernameField)
         }
+        self.passwordField = passwordField
         
         let button = UIButton()
         button.setTitle("Login", for: .normal)
@@ -45,6 +63,22 @@ class LoginViewController : UIViewController {
             make.top.equalTo(passwordField.snp.bottom).offset(30)
             make.centerX.equalToSuperview()
         }
+        self.loginButton = button
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupBindings()
+        //test bindingu
+        viewModel.userName.value = "TEST"
+    }
+    
+    func setupBindings() {
+        
+        passwordField <~> viewModel.password
+        usernameField <~> viewModel.userName
+        loginButton.reactive.isEnabled <~ viewModel.canSubmitForm
+        
     }
     
 }
