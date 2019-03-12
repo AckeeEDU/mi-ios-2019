@@ -25,8 +25,8 @@ class LogoutViewModel : BaseViewModel {
         super.init()
         
         
-        userRepository.currentUser.producer.skipNil().startWithValues { (user) in
-            self.userName.value = user.username
+        userRepository.currentUser.producer.skipNil().startWithValues { [weak self] (user) in
+            self?.userName.value = user.username
         }
         accessToken <~ userRepository.currentUser.producer.skipNil().map { $0.accessToken}
 
