@@ -71,11 +71,10 @@ class LoginViewController : UIViewController {
         super.viewDidLoad()
         setupBindings()
         //test bindingu
-        viewModel.userName.value = "TEST"
+        //viewModel.userName.value = "TEST"
     }
     
     func setupBindings() {
-        
         passwordField <~> viewModel.password
         usernameField <~> viewModel.userName
         loginButton.reactive.isEnabled <~ viewModel.canSubmitForm

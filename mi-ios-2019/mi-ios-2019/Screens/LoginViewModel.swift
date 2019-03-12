@@ -12,7 +12,7 @@ import ReactiveSwift
 import Result
 
 enum LoginError : Error {
-    case validation
+    case validation()
     case invalidCredentials
     case network
 }
@@ -21,7 +21,11 @@ class LoginViewModel {
     
     
     lazy var loginAction = Action<(),User,LoginError> {
-        return .empty
+        if self.validationSignal.value {
+            return .empty
+        } else {
+            return SignalProducer<User,LoginError>(error: .validation)
+        }
     }
     
     
@@ -29,14 +33,14 @@ class LoginViewModel {
     let password  = MutableProperty<String>("")
     
     
-    var validationSignal : Signal<Bool,NoError>
+    private var validationSignal : Property<Bool>
     
     lazy var canSubmitForm : Property<Bool> = Property<Bool>(initial: false, then: validationSignal.producer.and(self.loginAction.isExecuting.negate()))
     //lazy var canSubmitForm : Property<Bool> = Property<Bool>(initial: false, then: validationSignal.map { return $0 && !self.loginAction.isExecuting.value})
 
     
     init() {
-        validationSignal = userName.combineLatest(with: password).signal.map { userName, password in
+        validationSignal = userName.combineLatest(with: password).map { userName, password in
             (!userName.isEmpty && !password.isEmpty)
         }
         
