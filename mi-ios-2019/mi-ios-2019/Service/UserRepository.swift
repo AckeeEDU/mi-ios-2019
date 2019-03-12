@@ -28,4 +28,8 @@ class UserRepository {
         return SignalProducer(value: user )
     }
     
+    func logouut() {
+        currentUser.value = nil
+    }
+    
 }

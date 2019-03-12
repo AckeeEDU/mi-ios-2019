@@ -72,6 +72,6 @@ class LogoutViewController : UIViewController {
     }
     
     @objc func buttonTapped(_ : Any) {
-        
+        viewModel.logout()
     }
 }

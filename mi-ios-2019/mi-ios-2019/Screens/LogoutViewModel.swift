@@ -30,5 +30,8 @@ class LogoutViewModel {
 
     }
     
+    func logout() {
+        userRepository.logouut()
+    }
 }
 
