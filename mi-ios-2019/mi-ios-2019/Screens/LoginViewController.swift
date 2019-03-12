@@ -77,7 +77,7 @@ class LoginViewController : UIViewController {
     func setupBindings() {
         passwordField <~> viewModel.password
         usernameField <~> viewModel.userName
-        loginButton.reactive.isEnabled <~ viewModel.canSubmitForm
+        loginButton.reactive.isEnabled <~ viewModel.loginAction.isExecuting
         
         viewModel.validationErrors.producer.startWithValues { (errors) in
             print(errors)

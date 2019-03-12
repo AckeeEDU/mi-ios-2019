@@ -40,6 +40,7 @@
 		B4266CA42237F83800A7722B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA32237F83800A7722B /* LoginViewModel.swift */; };
 		B4266CA62237FC0400A7722B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA52237FC0400A7722B /* User.swift */; };
 		B4266CA82238027C00A7722B /* Reactive+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA72238027C00A7722B /* Reactive+TextField.swift */; };
+		B4266CAA22380DC100A7722B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA922380DC100A7722B /* UserRepository.swift */; };
 		B5F551874FA33172116FF089 /* Pods_mi_ios_2019.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFC1CB71F3F3E687778A233 /* Pods_mi_ios_2019.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		B4266CA32237F83800A7722B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B4266CA52237FC0400A7722B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B4266CA72238027C00A7722B /* Reactive+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+TextField.swift"; sourceTree = "<group>"; };
+		B4266CA922380DC100A7722B /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 		B4266CA22237DD0900A7722B /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				B4266CA922380DC100A7722B /* UserRepository.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				B4266CA82238027C00A7722B /* Reactive+TextField.swift in Sources */,
 				69E563842225ACBE00132447 /* PickerViewController.swift in Sources */,
 				69E5638A2225B78000132447 /* UIAlertActionExtensions.swift in Sources */,
+				B4266CAA22380DC100A7722B /* UserRepository.swift in Sources */,
 				887BDFAD221C672C008C37A4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
