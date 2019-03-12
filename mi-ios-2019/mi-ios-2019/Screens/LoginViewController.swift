@@ -79,6 +79,10 @@ class LoginViewController : UIViewController {
         usernameField <~> viewModel.userName
         loginButton.reactive.isEnabled <~ viewModel.canSubmitForm
         
+        viewModel.validationErrors.producer.startWithValues { (errors) in
+            print(errors)
+        }
+        
     }
     
 }
