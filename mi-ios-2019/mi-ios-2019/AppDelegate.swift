@@ -21,10 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let userRepository = UserRepository()
         
-        let loginVM = LoginViewModel(userRepository: userRepository)
-        let loginVC = LoginViewController(viewModel: loginVM)
-        window?.rootViewController = loginVC
-        
+        userRepository.currentUser.producer.startWithValues { user in
+            
+            var vc : UIViewController!
+            if let _ = user {
+                let logoutVM = LogoutViewModel(userRepository: userRepository)
+                vc = LogoutViewController(viewModel: logoutVM)
+            } else {
+                let loginVM = LoginViewModel(userRepository: userRepository)
+                vc = LoginViewController(viewModel: loginVM)
+            }
+            self.window?.rootViewController = vc
+
+        }
         // Override point for customization after application launch.
         return true
     }
