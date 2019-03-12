@@ -57,6 +57,7 @@ class LoginViewController : UIViewController {
         
         let button = UIButton()
         button.setTitle("Login", for: .normal)
+        button.setTitleColor(.red, for: .disabled)
         button.tintColor = .blue
         view.addSubview(button)
         button.snp.makeConstraints { make in

@@ -31,7 +31,7 @@ class LoginViewModel {
     
     var validationSignal : Signal<Bool,NoError>
     
-    lazy var canSubmitForm : Property<Bool> = Property<Bool>(initial: false, then: validationSignal.and(loginAction.isExecuting.signal.negate()))
+    lazy var canSubmitForm : Property<Bool> = Property<Bool>(initial: false, then: validationSignal.producer.and(self.loginAction.isExecuting.negate()))
     //lazy var canSubmitForm : Property<Bool> = Property<Bool>(initial: false, then: validationSignal.map { return $0 && !self.loginAction.isExecuting.value})
 
     
