@@ -11,27 +11,27 @@ import ReactiveSwift
 import ACKReactiveExtensions
 
 
-
-class LogoutViewModel : BaseViewModel {
-
-    private var userRepository: UserRepository
+class UserInfoViewModel: BaseViewModel {
+    
+    fileprivate var userRepository: UserRepository
     
     var userName = MutableProperty<String>("")
     var accessToken = MutableProperty<String>("")
-
+    
     init(userRepository: UserRepository) {
         self.userRepository = userRepository
-        
         super.init()
-        
-        
         userRepository.currentUser.producer.skipNil().startWithValues { [weak self] (user) in
             self?.userName.value = user.username
         }
         accessToken <~ userRepository.currentUser.producer.skipNil().map { $0.accessToken}
-
+        
     }
     
+}
+
+class LogoutViewModel : UserInfoViewModel {
+
     func logout() {
         userRepository.logouut()
     }
