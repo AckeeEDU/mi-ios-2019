@@ -18,7 +18,7 @@ class UserRepository {
         if Int.random(in: 0...10) < 2 {
             return SignalProducer(error: .network)
         }
-        if username == "bb" {
+        if username == "Bb" {
             return SignalProducer(error: .invalidCredentials)
         }
         

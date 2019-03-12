@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        let loginVM = LoginViewModel()
+        let userRepository = UserRepository()
+        
+        let loginVM = LoginViewModel(userRepository: userRepository)
         let loginVC = LoginViewController(viewModel: loginVM)
         window?.rootViewController = loginVC
         

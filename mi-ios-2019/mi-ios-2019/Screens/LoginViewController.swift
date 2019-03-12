@@ -70,6 +70,8 @@ class LoginViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBindings()
+        
+        loginButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         //test bindingu
         //viewModel.userName.value = "TEST"
     }
@@ -77,12 +79,17 @@ class LoginViewController : UIViewController {
     func setupBindings() {
         passwordField <~> viewModel.password
         usernameField <~> viewModel.userName
-        loginButton.reactive.isEnabled <~ viewModel.loginAction.isExecuting
+        loginButton.reactive.isEnabled <~ viewModel.loginAction.isExecuting.negate()
         
-        viewModel.validationErrors.producer.startWithValues { (errors) in
+        viewModel.loginAction.errors.producer.startWithValues { (errors) in
             print(errors)
         }
         
+        
+    }
+    
+    @objc func buttonTapped(_ : Any) {
+        viewModel.loginAction.apply().start()
     }
     
 }

@@ -25,14 +25,15 @@ enum LoginValidation {
 class LoginViewModel {
     
     
-    lazy var loginAction = Action<(),User,LoginError> {
+    lazy var loginAction = Action<(),User,LoginError> { [unowned self] in
         if self.validationSignal.value {
-            return .empty
+            return self.userRepository.login(username: self.userName.value, password: self.password.value)
         } else {
             return SignalProducer<User,LoginError>(error: .validation(self.validationErrors.value))
         }
     }
     
+    private var userRepository: UserRepository
     
     let userName  = MutableProperty<String>("")
     let password  = MutableProperty<String>("")
@@ -45,7 +46,9 @@ class LoginViewModel {
     //lazy var canSubmitForm : Property<Bool> = Property<Bool>(initial: false, then: validationSignal.map { return $0 && !self.loginAction.isExecuting.value})
 
     
-    init() {
+    init(userRepository: UserRepository) {
+        self.userRepository = userRepository
+        
         validationErrors = userName.combineLatest(with: password).map { userName, password in
             var validations : [LoginValidation]  = []
             if userName.isEmpty {
@@ -58,10 +61,6 @@ class LoginViewModel {
         }
         
         validationSignal = validationErrors.map { $0.isEmpty }
-        
-        
     }
-    
-    
     
 }
