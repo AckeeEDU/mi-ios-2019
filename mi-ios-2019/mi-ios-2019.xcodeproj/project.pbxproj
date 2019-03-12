@@ -43,6 +43,7 @@
 		B4266CAA22380DC100A7722B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA922380DC100A7722B /* UserRepository.swift */; };
 		B4266CAC223815A400A7722B /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CAB223815A400A7722B /* LogoutViewController.swift */; };
 		B4266CAE223817C200A7722B /* LogoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CAD223817C200A7722B /* LogoutViewModel.swift */; };
+		B4266CB0223833C200A7722B /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CAF223833C200A7722B /* Base.swift */; };
 		B5F551874FA33172116FF089 /* Pods_mi_ios_2019.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFC1CB71F3F3E687778A233 /* Pods_mi_ios_2019.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		B4266CA922380DC100A7722B /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		B4266CAB223815A400A7722B /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		B4266CAD223817C200A7722B /* LogoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewModel.swift; sourceTree = "<group>"; };
+		B4266CAF223833C200A7722B /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				69E563892225B78000132447 /* UIAlertActionExtensions.swift */,
 				B4266CA72238027C00A7722B /* Reactive+TextField.swift */,
+				B4266CAF223833C200A7722B /* Base.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				69E563902225D4BD00132447 /* Animal.swift in Sources */,
 				B4266CA62237FC0400A7722B /* User.swift in Sources */,
 				69E563942225D8D900132447 /* PickerHandler.swift in Sources */,
+				B4266CB0223833C200A7722B /* Base.swift in Sources */,
 				69E5638C2225B92B00132447 /* KnownManufacturer.swift in Sources */,
 				B4266CA42237F83800A7722B /* LoginViewModel.swift in Sources */,
 				69E5638E2225C20600132447 /* AlmostEquatable.swift in Sources */,

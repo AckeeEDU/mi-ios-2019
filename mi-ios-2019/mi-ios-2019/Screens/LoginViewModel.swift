@@ -22,7 +22,7 @@ enum LoginValidation {
     case password
 }
 
-class LoginViewModel {
+class LoginViewModel : BaseViewModel {
     
     
     lazy var loginAction = Action<(),User,LoginError> { [unowned self] in

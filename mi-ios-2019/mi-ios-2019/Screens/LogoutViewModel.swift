@@ -12,7 +12,7 @@ import ACKReactiveExtensions
 
 
 
-class LogoutViewModel {
+class LogoutViewModel : BaseViewModel {
 
     private var userRepository: UserRepository
     
@@ -21,6 +21,8 @@ class LogoutViewModel {
 
     init(userRepository: UserRepository) {
         self.userRepository = userRepository
+        
+        super.init()
         
         
         userRepository.currentUser.producer.skipNil().startWithValues { (user) in

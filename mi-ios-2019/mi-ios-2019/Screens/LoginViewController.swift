@@ -11,7 +11,7 @@ import UIKit
 import SnapKit
 import ReactiveSwift
 
-class LoginViewController : UIViewController {
+class LoginViewController : BaseViewController {
     
     private var viewModel : LoginViewModel
     
@@ -21,7 +21,7 @@ class LoginViewController : UIViewController {
 
     init(viewModel: LoginViewModel) {
         self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
+        super.init()
     }
     
     required init?(coder aDecoder: NSCoder) {

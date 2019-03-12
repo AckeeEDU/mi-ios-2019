@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import ReactiveSwift
 
-class LogoutViewController : UIViewController {
+class LogoutViewController : BaseViewController {
     weak var userName : UILabel!
     weak var accessToken : UILabel!
     weak var logoutButton : UIButton!
@@ -19,7 +19,7 @@ class LogoutViewController : UIViewController {
     
     init(viewModel: LogoutViewModel) {
         self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
+        super.init()
     }
     
     required init?(coder aDecoder: NSCoder) {
