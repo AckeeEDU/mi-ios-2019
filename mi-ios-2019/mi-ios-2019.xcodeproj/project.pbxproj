@@ -36,6 +36,7 @@
 		887BDFB7221C672D008C37A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887BDFB5221C672D008C37A4 /* LaunchScreen.storyboard */; };
 		888A33D7221C972C00420C3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 888A33D9221C972C00420C3A /* Localizable.strings */; };
 		888A33E3221CA33000420C3A /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A33E2221CA33000420C3A /* Strings.swift */; };
+		B4266CA12237DC8800A7722B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA02237DC8800A7722B /* LoginViewController.swift */; };
 		B5F551874FA33172116FF089 /* Pods_mi_ios_2019.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFC1CB71F3F3E687778A233 /* Pods_mi_ios_2019.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		888A33E2221CA33000420C3A /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		9AFC1CB71F3F3E687778A233 /* Pods_mi_ios_2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mi_ios_2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA5668B71824F04B9618A0D /* Pods-mi-ios-2019.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019.adhoc.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.adhoc.xcconfig"; sourceTree = "<group>"; };
+		B4266CA02237DC8800A7722B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,8 @@
 		887BDFAB221C672C008C37A4 /* mi-ios-2019 */ = {
 			isa = PBXGroup;
 			children = (
+				B4266CA22237DD0900A7722B /* Service */,
+				B4266C9F2237DC8100A7722B /* Screens */,
 				888A33E1221CA33000420C3A /* Generated */,
 				69E563882225B77000132447 /* Extensions */,
 				69E563852225B5E900132447 /* Model */,
@@ -157,6 +161,21 @@
 				9AFC1CB71F3F3E687778A233 /* Pods_mi_ios_2019.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4266C9F2237DC8100A7722B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B4266CA02237DC8800A7722B /* LoginViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B4266CA22237DD0900A7722B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,12 +264,20 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ACKReactiveExtensions/ACKReactiveExtensions.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ACKReactiveExtensions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				887BDFAF221C672C008C37A4 /* ViewController.swift in Sources */,
+				B4266CA12237DC8800A7722B /* LoginViewController.swift in Sources */,
 				888A33E3221CA33000420C3A /* Strings.swift in Sources */,
 				69E563872225B61400132447 /* CarKind.swift in Sources */,
 				69E563962225EC3E00132447 /* Playground.swift in Sources */,
