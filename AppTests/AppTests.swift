@@ -1,15 +1,15 @@
 //
-//  RSTests.swift
-//  RSTests
+//  AppTests.swift
+//  AppTests
 //
 //  Created by Petr Šíma on 06/03/2019.
 //  Copyright © 2019 Petr Šíma. All rights reserved.
 //
 
 import XCTest
-@testable import RS
+@testable import App
 
-class RSTests: XCTestCase {
+class AppTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
