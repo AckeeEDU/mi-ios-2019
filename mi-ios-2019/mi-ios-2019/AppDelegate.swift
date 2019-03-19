@@ -15,15 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Playground.play()
-        
+
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        
+
         let userRepository = UserRepository()
-        
+
         userRepository.currentUser.producer.startWithValues { user in
-            
-            var vc : UIViewController!
+
+            var vc: UIViewController!
             if let _ = user {
                 let logoutVM = LogoutViewModel(userRepository: userRepository)
                 vc = LogoutViewController(viewModel: logoutVM)
@@ -60,6 +60,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
-

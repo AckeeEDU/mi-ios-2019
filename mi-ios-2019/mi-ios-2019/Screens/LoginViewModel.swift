@@ -11,7 +11,7 @@ import UIKit
 import ReactiveSwift
 import Result
 
-enum LoginError : Error {
+enum LoginError: Error {
     case validation([LoginValidation])
     case invalidCredentials
     case network
@@ -22,35 +22,33 @@ enum LoginValidation {
     case password
 }
 
-class LoginViewModel : BaseViewModel {
-    
-    
-    lazy var loginAction = Action<(),User,LoginError> { [unowned self] in
+final class LoginViewModel: BaseViewModel {
+
+    let userName = MutableProperty<String>("")
+    let password = MutableProperty<String>("")
+
+    lazy var loginAction = Action<Void, User, LoginError> { [unowned self] in
         if self.validationSignal.value {
             return self.userRepository.login(username: self.userName.value, password: self.password.value)
         } else {
-            return SignalProducer<User,LoginError>(error: .validation(self.validationErrors.value))
+            return SignalProducer<User, LoginError>(error: .validation(self.validationErrors.value))
         }
     }
-    
+
+    private var validationSignal: Property<Bool>
+    var validationErrors: Property<[LoginValidation]>
+
+    lazy var canSubmitForm: Property<Bool> = Property<Bool>(initial: false, then: validationSignal.producer.and(self.loginAction.isExecuting.negate()))
+
     private var userRepository: UserRepository
-    
-    let userName  = MutableProperty<String>("")
-    let password  = MutableProperty<String>("")
-    
-    
-    private var validationSignal : Property<Bool>
-    var validationErrors : Property<[LoginValidation]>
 
-    lazy var canSubmitForm : Property<Bool> = Property<Bool>(initial: false, then: validationSignal.producer.and(self.loginAction.isExecuting.negate()))
-    //lazy var canSubmitForm : Property<Bool> = Property<Bool>(initial: false, then: validationSignal.map { return $0 && !self.loginAction.isExecuting.value})
+    // MARK: - Initialization
 
-    
     init(userRepository: UserRepository) {
         self.userRepository = userRepository
-        
+
         validationErrors = userName.combineLatest(with: password).map { userName, password in
-            var validations : [LoginValidation]  = []
+            var validations: [LoginValidation]  = []
             if userName.isEmpty {
                 validations.append(.username)
             }
@@ -59,8 +57,8 @@ class LoginViewModel : BaseViewModel {
             }
             return validations
         }
-        
+
         validationSignal = validationErrors.map { $0.isEmpty }
     }
-    
+
 }

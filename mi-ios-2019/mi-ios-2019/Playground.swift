@@ -13,55 +13,17 @@ enum Playground {
         let arrayOfAlmostEquatables = Animal.allCases
         let arrayOfAlmostEquatables2 = Animal.allCases
         let arrayOfAlmostEquatables3 = Array(Animal.allCases.prefix(1))
-        
+
         print(arrayOfAlmostEquatables ~== arrayOfAlmostEquatables2)
         print(arrayOfAlmostEquatables ~== arrayOfAlmostEquatables3)
-        
+
 //        let someStruct = SomeStruct(item: arrayOfAlmostEquatables)
     }
 }
 
-fileprivate struct SomeStruct<Item: AlmostEquatable> {
+private struct SomeStruct<Item: AlmostEquatable> {
     let item: Item
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 extension Array where Element: AlmostEquatable {
     static func~==(lhs: [Element], rhs: [Element]) -> Bool {
@@ -70,7 +32,7 @@ extension Array where Element: AlmostEquatable {
         for i in 0..<lhs.count {
             if lhs[i] ~!= rhs[i] { return false }
         }
-        
+
         return true
     }
 }

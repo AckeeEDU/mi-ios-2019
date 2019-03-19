@@ -13,7 +13,7 @@ enum CarKind: CaseIterable, CustomStringConvertible, Pickable {
     case lorry(KnownLorryManufacturer)
     case motorbike(KnownMotorbikeManufacturer)
     case other
-    
+
     var title: String {
         switch self {
         case .personal(let manufacturer): return manufacturer.rawValue
@@ -22,7 +22,7 @@ enum CarKind: CaseIterable, CustomStringConvertible, Pickable {
         case .other: return "Other"
         }
     }
-    
+
     var subtitle: String {
         switch self {
         case .personal: return "Personal"
@@ -31,11 +31,11 @@ enum CarKind: CaseIterable, CustomStringConvertible, Pickable {
         case .other: return ""
         }
     }
-    
+
     var description: String {
         return title + " (" + subtitle + ")"
     }
-    
+
     static var allCases: [CarKind] {
         let personal = KnownPersonalManufacturer.allCases.map { CarKind.personal($0) }
         let lorries = KnownLorryManufacturer.allCases.map { CarKind.lorry($0) }

@@ -12,7 +12,7 @@ struct Animal {
     enum Kind {
         case pet
         case wild
-        
+
         var name: String {
             switch self {
             case .pet: return "Pet"
@@ -20,7 +20,7 @@ struct Animal {
             }
         }
     }
-    
+
     let kind: Kind
     let name: String
 }
@@ -35,11 +35,11 @@ extension Animal: Pickable {
             Animal(kind: .wild, name: "Panther")
         ]
     }
-    
+
     var title: String {
         return name
     }
-    
+
     var subtitle: String {
         return kind.name
     }

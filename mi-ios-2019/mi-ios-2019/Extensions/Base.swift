@@ -9,30 +9,30 @@
 import Foundation
 import UIKit
 
-class BaseViewController : UIViewController {
-    
+class BaseViewController: UIViewController {
+
     init() {
         super.init(nibName: nil, bundle: nil)
         NSLog("📱 👶 \(self)")
     }
-    
+
     deinit {
         NSLog("📱 ⚰️ \(self)")
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
 }
 
 class BaseViewModel {
-    
+
     init() {
         NSLog("🧠 👶 \(self)")
-        
+
     }
-    
+
     deinit {
         NSLog("🧠 ⚰️ \(self)")
     }

@@ -20,7 +20,7 @@ extension PickerHandler {
 }
 
 extension PickerHandler where Self: UIViewController {
-    func confirmChangeIfNeeded<Item: Pickable & AlmostEquatable>(old: Item?, new: Item, confirmAction: @escaping () -> ()) {
+    func confirmChangeIfNeeded<Item: Pickable & AlmostEquatable>(old: Item?, new: Item, confirmAction: @escaping () -> Void) {
         if requiresConfirmation(old: old, new: new) {
             let confirmVC = confirmChangeAlert(confirmAction)
             present(confirmVC, animated: true)
@@ -28,8 +28,8 @@ extension PickerHandler where Self: UIViewController {
             confirmAction()
         }
     }
-    
-    func confirmChangeAlert(_ confirmAction: @escaping () -> ()) -> UIAlertController {
+
+    func confirmChangeAlert(_ confirmAction: @escaping () -> Void) -> UIAlertController {
         let confirmVC = UIAlertController(title: "Confirm change", message: "Do you want to perform change?", preferredStyle: .alert)
         let yes = UIAlertAction(title: "Yes", style: .default) { _ in confirmAction() }
         let no = UIAlertAction(title: "No", style: .cancel)

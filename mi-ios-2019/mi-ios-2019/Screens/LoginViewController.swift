@@ -6,33 +6,38 @@
 //  Copyright © 2019 ČVUT. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import SnapKit
 import ReactiveSwift
 
-class LoginViewController : BaseViewController {
-    
-    private var viewModel : LoginViewModel
-    
-    weak var usernameField : UITextField!
-    weak var passwordField : UITextField!
-    weak var loginButton : UIButton!
+final class LoginViewController: BaseViewController {
+
+    private weak var usernameField: UITextField!
+    private weak var passwordField: UITextField!
+    private weak var loginButton: UIButton!
+    private weak var registrationButton: UIButton!
+
+    private let viewModel: LoginViewModel
+
+    // MARK: - Initialization
 
     init(viewModel: LoginViewModel) {
         self.viewModel = viewModel
+
         super.init()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
+    // MARK: - Controller lifecycle
+
     override func loadView() {
         super.loadView()
-        view = UIView()
+
         view.backgroundColor = .gray
-        
+
         let usernameField = UITextField()
         usernameField.backgroundColor = .white
         usernameField.placeholder = "Username"
@@ -43,7 +48,7 @@ class LoginViewController : BaseViewController {
             make.leading.trailing.equalToSuperview().inset(48)
         }
         self.usernameField = usernameField
-        
+
         let passwordField = UITextField()
         view.addSubview(passwordField)
         passwordField.placeholder = "Password"
@@ -54,7 +59,7 @@ class LoginViewController : BaseViewController {
             make.leading.trailing.equalTo(usernameField)
         }
         self.passwordField = passwordField
-        
+
         let button = UIButton()
         button.setTitle("Login", for: .normal)
         button.setTitleColor(.red, for: .disabled)
@@ -65,31 +70,51 @@ class LoginViewController : BaseViewController {
             make.centerX.equalToSuperview()
         }
         self.loginButton = button
+
+        let registrationButton = UIButton(type: .system)
+        registrationButton.setTitle("Register", for: .normal)
+        registrationButton.setTitleColor(.white, for: .normal)
+        view.addSubview(registrationButton)
+        registrationButton.snp.makeConstraints { (make) in
+            make.top.equalTo(loginButton.snp.bottom).offset(30)
+            make.centerX.equalToSuperview()
+        }
+        self.registrationButton = registrationButton
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupBindings()
-        
-        loginButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-        //test bindingu
-        //viewModel.userName.value = "TEST"
+
+        loginButton.addTarget(self, action: #selector(loginButtonTapped(_:)), for: .touchUpInside)
+        registrationButton.addTarget(self, action: #selector(registrationButtonTapped(_:)), for: .touchUpInside)
     }
-    
-    func setupBindings() {
+
+    // MARK: - Bindings
+
+    private func setupBindings() {
         passwordField <~> viewModel.password
         usernameField <~> viewModel.userName
         loginButton.reactive.isEnabled <~ viewModel.loginAction.isExecuting.negate()
-        
+
         viewModel.loginAction.errors.producer.startWithValues { (errors) in
             print(errors)
         }
-        
-        
     }
-    
-    @objc func buttonTapped(_ : Any) {
+
+    // MARK: - Actions
+
+    @objc
+    private func loginButtonTapped(_ sender: UIButton) {
         viewModel.loginAction.apply().start()
     }
-    
+
+    @objc
+    private func registrationButtonTapped(_ sender: UIButton) {
+        let controller = RegistrationViewController()
+        let navigationController = UINavigationController(rootViewController: controller)
+        present(navigationController, animated: true)
+    }
+
 }

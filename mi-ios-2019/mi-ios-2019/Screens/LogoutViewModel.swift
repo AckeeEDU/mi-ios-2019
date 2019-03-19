@@ -10,14 +10,13 @@ import Foundation
 import ReactiveSwift
 import ACKReactiveExtensions
 
-
 class UserInfoViewModel: BaseViewModel {
-    
+
     fileprivate var userRepository: UserRepository
-    
+
     var userName = MutableProperty<String>("")
     var accessToken = MutableProperty<String>("")
-    
+
     init(userRepository: UserRepository) {
         self.userRepository = userRepository
         super.init()
@@ -25,15 +24,14 @@ class UserInfoViewModel: BaseViewModel {
             self?.userName.value = user.username
         }
         accessToken <~ userRepository.currentUser.producer.skipNil().map { $0.accessToken}
-        
+
     }
-    
+
 }
 
-class LogoutViewModel : UserInfoViewModel {
+class LogoutViewModel: UserInfoViewModel {
 
     func logout() {
         userRepository.logouut()
     }
 }
-

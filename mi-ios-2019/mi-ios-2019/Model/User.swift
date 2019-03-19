@@ -8,8 +8,7 @@
 
 import Foundation
 
-
-struct User : Codable {
-    var username : String
-    var accessToken : String
+struct User: Codable {
+    var username: String
+    var accessToken: String
 }
