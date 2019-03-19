@@ -14,8 +14,18 @@ struct UserRegistrationData {
     let email: String
 }
 
-final class RegistrationViewModel {
-    typealias Dependencies = HasPasswordEditViewModelingFactory
+protocol RegistrationViewModeling {
+    var name: MutableProperty<String> { get }
+    var phone: MutableProperty<String> { get }
+    var email: MutableProperty<String> { get }
+
+    var validate: Action<Void, Void, ValidationError> { get }
+
+    var passwordViewModel: PasswordEditViewModeling { get }
+}
+
+final class RegistrationViewModel: RegistrationViewModeling {
+    typealias Dependencies = HasPasswordEditViewModelingFactory & HasPhoneValidator & HasEmailValidator
 
     let name: MutableProperty<String>
     let phone: MutableProperty<String>
@@ -49,13 +59,13 @@ final class RegistrationViewModel {
 
                 if phone.isEmpty {
                     observer.send(error: ValidationError(message: "Phone is empty"))
-                } else if PhoneValidator.shared.validate(phone) == false {
+                } else if dependencies.phoneValidator.validate(phone) == false {
                     observer.send(error: ValidationError(message: "Phone is not valid"))
                 }
 
                 if email.isEmpty {
                     observer.send(error: ValidationError(message: "E-mail is empty"))
-                } else if EmailValidator.shared.validate(email) == false {
+                } else if dependencies.emailValidator.validate(email) == false {
                     observer.send(error: ValidationError(message: "E-mail is not valid"))
                 }
 

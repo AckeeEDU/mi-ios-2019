@@ -15,11 +15,11 @@ final class RegistrationViewController: BaseViewController, ValidationErrorPrese
     private weak var phoneTextField: UITextField!
     private weak var emailTextField: UITextField!
 
-    private let viewModel: RegistrationViewModel
+    private let viewModel: RegistrationViewModeling
 
     // MARK: - Initialization
 
-    init(viewModel: RegistrationViewModel) {
+    init(viewModel: RegistrationViewModeling) {
         self.viewModel = viewModel
 
         super.init()

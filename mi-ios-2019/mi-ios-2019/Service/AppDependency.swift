@@ -15,6 +15,10 @@ final class AppDependency: HasNoDependency {
     static let shared = AppDependency()
 
     lazy var userRepository: UserRepositoring = UserRepository()
+    lazy var phoneValidator: PhoneValidating = PhoneValidator()
+    lazy var emailValidator: EmailValidating = EmailValidator()
 }
 
 extension AppDependency: HasUserRepository { }
+extension AppDependency: HasPhoneValidator { }
+extension AppDependency: HasEmailValidator { }

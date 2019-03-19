@@ -12,19 +12,29 @@ struct ValidationError: Error {
     let message: String
 }
 
-class PhoneValidator {
-    private init() { }
-    static let shared = PhoneValidator()
+protocol HasPhoneValidator {
+    var phoneValidator: PhoneValidating { get }
+}
 
+protocol PhoneValidating {
+    func validate(_ phone: String) -> Bool
+}
+
+class PhoneValidator: PhoneValidating {
     func validate(_ phone: String) -> Bool {
         return phone.hasPrefix("+420")
     }
 }
 
-class EmailValidator {
-    private init() { }
-    static let shared = EmailValidator()
+protocol HasEmailValidator {
+    var emailValidator: EmailValidating { get }
+}
 
+protocol EmailValidating {
+    func validate(_ email: String) -> Bool
+}
+
+class EmailValidator: EmailValidating {
     func validate(_ email: String) -> Bool {
         return email.contains("@")
     }
