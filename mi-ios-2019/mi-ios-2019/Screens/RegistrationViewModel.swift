@@ -20,7 +20,7 @@ protocol RegistrationViewModeling {
     var email: MutableProperty<String> { get }
 
     var passwordViewModel: PasswordEditViewModeling { get }
-    
+
     var actions: RegistrationViewModelingActions { get }
 }
 

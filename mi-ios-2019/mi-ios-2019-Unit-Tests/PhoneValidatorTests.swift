@@ -9,20 +9,20 @@
 import XCTest
 
 final class PhoneValidatorTests: XCTestCase {
-    
+
     private let phoneValidator = PhoneValidator()
-    
+
     func testPhoneIsValid() {
         let phone = "+420777000000"
         let isValid = phoneValidator.validate(phone)
-        
+
         XCTAssertTrue(isValid)
     }
 
     func testPhoneIsNotValid() {
         let phone = "777000000"
         let isValid = phoneValidator.validate(phone)
-        
+
         XCTAssertFalse(isValid)
     }
 

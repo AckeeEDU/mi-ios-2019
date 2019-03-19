@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		02A5FF3AE73B6DF3CAB2A7AD /* libPods-mi-ios-2019-Unit-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAAD15C9CF13EC7913960B9 /* libPods-mi-ios-2019-Unit-Tests.a */; };
 		69E563842225ACBE00132447 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563832225ACBE00132447 /* PickerViewController.swift */; };
 		69E563872225B61400132447 /* CarKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563862225B61400132447 /* CarKind.swift */; };
 		69E5638A2225B78000132447 /* UIAlertActionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563892225B78000132447 /* UIAlertActionExtensions.swift */; };
@@ -44,8 +45,17 @@
 		A30023C52240F984007777C9 /* UIViewController+ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023C42240F984007777C9 /* UIViewController+ValidationError.swift */; };
 		A30023C72241149B007777C9 /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023C62241149B007777C9 /* AppDependency.swift */; };
 		A30023C92241198C007777C9 /* AppDependency+Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023C82241198C007777C9 /* AppDependency+Factories.swift */; };
-		A38011562241699A00CDD0DA /* PhoneValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38011552241699A00CDD0DA /* PhoneValidator.swift */; };
+		A38011562241699A00CDD0DA /* PhoneValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38011552241699A00CDD0DA /* PhoneValidatorTests.swift */; };
 		A3801157224169BF00CDD0DA /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023C22240F0F1007777C9 /* Validations.swift */; };
+		A380115922416AFC00CDD0DA /* EmailValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A380115822416AFC00CDD0DA /* EmailValidatorTests.swift */; };
+		A380115B22416B8700CDD0DA /* RegistrationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A380115A22416B8700CDD0DA /* RegistrationViewModelTests.swift */; };
+		A380115C22416BA200CDD0DA /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023BE2240F0C4007777C9 /* RegistrationViewModel.swift */; };
+		A380115D22416C2D00CDD0DA /* PasswordEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023BF2240F0C5007777C9 /* PasswordEditViewModel.swift */; };
+		A380115E22416C5400CDD0DA /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA922380DC100A7722B /* UserRepository.swift */; };
+		A380115F22416C5C00CDD0DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA52237FC0400A7722B /* User.swift */; };
+		A380116122416C8200CDD0DA /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A380116022416C8200CDD0DA /* LoginError.swift */; };
+		A380116222416C9000CDD0DA /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A380116022416C8200CDD0DA /* LoginError.swift */; };
+		A380116422416D5100CDD0DA /* TestDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A380116322416D5100CDD0DA /* TestDependency.swift */; };
 		B4266CA12237DC8800A7722B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA02237DC8800A7722B /* LoginViewController.swift */; };
 		B4266CA42237F83800A7722B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA32237F83800A7722B /* LoginViewModel.swift */; };
 		B4266CA62237FC0400A7722B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA52237FC0400A7722B /* User.swift */; };
@@ -88,6 +98,7 @@
 		888A33D8221C972C00420C3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		888A33DA221C973F00420C3A /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		888A33E2221CA33000420C3A /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		99A3C458492BB65632BC1743 /* Pods-mi-ios-2019-Unit-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019-Unit-Tests.debug.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019-Unit-Tests/Pods-mi-ios-2019-Unit-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9AFC1CB71F3F3E687778A233 /* Pods_mi_ios_2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mi_ios_2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30023BA2240ECC3007777C9 /* PasswordEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEditViewController.swift; sourceTree = "<group>"; };
 		A30023BB2240ECC4007777C9 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +110,11 @@
 		A30023C82241198C007777C9 /* AppDependency+Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDependency+Factories.swift"; sourceTree = "<group>"; };
 		A380114A224168C200CDD0DA /* mi-ios-2019-Unit-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mi-ios-2019-Unit-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A380114E224168C300CDD0DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A38011552241699A00CDD0DA /* PhoneValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneValidator.swift; sourceTree = "<group>"; };
+		A38011552241699A00CDD0DA /* PhoneValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneValidatorTests.swift; sourceTree = "<group>"; };
+		A380115822416AFC00CDD0DA /* EmailValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorTests.swift; sourceTree = "<group>"; };
+		A380115A22416B8700CDD0DA /* RegistrationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModelTests.swift; sourceTree = "<group>"; };
+		A380116022416C8200CDD0DA /* LoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
+		A380116322416D5100CDD0DA /* TestDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDependency.swift; sourceTree = "<group>"; };
 		AAA5668B71824F04B9618A0D /* Pods-mi-ios-2019.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019.adhoc.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.adhoc.xcconfig"; sourceTree = "<group>"; };
 		B4266CA02237DC8800A7722B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B4266CA32237F83800A7722B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -109,6 +124,9 @@
 		B4266CAB223815A400A7722B /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		B4266CAD223817C200A7722B /* LogoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewModel.swift; sourceTree = "<group>"; };
 		B4266CAF223833C200A7722B /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		B44610490FD5D36EFD3C6E5A /* Pods-mi-ios-2019-Unit-Tests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019-Unit-Tests.adhoc.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019-Unit-Tests/Pods-mi-ios-2019-Unit-Tests.adhoc.xcconfig"; sourceTree = "<group>"; };
+		BD2B32B90FD9B657BD0582D6 /* Pods-mi-ios-2019-Unit-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019-Unit-Tests.release.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019-Unit-Tests/Pods-mi-ios-2019-Unit-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		CDAAD15C9CF13EC7913960B9 /* libPods-mi-ios-2019-Unit-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mi-ios-2019-Unit-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02A5FF3AE73B6DF3CAB2A7AD /* libPods-mi-ios-2019-Unit-Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +155,9 @@
 				4BA6B2BF11B86034C99864EF /* Pods-mi-ios-2019.debug.xcconfig */,
 				6D1473B44E24DD0A17289E5A /* Pods-mi-ios-2019.release.xcconfig */,
 				AAA5668B71824F04B9618A0D /* Pods-mi-ios-2019.adhoc.xcconfig */,
+				99A3C458492BB65632BC1743 /* Pods-mi-ios-2019-Unit-Tests.debug.xcconfig */,
+				BD2B32B90FD9B657BD0582D6 /* Pods-mi-ios-2019-Unit-Tests.release.xcconfig */,
+				B44610490FD5D36EFD3C6E5A /* Pods-mi-ios-2019-Unit-Tests.adhoc.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -185,6 +207,7 @@
 		887BDFAB221C672C008C37A4 /* mi-ios-2019 */ = {
 			isa = PBXGroup;
 			children = (
+				A380116022416C8200CDD0DA /* LoginError.swift */,
 				B4266CA22237DD0900A7722B /* Service */,
 				B4266C9F2237DC8100A7722B /* Screens */,
 				888A33E1221CA33000420C3A /* Generated */,
@@ -217,7 +240,10 @@
 		A380114B224168C300CDD0DA /* mi-ios-2019-Unit-Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A38011552241699A00CDD0DA /* PhoneValidator.swift */,
+				A380115822416AFC00CDD0DA /* EmailValidatorTests.swift */,
+				A380115A22416B8700CDD0DA /* RegistrationViewModelTests.swift */,
+				A380116322416D5100CDD0DA /* TestDependency.swift */,
+				A38011552241699A00CDD0DA /* PhoneValidatorTests.swift */,
 				A380114E224168C300CDD0DA /* Info.plist */,
 			);
 			path = "mi-ios-2019-Unit-Tests";
@@ -227,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				9AFC1CB71F3F3E687778A233 /* Pods_mi_ios_2019.framework */,
+				CDAAD15C9CF13EC7913960B9 /* libPods-mi-ios-2019-Unit-Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -284,6 +311,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3801154224168C300CDD0DA /* Build configuration list for PBXNativeTarget "mi-ios-2019-Unit-Tests" */;
 			buildPhases = (
+				315C89989698D09782D72428 /* [CP] Check Pods Manifest.lock */,
 				A3801146224168C200CDD0DA /* Sources */,
 				A3801147224168C200CDD0DA /* Frameworks */,
 				A3801148224168C200CDD0DA /* Resources */,
@@ -374,8 +402,8 @@
 				"${PODS_ROOT}/Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ACKReactiveExtensions/ACKReactiveExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift-framework/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result-framework/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -391,6 +419,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		315C89989698D09782D72428 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mi-ios-2019-Unit-Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3D0CCE5FE979B7D20585D02F /* [CP] Check Pods Manifest.lock */ = {
@@ -487,6 +537,7 @@
 				A30023C02240F0C5007777C9 /* RegistrationViewModel.swift in Sources */,
 				B4266CA12237DC8800A7722B /* LoginViewController.swift in Sources */,
 				888A33E3221CA33000420C3A /* Strings.swift in Sources */,
+				A380116122416C8200CDD0DA /* LoginError.swift in Sources */,
 				69E563872225B61400132447 /* CarKind.swift in Sources */,
 				69E563962225EC3E00132447 /* Playground.swift in Sources */,
 				B4266CAC223815A400A7722B /* LogoutViewController.swift in Sources */,
@@ -515,8 +566,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A380115C22416BA200CDD0DA /* RegistrationViewModel.swift in Sources */,
+				A380115922416AFC00CDD0DA /* EmailValidatorTests.swift in Sources */,
 				A3801157224169BF00CDD0DA /* Validations.swift in Sources */,
-				A38011562241699A00CDD0DA /* PhoneValidator.swift in Sources */,
+				A380115E22416C5400CDD0DA /* UserRepository.swift in Sources */,
+				A380115F22416C5C00CDD0DA /* User.swift in Sources */,
+				A380115D22416C2D00CDD0DA /* PasswordEditViewModel.swift in Sources */,
+				A380116422416D5100CDD0DA /* TestDependency.swift in Sources */,
+				A380115B22416B8700CDD0DA /* RegistrationViewModelTests.swift in Sources */,
+				A38011562241699A00CDD0DA /* PhoneValidatorTests.swift in Sources */,
+				A380116222416C9000CDD0DA /* LoginError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -828,6 +887,7 @@
 		};
 		A3801151224168C300CDD0DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99A3C458492BB65632BC1743 /* Pods-mi-ios-2019-Unit-Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -848,6 +908,7 @@
 		};
 		A3801152224168C300CDD0DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD2B32B90FD9B657BD0582D6 /* Pods-mi-ios-2019-Unit-Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -868,6 +929,7 @@
 		};
 		A3801153224168C300CDD0DA /* AdHoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B44610490FD5D36EFD3C6E5A /* Pods-mi-ios-2019-Unit-Tests.adhoc.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

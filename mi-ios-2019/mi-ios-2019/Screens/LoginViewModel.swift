@@ -11,17 +11,6 @@ import UIKit
 import ReactiveSwift
 import Result
 
-enum LoginError: Error {
-    case validation([LoginValidation])
-    case invalidCredentials
-    case network
-}
-
-enum LoginValidation {
-    case username
-    case password
-}
-
 protocol LoginViewModeling {
     var userName: MutableProperty<String> { get }
     var password: MutableProperty<String> { get }

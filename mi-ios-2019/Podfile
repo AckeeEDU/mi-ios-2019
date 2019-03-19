@@ -15,3 +15,7 @@ target 'mi-ios-2019' do
   pod 'SnapKit', '~> 4.2'
 
 end
+
+target 'mi-ios-2019-Unit-Tests' do
+  pod 'ReactiveSwift'
+end
