@@ -11,3 +11,12 @@ import Foundation
 struct ValidationError: Error {
     let message: String
 }
+
+class PhoneValidator {
+    private init() { }
+    static let shared = PhoneValidator()
+
+    func validate(_ phone: String) -> Bool {
+        return phone.hasPrefix("+420")
+    }
+}

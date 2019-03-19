@@ -32,6 +32,8 @@ final class RegistrationViewModel {
 
                 if phone.isEmpty {
                     observer.send(error: ValidationError(message: "Phone is empty"))
+                } else if PhoneValidator.shared.validate(phone) == false {
+                    observer.send(error: ValidationError(message: "Phone is not valid"))
                 }
 
                 if email.isEmpty {

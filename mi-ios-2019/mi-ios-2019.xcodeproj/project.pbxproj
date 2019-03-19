@@ -41,6 +41,7 @@
 		A30023C02240F0C5007777C9 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023BE2240F0C4007777C9 /* RegistrationViewModel.swift */; };
 		A30023C12240F0C5007777C9 /* PasswordEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023BF2240F0C5007777C9 /* PasswordEditViewModel.swift */; };
 		A30023C32240F0F2007777C9 /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023C22240F0F1007777C9 /* Validations.swift */; };
+		A30023C52240F984007777C9 /* UIViewController+ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023C42240F984007777C9 /* UIViewController+ValidationError.swift */; };
 		B4266CA12237DC8800A7722B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA02237DC8800A7722B /* LoginViewController.swift */; };
 		B4266CA42237F83800A7722B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA32237F83800A7722B /* LoginViewModel.swift */; };
 		B4266CA62237FC0400A7722B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA52237FC0400A7722B /* User.swift */; };
@@ -79,6 +80,7 @@
 		A30023BE2240F0C4007777C9 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		A30023BF2240F0C5007777C9 /* PasswordEditViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEditViewModel.swift; sourceTree = "<group>"; };
 		A30023C22240F0F1007777C9 /* Validations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
+		A30023C42240F984007777C9 /* UIViewController+ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ValidationError.swift"; sourceTree = "<group>"; };
 		AAA5668B71824F04B9618A0D /* Pods-mi-ios-2019.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019.adhoc.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.adhoc.xcconfig"; sourceTree = "<group>"; };
 		B4266CA02237DC8800A7722B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B4266CA32237F83800A7722B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				69E563892225B78000132447 /* UIAlertActionExtensions.swift */,
+				A30023C42240F984007777C9 /* UIViewController+ValidationError.swift */,
 				B4266CA72238027C00A7722B /* Reactive+TextField.swift */,
 				B4266CAF223833C200A7722B /* Base.swift */,
 			);
@@ -410,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				887BDFAF221C672C008C37A4 /* ViewController.swift in Sources */,
+				A30023C52240F984007777C9 /* UIViewController+ValidationError.swift in Sources */,
 				A30023C02240F0C5007777C9 /* RegistrationViewModel.swift in Sources */,
 				B4266CA12237DC8800A7722B /* LoginViewController.swift in Sources */,
 				888A33E3221CA33000420C3A /* Strings.swift in Sources */,

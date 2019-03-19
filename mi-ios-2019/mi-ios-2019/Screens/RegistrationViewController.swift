@@ -9,7 +9,7 @@
 import UIKit
 import ReactiveSwift
 
-final class RegistrationViewController: BaseViewController {
+final class RegistrationViewController: BaseViewController, ValidationErrorPresentable {
 
     private weak var nameTextField: UITextField!
     private weak var phoneTextField: UITextField!
@@ -88,7 +88,10 @@ final class RegistrationViewController: BaseViewController {
         emailTextField <~> viewModel.email
 
         viewModel.validate.errors
-            .observeValues { print($0.message) }
+            .observe(on: UIScheduler())
+            .observeValues { [weak self] error in
+                self?.displayValidationError(error)
+            }
 
         viewModel.validate.completed
             .observe(on: UIScheduler())

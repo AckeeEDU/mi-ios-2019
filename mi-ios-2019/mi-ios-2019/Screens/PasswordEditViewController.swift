@@ -9,7 +9,7 @@
 import UIKit
 import ReactiveSwift
 
-final class PasswordEditViewController: BaseViewController {
+final class PasswordEditViewController: BaseViewController, ValidationErrorPresentable {
 
     private weak var passwordTextField: UITextField!
     private weak var passwordCheckTextField: UITextField!
@@ -77,7 +77,10 @@ final class PasswordEditViewController: BaseViewController {
         passwordCheckTextField <~> viewModel.passwordCheck
 
         viewModel.register.errors
-            .observeValues { print($0.message) }
+            .observe(on: UIScheduler())
+            .observeValues { [weak self] error in
+                self?.displayValidationError(error)
+            }
 
         viewModel.register.completed
             .observe(on: UIScheduler())
