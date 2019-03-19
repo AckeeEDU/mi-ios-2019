@@ -19,12 +19,20 @@ protocol RegistrationViewModeling {
     var phone: MutableProperty<String> { get }
     var email: MutableProperty<String> { get }
 
-    var validate: Action<Void, Void, ValidationError> { get }
-
     var passwordViewModel: PasswordEditViewModeling { get }
+    
+    var actions: RegistrationViewModelingActions { get }
 }
 
-final class RegistrationViewModel: RegistrationViewModeling {
+protocol RegistrationViewModelingActions {
+    var validate: Action<Void, Void, ValidationError> { get }
+}
+
+extension RegistrationViewModelingActions where Self: RegistrationViewModeling {
+    var actions: RegistrationViewModelingActions { return self }
+}
+
+final class RegistrationViewModel: RegistrationViewModeling, RegistrationViewModelingActions {
     typealias Dependencies = HasPasswordEditViewModelingFactory & HasPhoneValidator & HasEmailValidator
 
     let name: MutableProperty<String>

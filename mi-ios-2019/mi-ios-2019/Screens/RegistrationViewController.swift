@@ -77,7 +77,7 @@ final class RegistrationViewController: BaseViewController, ValidationErrorPrese
     private func nextBarButtonTapped(_ sender: UIBarButtonItem) {
         view.endEditing(true)
 
-        viewModel.validate.apply().start()
+        viewModel.actions.validate.apply().start()
     }
 
     // MARK: - Bindings
@@ -87,13 +87,13 @@ final class RegistrationViewController: BaseViewController, ValidationErrorPrese
         phoneTextField <~> viewModel.phone
         emailTextField <~> viewModel.email
 
-        viewModel.validate.errors
+        viewModel.actions.validate.errors
             .observe(on: UIScheduler())
             .observeValues { [weak self] error in
                 self?.displayValidationError(error)
             }
 
-        viewModel.validate.completed
+        viewModel.actions.validate.completed
             .observe(on: UIScheduler())
             .observeValues { [weak self] in
                 guard let self = self else { return }
