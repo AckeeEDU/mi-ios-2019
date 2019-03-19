@@ -16,7 +16,7 @@ final class PasswordEditViewModel {
 
     // MARK: - Initialization
 
-    init() {
+    init(userData: UserRegistrationData) {
         password = MutableProperty("")
         passwordCheck = MutableProperty("")
 
@@ -31,6 +31,9 @@ final class PasswordEditViewModel {
                 if password != passwordCheck {
                     observer.send(error: ValidationError(message: "Passwords are not matching"))
                 }
+
+                let user = User(username: userData.email, name: userData.name, password: password, phone: userData.phone)
+                UserRepository.shared.register(user)
 
                 observer.send(value: ())
                 observer.sendCompleted()

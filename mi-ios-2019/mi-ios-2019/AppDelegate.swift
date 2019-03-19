@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
 
-        let userRepository = UserRepository()
+        let userRepository = UserRepository.shared
 
         userRepository.currentUser.producer.startWithValues { user in
 

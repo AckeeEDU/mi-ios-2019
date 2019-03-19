@@ -8,10 +8,21 @@
 
 import ReactiveSwift
 
+struct UserRegistrationData {
+    let name: String
+    let phone: String
+    let email: String
+}
+
 final class RegistrationViewModel {
     let name: MutableProperty<String>
     let phone: MutableProperty<String>
     let email: MutableProperty<String>
+
+    var passwordViewModel: PasswordEditViewModel {
+        let userData = UserRegistrationData(name: name.value, phone: phone.value, email: email.value)
+        return PasswordEditViewModel(userData: userData)
+    }
 
     let validate: Action<Void, Void, ValidationError>
 

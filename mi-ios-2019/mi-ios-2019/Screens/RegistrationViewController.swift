@@ -96,9 +96,9 @@ final class RegistrationViewController: BaseViewController, ValidationErrorPrese
         viewModel.validate.completed
             .observe(on: UIScheduler())
             .observeValues { [weak self] in
-                let viewModel = PasswordEditViewModel()
-                let controller = PasswordEditViewController(viewModel: viewModel)
-                self?.navigationController?.pushViewController(controller, animated: true)
+                guard let self = self else { return }
+                let controller = PasswordEditViewController(viewModel: self.viewModel.passwordViewModel)
+                self.navigationController?.pushViewController(controller, animated: true)
             }
     }
 

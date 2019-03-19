@@ -61,4 +61,8 @@ final class LoginViewModel: BaseViewModel {
         validationSignal = validationErrors.map { $0.isEmpty }
     }
 
+    func clearData() {
+        userRepository.clearData()
+    }
+
 }

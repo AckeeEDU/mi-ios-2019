@@ -6,32 +6,45 @@
 //  Copyright © 2019 ČVUT. All rights reserved.
 //
 
-import Foundation
 import ReactiveSwift
 import ACKReactiveExtensions
 
 class UserInfoViewModel: BaseViewModel {
 
-    fileprivate var userRepository: UserRepository
+    let name = MutableProperty<String?>(nil)
+    let username = MutableProperty<String?>(nil)
+    let phone = MutableProperty<String?>(nil)
+    let password = MutableProperty<String?>(nil)
 
-    var userName = MutableProperty<String>("")
-    var accessToken = MutableProperty<String>("")
+    fileprivate let userRepository: UserRepository
+
+    // MARK: - Initialization
 
     init(userRepository: UserRepository) {
         self.userRepository = userRepository
-        super.init()
-        userRepository.currentUser.producer.skipNil().startWithValues { [weak self] (user) in
-            self?.userName.value = user.username
-        }
-        accessToken <~ userRepository.currentUser.producer.skipNil().map { $0.accessToken}
 
+        super.init()
+
+        setupBindings()
+    }
+
+    // MARK: - Bindings
+
+    private func setupBindings() {
+        let user = userRepository.currentUser
+
+        name <~ user.map { $0?.name }
+        username <~ user.map { $0?.username }
+        phone <~ user.map { $0?.phone }
+        password <~ user.map { $0?.password }
     }
 
 }
 
-class LogoutViewModel: UserInfoViewModel {
+final class LogoutViewModel: UserInfoViewModel {
 
     func logout() {
-        userRepository.logouut()
+        userRepository.logout()
     }
+
 }

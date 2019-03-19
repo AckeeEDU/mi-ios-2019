@@ -16,6 +16,7 @@ final class LoginViewController: BaseViewController {
     private weak var passwordField: UITextField!
     private weak var loginButton: UIButton!
     private weak var registrationButton: UIButton!
+    private weak var clearDataButton: UIButton!
 
     private let viewModel: LoginViewModel
 
@@ -80,6 +81,16 @@ final class LoginViewController: BaseViewController {
             make.centerX.equalToSuperview()
         }
         self.registrationButton = registrationButton
+
+        let clearDataButton = UIButton(type: .system)
+        clearDataButton.setTitle("Clear data", for: .normal)
+        clearDataButton.setTitleColor(.red, for: .normal)
+        view.addSubview(clearDataButton)
+        clearDataButton.snp.makeConstraints { (make) in
+            make.top.equalTo(registrationButton.snp.bottom).offset(30)
+            make.centerX.equalToSuperview()
+        }
+        self.clearDataButton = clearDataButton
     }
 
     override func viewDidLoad() {
@@ -89,6 +100,7 @@ final class LoginViewController: BaseViewController {
 
         loginButton.addTarget(self, action: #selector(loginButtonTapped(_:)), for: .touchUpInside)
         registrationButton.addTarget(self, action: #selector(registrationButtonTapped(_:)), for: .touchUpInside)
+        clearDataButton.addTarget(self, action: #selector(clearDataButtonTapped(_:)), for: .touchUpInside)
     }
 
     // MARK: - Bindings
@@ -116,6 +128,11 @@ final class LoginViewController: BaseViewController {
         let controller = RegistrationViewController(viewModel: viewModel)
         let navigationController = UINavigationController(rootViewController: controller)
         present(navigationController, animated: true)
+    }
+
+    @objc
+    private func clearDataButtonTapped(_ sender: UIButton) {
+        viewModel.clearData()
     }
 
 }

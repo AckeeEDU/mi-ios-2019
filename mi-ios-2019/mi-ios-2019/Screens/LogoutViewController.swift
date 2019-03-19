@@ -11,8 +11,10 @@ import ReactiveSwift
 
 final class LogoutViewController: BaseViewController {
 
-    private weak var userNameLabel: UILabel!
-    private weak var accessTokenLabel: UILabel!
+    private weak var nameLabel: UILabel!
+    private weak var usernameLabel: UILabel!
+    private weak var phoneLabel: UILabel!
+    private weak var passwordLabel: UILabel!
     private weak var logoutButton: UIButton!
 
     private let viewModel: LogoutViewModel
@@ -35,11 +37,17 @@ final class LogoutViewController: BaseViewController {
 
         view.backgroundColor = .gray
 
-        let userNameLabel = UILabel()
-        self.userNameLabel = userNameLabel
+        let nameLabel = UILabel()
+        self.nameLabel = nameLabel
 
-        let accessTokenLabel = UILabel()
-        self.accessTokenLabel = accessTokenLabel
+        let usernameLabel = UILabel()
+        self.usernameLabel = usernameLabel
+
+        let phoneLabel = UILabel()
+        self.phoneLabel = phoneLabel
+
+        let passwordLabel = UILabel()
+        self.passwordLabel = passwordLabel
 
         let logoutButton = UIButton(type: .custom)
         logoutButton.setTitle("Logout", for: .normal)
@@ -47,7 +55,7 @@ final class LogoutViewController: BaseViewController {
         self.logoutButton = logoutButton
 
         // ----- Stack View -----
-        let stackView = UIStackView(arrangedSubviews: [userNameLabel, accessTokenLabel, logoutButton])
+        let stackView = UIStackView(arrangedSubviews: [nameLabel, usernameLabel, phoneLabel, passwordLabel, logoutButton])
         stackView.axis = .vertical
         stackView.spacing = 30
         view.addSubview(stackView)
@@ -55,7 +63,6 @@ final class LogoutViewController: BaseViewController {
             make.top.equalToSuperview().offset(80)
             make.leading.trailing.equalToSuperview().inset(48)
         }
-
     }
 
     override func viewDidLoad() {
@@ -66,19 +73,20 @@ final class LogoutViewController: BaseViewController {
         setupBindings()
     }
 
-    // MARK: - Bindings
-
-    func setupBindings() {
-        userNameLabel.reactive.text <~ viewModel.userName.map { "User: \($0)"}
-        accessTokenLabel.reactive.text <~ viewModel.accessToken
-
-    }
-
     // MARK: - Actions
 
     @objc
     private func logoutButtonTapped(_ sender: UIButton) {
         viewModel.logout()
+    }
+
+    // MARK: - Bindings
+
+    private func setupBindings() {
+        nameLabel.reactive.text <~ viewModel.name
+        usernameLabel.reactive.text <~ viewModel.username
+        phoneLabel.reactive.text <~ viewModel.phone
+        passwordLabel.reactive.text <~ viewModel.password
     }
 
 }
