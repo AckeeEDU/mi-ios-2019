@@ -20,3 +20,12 @@ class PhoneValidator {
         return phone.hasPrefix("+420")
     }
 }
+
+class EmailValidator {
+    private init() { }
+    static let shared = EmailValidator()
+
+    func validate(_ email: String) -> Bool {
+        return email.contains("@")
+    }
+}

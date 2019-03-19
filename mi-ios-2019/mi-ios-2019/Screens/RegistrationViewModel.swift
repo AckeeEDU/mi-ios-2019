@@ -38,6 +38,8 @@ final class RegistrationViewModel {
 
                 if email.isEmpty {
                     observer.send(error: ValidationError(message: "E-mail is empty"))
+                } else if EmailValidator.shared.validate(email) == false {
+                    observer.send(error: ValidationError(message: "E-mail is not valid"))
                 }
 
                 observer.send(value: ())
