@@ -14,3 +14,7 @@ struct User: Codable {
     var password: String
     var phone: String
 }
+
+extension User {
+    static let test = User(username: "unicorn@ackee.cz", name: "Unicorn", password: "heslo", phone: "+420123456789")
+}

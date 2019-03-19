@@ -36,6 +36,7 @@ final class LogoutViewController: BaseViewController {
         super.loadView()
 
         view.backgroundColor = .gray
+        view.accessibilityIdentifier = "logoutView"
 
         let nameLabel = UILabel()
         self.nameLabel = nameLabel

@@ -42,6 +42,7 @@ final class LoginViewController: BaseViewController {
         let usernameField = UITextField()
         usernameField.backgroundColor = .white
         usernameField.placeholder = "Username"
+        usernameField.accessibilityIdentifier = "loginField"
         view.addSubview(usernameField)
         usernameField.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(100)
@@ -54,6 +55,7 @@ final class LoginViewController: BaseViewController {
         view.addSubview(passwordField)
         passwordField.placeholder = "Password"
         passwordField.backgroundColor = .white
+        passwordField.accessibilityIdentifier = "passwordField"
         passwordField.snp.makeConstraints { (make) in
             make.top.equalTo(usernameField.snp.bottom).offset(30)
             make.height.equalTo(usernameField)
@@ -65,6 +67,7 @@ final class LoginViewController: BaseViewController {
         button.setTitle("Login", for: .normal)
         button.setTitleColor(.red, for: .disabled)
         button.tintColor = .blue
+        button.accessibilityIdentifier = "loginButton"
         view.addSubview(button)
         button.snp.makeConstraints { make in
             make.top.equalTo(passwordField.snp.bottom).offset(30)
@@ -119,6 +122,7 @@ final class LoginViewController: BaseViewController {
 
     @objc
     private func loginButtonTapped(_ sender: UIButton) {
+        print(#function)
         viewModel.loginAction.apply().start()
     }
 

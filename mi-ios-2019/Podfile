@@ -19,3 +19,7 @@ end
 target 'mi-ios-2019-Unit-Tests' do
   pod 'ReactiveSwift'
 end
+
+target 'mi-ios-2019-UITests' do
+  pod 'ReactiveSwift'
+end

@@ -21,6 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let userRepository = AppDependency.shared.userRepository
 
+        if CommandLine.arguments.contains("--uitesting") {
+            userRepository.logout()
+            userRepository.clearData()
+            userRepository.register(User.test)
+        }
+
         userRepository.currentUser.producer.startWithValues { user in
 
             var vc: UIViewController!
