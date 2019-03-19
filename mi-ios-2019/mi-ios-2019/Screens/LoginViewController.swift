@@ -112,7 +112,8 @@ final class LoginViewController: BaseViewController {
 
     @objc
     private func registrationButtonTapped(_ sender: UIButton) {
-        let controller = RegistrationViewController()
+        let viewModel = RegistrationViewModel()
+        let controller = RegistrationViewController(viewModel: viewModel)
         let navigationController = UINavigationController(rootViewController: controller)
         present(navigationController, animated: true)
     }

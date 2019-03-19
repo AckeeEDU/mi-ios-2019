@@ -15,6 +15,20 @@ final class RegistrationViewController: BaseViewController {
     private weak var phoneTextField: UITextField!
     private weak var emailTextField: UITextField!
 
+    private let viewModel: RegistrationViewModel
+
+    // MARK: - Initialization
+
+    init(viewModel: RegistrationViewModel) {
+        self.viewModel = viewModel
+
+        super.init()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     // MARK: - Controller lifecycle
 
     override func loadView() {
@@ -53,6 +67,8 @@ final class RegistrationViewController: BaseViewController {
 
         navigationItem.title = "Registration"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(nextBarButtonTapped(_:)))
+
+        setupBindings()
     }
 
     // MARK: - Actions
@@ -61,8 +77,26 @@ final class RegistrationViewController: BaseViewController {
     private func nextBarButtonTapped(_ sender: UIBarButtonItem) {
         view.endEditing(true)
 
-        let controller = PasswordEditViewController()
-        navigationController?.pushViewController(controller, animated: true)
+        viewModel.validate.apply().start()
+    }
+
+    // MARK: - Bindings
+
+    private func setupBindings() {
+        nameTextField <~> viewModel.name
+        phoneTextField <~> viewModel.phone
+        emailTextField <~> viewModel.email
+
+        viewModel.validate.errors
+            .observeValues { print($0.message) }
+
+        viewModel.validate.completed
+            .observe(on: UIScheduler())
+            .observeValues { [weak self] in
+                let viewModel = PasswordEditViewModel()
+                let controller = PasswordEditViewController(viewModel: viewModel)
+                self?.navigationController?.pushViewController(controller, animated: true)
+            }
     }
 
 }

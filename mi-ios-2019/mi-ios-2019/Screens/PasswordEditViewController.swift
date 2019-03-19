@@ -14,6 +14,20 @@ final class PasswordEditViewController: BaseViewController {
     private weak var passwordTextField: UITextField!
     private weak var passwordCheckTextField: UITextField!
 
+    private let viewModel: PasswordEditViewModel
+
+    // MARK: - Initialization
+
+    init(viewModel: PasswordEditViewModel) {
+        self.viewModel = viewModel
+
+        super.init()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     // MARK: - Controller lifecycle
 
     override func loadView() {
@@ -43,6 +57,8 @@ final class PasswordEditViewController: BaseViewController {
 
         navigationItem.title = "Password"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneBarButtonTapped(_:)))
+
+        setupBindings()
     }
 
     // MARK: - Actions
@@ -51,7 +67,23 @@ final class PasswordEditViewController: BaseViewController {
     private func doneBarButtonTapped(_ sender: UIBarButtonItem) {
         view.endEditing(true)
 
-        dismiss(animated: true)
+        viewModel.register.apply().start()
+    }
+
+    // MARK: - Bindings
+
+    private func setupBindings() {
+        passwordTextField <~> viewModel.password
+        passwordCheckTextField <~> viewModel.passwordCheck
+
+        viewModel.register.errors
+            .observeValues { print($0.message) }
+
+        viewModel.register.completed
+            .observe(on: UIScheduler())
+            .observeValues { [weak self] in
+                self?.dismiss(animated: true)
+            }
     }
 
     // MARK: - Helpers
