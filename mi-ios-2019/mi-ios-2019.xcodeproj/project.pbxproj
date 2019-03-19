@@ -42,6 +42,8 @@
 		A30023C12240F0C5007777C9 /* PasswordEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023BF2240F0C5007777C9 /* PasswordEditViewModel.swift */; };
 		A30023C32240F0F2007777C9 /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023C22240F0F1007777C9 /* Validations.swift */; };
 		A30023C52240F984007777C9 /* UIViewController+ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023C42240F984007777C9 /* UIViewController+ValidationError.swift */; };
+		A30023C72241149B007777C9 /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023C62241149B007777C9 /* AppDependency.swift */; };
+		A30023C92241198C007777C9 /* AppDependency+Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023C82241198C007777C9 /* AppDependency+Factories.swift */; };
 		B4266CA12237DC8800A7722B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA02237DC8800A7722B /* LoginViewController.swift */; };
 		B4266CA42237F83800A7722B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA32237F83800A7722B /* LoginViewModel.swift */; };
 		B4266CA62237FC0400A7722B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA52237FC0400A7722B /* User.swift */; };
@@ -81,6 +83,8 @@
 		A30023BF2240F0C5007777C9 /* PasswordEditViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordEditViewModel.swift; sourceTree = "<group>"; };
 		A30023C22240F0F1007777C9 /* Validations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 		A30023C42240F984007777C9 /* UIViewController+ValidationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ValidationError.swift"; sourceTree = "<group>"; };
+		A30023C62241149B007777C9 /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDependency.swift; path = Service/AppDependency.swift; sourceTree = "<group>"; };
+		A30023C82241198C007777C9 /* AppDependency+Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDependency+Factories.swift"; sourceTree = "<group>"; };
 		AAA5668B71824F04B9618A0D /* Pods-mi-ios-2019.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019.adhoc.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.adhoc.xcconfig"; sourceTree = "<group>"; };
 		B4266CA02237DC8800A7722B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B4266CA32237F83800A7722B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 				69E563882225B77000132447 /* Extensions */,
 				69E563852225B5E900132447 /* Model */,
 				887BDFAC221C672C008C37A4 /* AppDelegate.swift */,
+				A30023C62241149B007777C9 /* AppDependency.swift */,
 				887BDFAE221C672C008C37A4 /* ViewController.swift */,
 				69E563832225ACBE00132447 /* PickerViewController.swift */,
 				69E563932225D8D900132447 /* PickerHandler.swift */,
@@ -211,6 +216,7 @@
 		B4266CA22237DD0900A7722B /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				A30023C82241198C007777C9 /* AppDependency+Factories.swift */,
 				B4266CA922380DC100A7722B /* UserRepository.swift */,
 				A30023C22240F0F1007777C9 /* Validations.swift */,
 			);
@@ -412,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A30023C92241198C007777C9 /* AppDependency+Factories.swift in Sources */,
 				887BDFAF221C672C008C37A4 /* ViewController.swift in Sources */,
 				A30023C52240F984007777C9 /* UIViewController+ValidationError.swift in Sources */,
 				A30023C02240F0C5007777C9 /* RegistrationViewModel.swift in Sources */,
@@ -432,6 +439,7 @@
 				B4266CAE223817C200A7722B /* LogoutViewModel.swift in Sources */,
 				B4266CA82238027C00A7722B /* Reactive+TextField.swift in Sources */,
 				69E563842225ACBE00132447 /* PickerViewController.swift in Sources */,
+				A30023C72241149B007777C9 /* AppDependency.swift in Sources */,
 				69E5638A2225B78000132447 /* UIAlertActionExtensions.swift in Sources */,
 				A30023C12240F0C5007777C9 /* PasswordEditViewModel.swift in Sources */,
 				A30023BD2240ECC4007777C9 /* RegistrationViewController.swift in Sources */,

@@ -6,13 +6,22 @@
 //  Copyright © 2019 ČVUT. All rights reserved.
 //
 
-import Foundation
 import ReactiveSwift
 
-final class UserRepository {
-    private init() { }
-    static let shared = UserRepository()
+protocol HasUserRepository {
+    var userRepository: UserRepositoring { get }
+}
 
+protocol UserRepositoring {
+    var currentUser: MutableProperty<User?> { get }
+
+    func login(username: String, password: String) -> SignalProducer<User, LoginError>
+    func logout()
+    func clearData()
+    func register(_ user: User)
+}
+
+final class UserRepository: UserRepositoring {
     lazy var currentUser = MutableProperty<User?>(self.retrieveUser())
 
     func login(username: String, password: String) -> SignalProducer<User, LoginError> {

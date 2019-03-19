@@ -14,11 +14,11 @@ final class PasswordEditViewController: BaseViewController, ValidationErrorPrese
     private weak var passwordTextField: UITextField!
     private weak var passwordCheckTextField: UITextField!
 
-    private let viewModel: PasswordEditViewModel
+    private let viewModel: PasswordEditViewModeling
 
     // MARK: - Initialization
 
-    init(viewModel: PasswordEditViewModel) {
+    init(viewModel: PasswordEditViewModeling) {
         self.viewModel = viewModel
 
         super.init()

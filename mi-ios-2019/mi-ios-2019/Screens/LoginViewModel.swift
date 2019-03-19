@@ -22,14 +22,24 @@ enum LoginValidation {
     case password
 }
 
-final class LoginViewModel: BaseViewModel {
+protocol LoginViewModeling {
+    var userName: MutableProperty<String> { get }
+    var password: MutableProperty<String> { get }
+
+    var loginAction: Action<Void, User, LoginError> { get }
+
+    func clearData()
+}
+
+final class LoginViewModel: BaseViewModel, LoginViewModeling {
+    typealias Dependencies = HasUserRepository
 
     let userName = MutableProperty<String>("")
     let password = MutableProperty<String>("")
 
     lazy var loginAction = Action<Void, User, LoginError> { [unowned self] in
         if self.validationSignal.value {
-            return self.userRepository.login(username: self.userName.value, password: self.password.value)
+            return self.dependencies.userRepository.login(username: self.userName.value, password: self.password.value)
         } else {
             return SignalProducer<User, LoginError>(error: .validation(self.validationErrors.value))
         }
@@ -40,12 +50,12 @@ final class LoginViewModel: BaseViewModel {
 
     lazy var canSubmitForm: Property<Bool> = Property<Bool>(initial: false, then: validationSignal.producer.and(self.loginAction.isExecuting.negate()))
 
-    private var userRepository: UserRepository
+    private let dependencies: Dependencies
 
     // MARK: - Initialization
 
-    init(userRepository: UserRepository) {
-        self.userRepository = userRepository
+    init(dependencies: Dependencies) {
+        self.dependencies = dependencies
 
         validationErrors = userName.combineLatest(with: password).map { userName, password in
             var validations: [LoginValidation]  = []
@@ -62,7 +72,7 @@ final class LoginViewModel: BaseViewModel {
     }
 
     func clearData() {
-        userRepository.clearData()
+        dependencies.userRepository.clearData()
     }
 
 }

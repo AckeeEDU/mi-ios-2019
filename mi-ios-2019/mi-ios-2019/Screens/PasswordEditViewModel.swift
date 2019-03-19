@@ -8,7 +8,22 @@
 
 import ReactiveSwift
 
-final class PasswordEditViewModel {
+typealias PasswordEditViewModelingFactory = (UserRegistrationData) -> PasswordEditViewModeling
+
+protocol HasPasswordEditViewModelingFactory {
+    var passwordEditViewModelingFactory: PasswordEditViewModelingFactory { get }
+}
+
+protocol PasswordEditViewModeling {
+    var password: MutableProperty<String> { get }
+    var passwordCheck: MutableProperty<String> { get }
+
+    var register: Action<Void, Void, ValidationError> { get }
+}
+
+final class PasswordEditViewModel: PasswordEditViewModeling {
+    typealias Dependencies = HasUserRepository
+
     let password: MutableProperty<String>
     let passwordCheck: MutableProperty<String>
 
@@ -16,7 +31,7 @@ final class PasswordEditViewModel {
 
     // MARK: - Initialization
 
-    init(userData: UserRegistrationData) {
+    init(dependencies: Dependencies, userData: UserRegistrationData) {
         password = MutableProperty("")
         passwordCheck = MutableProperty("")
 
@@ -33,7 +48,7 @@ final class PasswordEditViewModel {
                 }
 
                 let user = User(username: userData.email, name: userData.name, password: password, phone: userData.phone)
-                UserRepository.shared.register(user)
+                dependencies.userRepository.register(user)
 
                 observer.send(value: ())
                 observer.sendCompleted()

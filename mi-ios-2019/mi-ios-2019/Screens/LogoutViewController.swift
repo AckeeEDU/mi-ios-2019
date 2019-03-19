@@ -17,11 +17,11 @@ final class LogoutViewController: BaseViewController {
     private weak var passwordLabel: UILabel!
     private weak var logoutButton: UIButton!
 
-    private let viewModel: LogoutViewModel
+    private let viewModel: LogoutViewModeling
 
     // MARK: - Initialization
 
-    init(viewModel: LogoutViewModel) {
+    init(viewModel: LogoutViewModeling) {
         self.viewModel = viewModel
         super.init()
     }

@@ -19,16 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
 
-        let userRepository = UserRepository.shared
+        let userRepository = AppDependency.shared.userRepository
 
         userRepository.currentUser.producer.startWithValues { user in
 
             var vc: UIViewController!
             if let _ = user {
-                let logoutVM = LogoutViewModel(userRepository: userRepository)
+                let logoutVM = LogoutViewModel(dependencies: AppDependency.shared)
                 vc = LogoutViewController(viewModel: logoutVM)
             } else {
-                let loginVM = LoginViewModel(userRepository: userRepository)
+                let loginVM = LoginViewModel(dependencies: AppDependency.shared)
                 vc = LoginViewController(viewModel: loginVM)
             }
             self.window?.rootViewController = vc

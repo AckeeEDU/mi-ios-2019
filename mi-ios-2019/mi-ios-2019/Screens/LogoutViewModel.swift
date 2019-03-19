@@ -9,19 +9,27 @@
 import ReactiveSwift
 import ACKReactiveExtensions
 
-class UserInfoViewModel: BaseViewModel {
+protocol UserInfoViewModeling {
+    var name: MutableProperty<String?> { get }
+    var username: MutableProperty<String?> { get }
+    var phone: MutableProperty<String?> { get }
+    var password: MutableProperty<String?> { get }
+}
+
+class UserInfoViewModel: BaseViewModel, UserInfoViewModeling {
+    typealias Dependencies = HasUserRepository
 
     let name = MutableProperty<String?>(nil)
     let username = MutableProperty<String?>(nil)
     let phone = MutableProperty<String?>(nil)
     let password = MutableProperty<String?>(nil)
 
-    fileprivate let userRepository: UserRepository
+    fileprivate let dependencies: Dependencies
 
     // MARK: - Initialization
 
-    init(userRepository: UserRepository) {
-        self.userRepository = userRepository
+    init(dependencies: Dependencies) {
+        self.dependencies = dependencies
 
         super.init()
 
@@ -31,7 +39,7 @@ class UserInfoViewModel: BaseViewModel {
     // MARK: - Bindings
 
     private func setupBindings() {
-        let user = userRepository.currentUser
+        let user = dependencies.userRepository.currentUser
 
         name <~ user.map { $0?.name }
         username <~ user.map { $0?.username }
@@ -41,10 +49,14 @@ class UserInfoViewModel: BaseViewModel {
 
 }
 
-final class LogoutViewModel: UserInfoViewModel {
+protocol LogoutViewModeling: UserInfoViewModeling {
+    func logout()
+}
+
+final class LogoutViewModel: UserInfoViewModel, LogoutViewModeling {
 
     func logout() {
-        userRepository.logout()
+        dependencies.userRepository.logout()
     }
 
 }

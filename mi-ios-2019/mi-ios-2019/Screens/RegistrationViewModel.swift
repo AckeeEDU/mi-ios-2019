@@ -15,20 +15,26 @@ struct UserRegistrationData {
 }
 
 final class RegistrationViewModel {
+    typealias Dependencies = HasPasswordEditViewModelingFactory
+
     let name: MutableProperty<String>
     let phone: MutableProperty<String>
     let email: MutableProperty<String>
 
-    var passwordViewModel: PasswordEditViewModel {
+    var passwordViewModel: PasswordEditViewModeling {
         let userData = UserRegistrationData(name: name.value, phone: phone.value, email: email.value)
-        return PasswordEditViewModel(userData: userData)
+        return dependencies.passwordEditViewModelingFactory(userData)
     }
 
     let validate: Action<Void, Void, ValidationError>
 
+    private let dependencies: Dependencies
+
     // MARK: - Initialization
 
-    init() {
+    init(dependencies: Dependencies) {
+        self.dependencies = dependencies
+
         name = MutableProperty("")
         phone = MutableProperty("")
         email = MutableProperty("")

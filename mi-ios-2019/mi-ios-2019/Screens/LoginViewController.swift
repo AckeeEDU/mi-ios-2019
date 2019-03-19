@@ -18,11 +18,11 @@ final class LoginViewController: BaseViewController {
     private weak var registrationButton: UIButton!
     private weak var clearDataButton: UIButton!
 
-    private let viewModel: LoginViewModel
+    private let viewModel: LoginViewModeling
 
     // MARK: - Initialization
 
-    init(viewModel: LoginViewModel) {
+    init(viewModel: LoginViewModeling) {
         self.viewModel = viewModel
 
         super.init()
@@ -124,7 +124,7 @@ final class LoginViewController: BaseViewController {
 
     @objc
     private func registrationButtonTapped(_ sender: UIButton) {
-        let viewModel = RegistrationViewModel()
+        let viewModel = RegistrationViewModel(dependencies: AppDependency.shared)
         let controller = RegistrationViewController(viewModel: viewModel)
         let navigationController = UINavigationController(rootViewController: controller)
         present(navigationController, animated: true)
