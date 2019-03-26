@@ -793,6 +793,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -849,6 +850,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -870,7 +872,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios.dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -892,7 +893,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -950,6 +950,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = AdHoc;
@@ -971,7 +972,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios.beta";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = AdHoc;
@@ -1015,7 +1015,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.ackee.enterprise.mi-ios-2019-Unit-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mi-ios-2019.app/mi-ios-2019";
 			};
@@ -1036,7 +1035,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.ackee.enterprise.mi-ios-2019-Unit-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mi-ios-2019.app/mi-ios-2019";
 			};
@@ -1057,7 +1055,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.ackee.enterprise.mi-ios-2019-Unit-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mi-ios-2019.app/mi-ios-2019";
 			};
@@ -1077,7 +1074,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.ackee.enterprise.mi-ios-2019-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "mi-ios-2019";
 			};
@@ -1097,7 +1093,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.ackee.enterprise.mi-ios-2019-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "mi-ios-2019";
 			};
@@ -1117,7 +1112,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cz.ackee.enterprise.mi-ios-2019-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "mi-ios-2019";
 			};

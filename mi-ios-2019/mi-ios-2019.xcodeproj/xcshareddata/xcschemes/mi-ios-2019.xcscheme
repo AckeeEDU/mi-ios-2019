@@ -38,16 +38,6 @@
                ReferencedContainer = "container:mi-ios-2019.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A3801168224170A600CDD0DA"
-               BuildableName = "mi-ios-2019-UITests.xctest"
-               BlueprintName = "mi-ios-2019-UITests"
-               ReferencedContainer = "container:mi-ios-2019.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
