@@ -10,16 +10,15 @@ target 'mi-ios-2019' do
   # Pods for mi-ios-2019
   pod 'ACKLocalization', '~> 0.1'
   pod 'SwiftGen', '~> 6.0'
-  pod 'ReactiveSwift'
-  pod 'ACKReactiveExtensions'
+  pod 'ReactiveSwift', '~> 4.0'
+  pod 'ACKReactiveExtensions', '~> 4.0'
   pod 'SnapKit', '~> 4.2'
-
 end
 
 target 'mi-ios-2019-Unit-Tests' do
-  pod 'ReactiveSwift'
+  pod 'ReactiveSwift', '~> 4.0'
 end
 
 target 'mi-ios-2019-UITests' do
-  pod 'ReactiveSwift'
+  pod 'ReactiveSwift', '~> 4.0'
 end
