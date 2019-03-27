@@ -38,4 +38,32 @@ branch: `02-advanced_swift`
 - conditional protocol conformace
 - protocol and class composition
 
-## 06. CI
+## 03. Reactive programming
+
+_TODO_
+
+## 04. MVVM
+
+_TODO_
+
+## 05. Dependency injection & tests
+
+_TODO_
+
+## 06. CI 
+
+[![Build Status](https://travis-ci.com/AckeeEDU/mi-ios-2019.svg?branch=master)](https://travis-ci.com/AckeeEDU/mi-ios-2019)
+
+- k čemu je CI dobré
+- možnosti CI serverů
+- Xcode CLI
+  - xcodebuild
+  - xcpretty
+- Travis CI 
+  - GitHub integrace
+  - .travis.yml
+- Gemfile
+- fastlane
+  - verze Xcodu
+  - actions _cocoapods_, _scan_, _gym_
+  - Fastfile
