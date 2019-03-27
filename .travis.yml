@@ -4,8 +4,7 @@ cache: cocoapods
 install:
 - gem update bundler
 - bundle install --gemfile mi-ios-2019/Gemfile
-- cd mi-ios-2019
-- bundle exec pod install || bundle exec pod install --repo-update
-- cd -
 script:
-- set -o pipefail && xcodebuild test -scheme mi-ios-2019 -workspace mi-ios-2019/mi-ios-2019.xcworkspace -destination 'platform=iOS Simulator,name=iPhone XS Max,OS=12.1' | xcpretty
+- cd mi-ios-2019
+- bundle exec fastlane beta
+- cd -
