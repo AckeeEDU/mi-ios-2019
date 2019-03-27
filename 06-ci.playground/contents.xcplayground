@@ -9,5 +9,9 @@
         <page name='Travis CI'/>
         <page name='Travis build'/>
         <page name='travis.yml'/>
+        <page name='Xcode CLI lépe'/>
+        <page name='Fastlane'/>
+        <page name='Fastlane v. vanilla'/>
+        <page name='Fastfile'/>
     </pages>
 </playground>
