@@ -1,0 +1,10 @@
+osx_image: xcode10.1
+language: objective-c
+cache: cocoapods
+install:
+- gem update bundler
+- bundle install --gemfile mi-ios-2019/Gemfile
+script:
+- cd mi-ios-2019
+- bundle exec fastlane beta
+- cd -

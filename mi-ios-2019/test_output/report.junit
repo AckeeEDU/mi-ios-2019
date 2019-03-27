@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='mi-ios-2019-Unit-Tests.xctest' tests='10' failures='0'>
+  <testsuite name='mi_ios_2019_Unit_Tests.EmailValidatorTests' tests='2' failures='0'>
+    <testcase classname='mi_ios_2019_Unit_Tests.EmailValidatorTests' name='testEmailIsNotValid' time='0.001'/>
+    <testcase classname='mi_ios_2019_Unit_Tests.EmailValidatorTests' name='testEmailIsValid' time='0.001'/>
+  </testsuite>
+  <testsuite name='mi_ios_2019_Unit_Tests.PhoneValidatorTests' tests='2' failures='0'>
+    <testcase classname='mi_ios_2019_Unit_Tests.PhoneValidatorTests' name='testPhoneIsNotValid' time='0.000'/>
+    <testcase classname='mi_ios_2019_Unit_Tests.PhoneValidatorTests' name='testPhoneIsValid' time='0.000'/>
+  </testsuite>
+  <testsuite name='mi_ios_2019_Unit_Tests.RegistrationViewModelTests' tests='6' failures='0'>
+    <testcase classname='mi_ios_2019_Unit_Tests.RegistrationViewModelTests' name='testEmptyEmailReturnsError' time='0.002'/>
+    <testcase classname='mi_ios_2019_Unit_Tests.RegistrationViewModelTests' name='testEmptyNameReturnsError' time='0.001'/>
+    <testcase classname='mi_ios_2019_Unit_Tests.RegistrationViewModelTests' name='testEmptyPhoneReturnsError' time='0.001'/>
+    <testcase classname='mi_ios_2019_Unit_Tests.RegistrationViewModelTests' name='testInvalidEmailReturnsError' time='0.001'/>
+    <testcase classname='mi_ios_2019_Unit_Tests.RegistrationViewModelTests' name='testInvalidPhoneReturnsError' time='0.001'/>
+    <testcase classname='mi_ios_2019_Unit_Tests.RegistrationViewModelTests' name='testValidViewModelDataReturnsNoError' time='0.001'/>
+  </testsuite>
+</testsuites>

@@ -13,9 +13,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Playground.play()
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+
+        let userRepository = AppDependency.shared.userRepository
+
+        if CommandLine.arguments.contains("--uitesting") {
+            userRepository.logout()
+            userRepository.clearData()
+            userRepository.register(User.test)
+        }
+
+        userRepository.currentUser.producer.startWithValues { user in
+
+            var vc: UIViewController!
+            if let _ = user {
+                let logoutVM = LogoutViewModel(dependencies: AppDependency.shared)
+                vc = LogoutViewController(viewModel: logoutVM)
+            } else {
+                let loginVM = LoginViewModel(dependencies: AppDependency.shared)
+                vc = LoginViewController(viewModel: loginVM)
+            }
+            self.window?.rootViewController = vc
+
+        }
         // Override point for customization after application launch.
         return true
     }
@@ -42,6 +66,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
-
