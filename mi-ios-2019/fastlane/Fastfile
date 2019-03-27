@@ -1,6 +1,6 @@
 desc "Run tests, build app and upload to HockeyApp"
 lane :beta do |options|
-    cocoapods
+    cocoapods(repo_update: true)
     scan(scheme: "mi-ios-2019")
     # gym
     # hockey(public_identifier: <hockey_identifier>, api_token: <api_token>)
