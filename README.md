@@ -54,6 +54,8 @@ _TODO_
 
 [![Build Status](https://travis-ci.com/AckeeEDU/mi-ios-2019.svg?branch=master)](https://travis-ci.com/AckeeEDU/mi-ios-2019)
 
+branch: `06-ci`
+
 - k čemu je CI dobré
 - možnosti CI serverů
 - Xcode CLI
