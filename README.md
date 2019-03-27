@@ -37,3 +37,5 @@ branch: `02-advanced_swift`
 - generiky
 - conditional protocol conformace
 - protocol and class composition
+
+## 06. CI
