@@ -45,7 +45,7 @@ final class LoginViewController: BaseViewController {
         usernameField.accessibilityIdentifier = "loginField"
         view.addSubview(usernameField)
         usernameField.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(100)
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(100)
             make.height.equalTo(35)
             make.leading.trailing.equalToSuperview().inset(48)
         }

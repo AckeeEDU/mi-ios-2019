@@ -16,7 +16,8 @@ final class LogoutViewController: BaseViewController {
     private weak var phoneLabel: UILabel!
     private weak var passwordLabel: UILabel!
     private weak var logoutButton: UIButton!
-
+    private weak var changePasswordButton: UIButton!
+    
     private let viewModel: LogoutViewModeling
 
     // MARK: - Initialization
@@ -50,18 +51,22 @@ final class LogoutViewController: BaseViewController {
         let passwordLabel = UILabel()
         self.passwordLabel = passwordLabel
 
+        let changePasswordButton = UIButton(type: .custom)
+        changePasswordButton.setTitle("Change password", for: .normal)
+        self.changePasswordButton = changePasswordButton
+        
         let logoutButton = UIButton(type: .custom)
         logoutButton.setTitle("Logout", for: .normal)
         logoutButton.setTitleColor(.red, for: .disabled)
         self.logoutButton = logoutButton
 
         // ----- Stack View -----
-        let stackView = UIStackView(arrangedSubviews: [nameLabel, usernameLabel, phoneLabel, passwordLabel, logoutButton])
+        let stackView = UIStackView(arrangedSubviews: [nameLabel, usernameLabel, phoneLabel, passwordLabel, changePasswordButton, logoutButton])
         stackView.axis = .vertical
         stackView.spacing = 30
         view.addSubview(stackView)
         stackView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(80)
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(80)
             make.leading.trailing.equalToSuperview().inset(48)
         }
     }
@@ -69,6 +74,7 @@ final class LogoutViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        changePasswordButton.addTarget(self, action: #selector(changePasswordButtonTapped(_:)), for: .touchUpInside)
         logoutButton.addTarget(self, action: #selector(logoutButtonTapped(_:)), for: .touchUpInside)
 
         setupBindings()
@@ -76,6 +82,10 @@ final class LogoutViewController: BaseViewController {
 
     // MARK: - Actions
 
+    @objc private func changePasswordButtonTapped(_ sender: UIButton) {
+        
+    }
+    
     @objc
     private func logoutButtonTapped(_ sender: UIButton) {
         viewModel.logout()

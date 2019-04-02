@@ -32,10 +32,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             var vc: UIViewController!
             if let _ = user {
                 let logoutVM = LogoutViewModel(dependencies: AppDependency.shared)
-                vc = LogoutViewController(viewModel: logoutVM)
+                let logoutVC = LogoutViewController(viewModel: logoutVM)
+                vc = UINavigationController(rootViewController: logoutVC)
             } else {
                 let loginVM = LoginViewModel(dependencies: AppDependency.shared)
-                vc = LoginViewController(viewModel: loginVM)
+                let loginVC = LoginViewController(viewModel: loginVM)
+                vc = UINavigationController(rootViewController: loginVC)
             }
             self.window?.rootViewController = vc
 
