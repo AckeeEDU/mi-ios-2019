@@ -10,6 +10,8 @@ import UIKit
 
 class AppFlowCoordinator: BaseFlowCoordinator {
     
+    public var childCoordinators = [BaseFlowCoordinator]()
+    
     weak var navigationController: UINavigationController!
     
     func start(in window: UIWindow) {
@@ -48,10 +50,8 @@ extension AppFlowCoordinator: LogoutFlowDelegate {
 
 extension AppFlowCoordinator: LoginFlowDelegate {
     func registerTapped(in viewController: LoginViewController) {
-        let viewModel = RegistrationViewModel(dependencies: AppDependency.shared)
-        let controller = RegistrationViewController(viewModel: viewModel)
-        let navigationController = UINavigationController(rootViewController: controller)
-        
-        viewController.present(navigationController, animated: true)
+        let fc = RegisterFlowCoordinator()
+        childCoordinators.append(fc)
+        fc.start(from: viewController)
     }
 }
