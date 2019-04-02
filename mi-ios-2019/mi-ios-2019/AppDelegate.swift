@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var appFlowCoordinator: AppFlowCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Playground.play()
@@ -27,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             userRepository.register(User.test)
         }
 
-        let appFlowCoordinator = AppFlowCoordinator()
+        appFlowCoordinator = AppFlowCoordinator()
         appFlowCoordinator.start(in: window!)
         
         return true

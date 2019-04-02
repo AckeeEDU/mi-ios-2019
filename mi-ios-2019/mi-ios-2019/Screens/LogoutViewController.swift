@@ -9,8 +9,12 @@
 import UIKit
 import ReactiveSwift
 
-final class LogoutViewController: BaseViewController {
+protocol LogoutFlowDelegate: class {
+    func changePasswordTapped(in viewController: LogoutViewController)
+}
 
+final class LogoutViewController: BaseViewController {
+    
     private weak var nameLabel: UILabel!
     private weak var usernameLabel: UILabel!
     private weak var phoneLabel: UILabel!
@@ -18,6 +22,7 @@ final class LogoutViewController: BaseViewController {
     private weak var logoutButton: UIButton!
     private weak var changePasswordButton: UIButton!
     
+    weak var flowDelegate: LogoutFlowDelegate?
     private let viewModel: LogoutViewModeling
 
     // MARK: - Initialization
@@ -83,9 +88,7 @@ final class LogoutViewController: BaseViewController {
     // MARK: - Actions
 
     @objc private func changePasswordButtonTapped(_ sender: UIButton) {
-        let vm = PasswordEditViewModel(dependencies: AppDependency.shared)
-        let vc = PasswordEditViewController(viewModel: vm)
-        navigationController?.pushViewController(vc, animated: true)
+        flowDelegate?.changePasswordTapped(in: self)
     }
     
     @objc

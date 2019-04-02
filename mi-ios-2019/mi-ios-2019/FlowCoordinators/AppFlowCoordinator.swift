@@ -10,25 +10,37 @@ import UIKit
 
 class AppFlowCoordinator: BaseFlowCoordinator {
     
+    weak var navigationController: UINavigationController!
+    
     func start(in window: UIWindow) {
-        let userRepository = AppDependency.shared.userRepository
         
-        userRepository.currentUser.producer
+        let navigationController = UINavigationController()
+        window.rootViewController = navigationController
+        self.navigationController = navigationController
+        
+        AppDependency.shared.userRepository.currentUser.producer
             .skipRepeats { $0?.username == $1?.username }
-            .startWithValues { user in
+            .startWithValues { [weak navigationController] user in
                 
-                var vc: UIViewController!
                 if let _ = user {
                     let logoutVM = LogoutViewModel(dependencies: AppDependency.shared)
-                    let logoutVC = LogoutViewController(viewModel: logoutVM)
-                    vc = UINavigationController(rootViewController: logoutVC)
+                    let vc = LogoutViewController(viewModel: logoutVM)
+                    vc.flowDelegate = self
+                    navigationController?.setViewControllers([vc], animated: true)
                 } else {
                     let loginVM = LoginViewModel(dependencies: AppDependency.shared)
-                    let loginVC = LoginViewController(viewModel: loginVM)
-                    vc = UINavigationController(rootViewController: loginVC)
+                    let vc = LoginViewController(viewModel: loginVM)
+                    navigationController?.setViewControllers([vc], animated: true)
                 }
-                window.rootViewController = vc
             }
     }
     
+}
+
+extension AppFlowCoordinator: LogoutFlowDelegate {
+    func changePasswordTapped(in viewController: LogoutViewController) {
+        let vm = PasswordEditViewModel(dependencies: AppDependency.shared)
+        let vc = PasswordEditViewController(viewModel: vm)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
