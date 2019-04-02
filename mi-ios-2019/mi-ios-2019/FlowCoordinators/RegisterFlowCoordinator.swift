@@ -17,10 +17,20 @@ class RegisterFlowCoordinator: BaseFlowCoordinator {
         
         let vm = RegistrationViewModel(dependencies: AppDependency.shared)
         let vc = RegistrationViewController(viewModel: vm)
+        vc.flowDelegate = self
         
         let navigationController = UINavigationController(rootViewController: vc)
         viewController.present(navigationController, animated: true)
         self.navigationController = navigationController
     }
     
+}
+
+extension RegisterFlowCoordinator: RegistrationFlowDelegate {
+    func registrationSuccessful(with userData: UserRegistrationData, in viewController: RegistrationViewController) {
+        let vm = RegisterPasswordEditViewModel(dependencies: AppDependency.shared, userData: userData)
+        let vc = PasswordEditViewController(viewModel: vm)
+        
+        navigationController.pushViewController(vc, animated: true)
+    }
 }

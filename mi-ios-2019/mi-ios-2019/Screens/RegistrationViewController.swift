@@ -9,12 +9,17 @@
 import UIKit
 import ReactiveSwift
 
+protocol RegistrationFlowDelegate: class {
+    func registrationSuccessful(with userData: UserRegistrationData, in viewController: RegistrationViewController)
+}
+
 final class RegistrationViewController: BaseViewController, ValidationErrorPresentable {
 
     private weak var nameTextField: UITextField!
     private weak var phoneTextField: UITextField!
     private weak var emailTextField: UITextField!
 
+    weak var flowDelegate: RegistrationFlowDelegate?
     private let viewModel: RegistrationViewModeling
 
     // MARK: - Initialization
@@ -97,8 +102,13 @@ final class RegistrationViewController: BaseViewController, ValidationErrorPrese
             .observe(on: UIScheduler())
             .observeValues { [weak self] in
                 guard let self = self else { return }
-                let controller = PasswordEditViewController(viewModel: self.viewModel.passwordViewModel)
-                self.navigationController?.pushViewController(controller, animated: true)
+                
+                let data = UserRegistrationData(
+                    name: self.viewModel.name.value,
+                    phone: self.viewModel.phone.value,
+                    email: self.viewModel.email.value
+                )
+                self.flowDelegate?.registrationSuccessful(with: data, in: self)
             }
     }
 
