@@ -30,6 +30,7 @@ class AppFlowCoordinator: BaseFlowCoordinator {
                 } else {
                     let loginVM = LoginViewModel(dependencies: AppDependency.shared)
                     let vc = LoginViewController(viewModel: loginVM)
+                    vc.flowDelegate = self
                     navigationController?.setViewControllers([vc], animated: true)
                 }
             }
@@ -42,5 +43,15 @@ extension AppFlowCoordinator: LogoutFlowDelegate {
         let vm = PasswordEditViewModel(dependencies: AppDependency.shared)
         let vc = PasswordEditViewController(viewModel: vm)
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension AppFlowCoordinator: LoginFlowDelegate {
+    func registerTapped(in viewController: LoginViewController) {
+        let viewModel = RegistrationViewModel(dependencies: AppDependency.shared)
+        let controller = RegistrationViewController(viewModel: viewModel)
+        let navigationController = UINavigationController(rootViewController: controller)
+        
+        viewController.present(navigationController, animated: true)
     }
 }

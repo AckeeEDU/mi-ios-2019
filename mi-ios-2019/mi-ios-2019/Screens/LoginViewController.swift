@@ -10,6 +10,10 @@ import UIKit
 import SnapKit
 import ReactiveSwift
 
+protocol LoginFlowDelegate: class {
+    func registerTapped(in viewController: LoginViewController)
+}
+
 final class LoginViewController: BaseViewController {
 
     private weak var usernameField: UITextField!
@@ -18,6 +22,7 @@ final class LoginViewController: BaseViewController {
     private weak var registrationButton: UIButton!
     private weak var clearDataButton: UIButton!
 
+    weak var flowDelegate: LoginFlowDelegate?
     private let viewModel: LoginViewModeling
 
     // MARK: - Initialization
@@ -128,10 +133,7 @@ final class LoginViewController: BaseViewController {
 
     @objc
     private func registrationButtonTapped(_ sender: UIButton) {
-        let viewModel = RegistrationViewModel(dependencies: AppDependency.shared)
-        let controller = RegistrationViewController(viewModel: viewModel)
-        let navigationController = UINavigationController(rootViewController: controller)
-        present(navigationController, animated: true)
+        flowDelegate?.registerTapped(in: self)
     }
 
     @objc
