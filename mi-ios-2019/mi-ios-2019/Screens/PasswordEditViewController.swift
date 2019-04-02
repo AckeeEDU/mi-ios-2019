@@ -67,7 +67,7 @@ final class PasswordEditViewController: BaseViewController, ValidationErrorPrese
     private func doneBarButtonTapped(_ sender: UIBarButtonItem) {
         view.endEditing(true)
 
-        viewModel.register.apply().start()
+        viewModel.doneAction.apply().start()
     }
 
     // MARK: - Bindings
@@ -76,13 +76,13 @@ final class PasswordEditViewController: BaseViewController, ValidationErrorPrese
         passwordTextField <~> viewModel.password
         passwordCheckTextField <~> viewModel.passwordCheck
 
-        viewModel.register.errors
+        viewModel.doneAction.errors
             .observe(on: UIScheduler())
             .observeValues { [weak self] error in
                 self?.displayValidationError(error)
             }
 
-        viewModel.register.completed
+        viewModel.doneAction.completed
             .observe(on: UIScheduler())
             .observeValues { [weak self] in
                 self?.dismiss(animated: true)

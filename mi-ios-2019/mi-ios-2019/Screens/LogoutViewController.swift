@@ -83,7 +83,9 @@ final class LogoutViewController: BaseViewController {
     // MARK: - Actions
 
     @objc private func changePasswordButtonTapped(_ sender: UIButton) {
-        
+        let vm = PasswordEditViewModel(dependencies: AppDependency.shared)
+        let vc = PasswordEditViewController(viewModel: vm)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc

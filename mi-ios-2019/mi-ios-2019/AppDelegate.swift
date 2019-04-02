@@ -27,22 +27,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             userRepository.register(User.test)
         }
 
-        userRepository.currentUser.producer.startWithValues { user in
-
-            var vc: UIViewController!
-            if let _ = user {
-                let logoutVM = LogoutViewModel(dependencies: AppDependency.shared)
-                let logoutVC = LogoutViewController(viewModel: logoutVM)
-                vc = UINavigationController(rootViewController: logoutVC)
-            } else {
-                let loginVM = LoginViewModel(dependencies: AppDependency.shared)
-                let loginVC = LoginViewController(viewModel: loginVM)
-                vc = UINavigationController(rootViewController: loginVC)
-            }
-            self.window?.rootViewController = vc
-
+        userRepository.currentUser.producer
+            .skipRepeats { $0?.username == $1?.username }
+            .startWithValues { user in
+                
+                var vc: UIViewController!
+                if let _ = user {
+                    let logoutVM = LogoutViewModel(dependencies: AppDependency.shared)
+                    let logoutVC = LogoutViewController(viewModel: logoutVM)
+                    vc = UINavigationController(rootViewController: logoutVC)
+                } else {
+                    let loginVM = LoginViewModel(dependencies: AppDependency.shared)
+                    let loginVC = LoginViewController(viewModel: loginVM)
+                    vc = UINavigationController(rootViewController: loginVC)
+                }
+                self.window?.rootViewController = vc
+                
         }
-        // Override point for customization after application launch.
+        
         return true
     }
 

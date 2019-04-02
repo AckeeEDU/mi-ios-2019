@@ -9,7 +9,7 @@
 extension AppDependency: HasPasswordEditViewModelingFactory {
     var passwordEditViewModelingFactory: PasswordEditViewModelingFactory {
         return { userData in
-            return PasswordEditViewModel(dependencies: self, userData: userData)
+            return RegisterPasswordEditViewModel(dependencies: self, userData: userData)
         }
     }
 }

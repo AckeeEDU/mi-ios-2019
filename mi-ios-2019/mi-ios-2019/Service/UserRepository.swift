@@ -18,6 +18,7 @@ protocol UserRepositoring {
     func login(username: String, password: String) -> SignalProducer<User, LoginError>
     func logout()
     func clearData()
+    func changePassword(_ password: String)
     func register(_ user: User)
 }
 
@@ -50,6 +51,18 @@ final class UserRepository: UserRepositoring {
         return nil
     }
 
+    func changePassword(_ password: String) {
+        if let data = UserDefaults.standard.value(forKey: "currentUser") as? Data,
+            var user = try? PropertyListDecoder().decode(User.self, from: data) {
+            user.password = password
+            
+            let encodedUser = try? PropertyListEncoder().encode(user)
+            UserDefaults.standard.set(encodedUser, forKey: "currentUser")
+            
+            currentUser.value = user
+        }
+    }
+    
     func register(_ user: User) {
         let encodedUser = try? PropertyListEncoder().encode(user)
         UserDefaults.standard.set(encodedUser, forKey: "currentUser")
