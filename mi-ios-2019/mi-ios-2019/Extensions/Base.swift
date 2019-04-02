@@ -37,3 +37,14 @@ class BaseViewModel {
         NSLog("🧠 ⚰️ \(self)")
     }
 }
+
+class BaseFlowCoordinator {
+    init() {
+        NSLog("🔀 👶 \(self)")
+        
+    }
+    
+    deinit {
+        NSLog("🔀 ⚰️ \(self)")
+    }
+}
