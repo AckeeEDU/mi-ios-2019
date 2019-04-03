@@ -44,6 +44,7 @@ extension AppFlowCoordinator: LogoutFlowDelegate {
     func changePasswordTapped(in viewController: LogoutViewController) {
         let vm = PasswordEditViewModel(dependencies: AppDependency.shared)
         let vc = PasswordEditViewController(viewModel: vm)
+        vc.flowDelegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -53,5 +54,11 @@ extension AppFlowCoordinator: LoginFlowDelegate {
         let fc = RegisterFlowCoordinator()
         childCoordinators.append(fc)
         fc.start(from: viewController)
+    }
+}
+
+extension AppFlowCoordinator: PasswordEditFlowDelegate {
+    func doneTapped(in viewController: PasswordEditViewController) {
+        navigationController.popViewController(animated: true)
     }
 }

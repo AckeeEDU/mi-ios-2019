@@ -9,11 +9,16 @@
 import UIKit
 import ReactiveSwift
 
+protocol PasswordEditFlowDelegate: class {
+    func doneTapped(in viewController: PasswordEditViewController)
+}
+
 final class PasswordEditViewController: BaseViewController, ValidationErrorPresentable {
 
     private weak var passwordTextField: UITextField!
     private weak var passwordCheckTextField: UITextField!
 
+    weak var flowDelegate: PasswordEditFlowDelegate?
     private let viewModel: PasswordEditViewModeling
 
     // MARK: - Initialization
@@ -85,7 +90,7 @@ final class PasswordEditViewController: BaseViewController, ValidationErrorPrese
         viewModel.doneAction.completed
             .observe(on: UIScheduler())
             .observeValues { [weak self] in
-                self?.dismiss(animated: true)
+                self?.flowDelegate?.doneTapped(in: self!)
             }
     }
 

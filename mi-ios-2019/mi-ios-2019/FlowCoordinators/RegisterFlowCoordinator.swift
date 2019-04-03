@@ -30,7 +30,14 @@ extension RegisterFlowCoordinator: RegistrationFlowDelegate {
     func registrationSuccessful(with userData: UserRegistrationData, in viewController: RegistrationViewController) {
         let vm = RegisterPasswordEditViewModel(dependencies: AppDependency.shared, userData: userData)
         let vc = PasswordEditViewController(viewModel: vm)
+        vc.flowDelegate = self
         
         navigationController.pushViewController(vc, animated: true)
+    }
+}
+
+extension RegisterFlowCoordinator: PasswordEditFlowDelegate {
+    func doneTapped(in viewController: PasswordEditViewController) {
+        viewController.dismiss(animated: true)
     }
 }
