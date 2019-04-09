@@ -12,6 +12,13 @@ class AnimationsViewController: UIViewController {
 
     enum State {
         case small, large
+        
+        var height: CGFloat {
+            switch self {
+            case .small: return 100
+            case .large: return 600
+            }
+        }
     }
     
     private(set) weak var interactiveView: UIView!
@@ -28,14 +35,17 @@ class AnimationsViewController: UIViewController {
         interactiveView.backgroundColor = .blue
         view.addSubview(interactiveView)
         interactiveView.snp.makeConstraints { make in
-            make.trailing.bottom.equalToSuperview()
-            make.width.equalTo(200)
-            make.height.equalTo(150)
+            make.leading.trailing.equalToSuperview().inset(30)
+            make.bottom.equalToSuperview()
+            make.height.equalTo(100)
         }
         self.interactiveView = interactiveView
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         interactiveView.addGestureRecognizer(tapGestureRecognizer)
+
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
+        interactiveView.addGestureRecognizer(panGestureRecognizer)
 
     }
     
@@ -50,8 +60,7 @@ class AnimationsViewController: UIViewController {
             switch interactiveViewState {
             case .small:
                 interactiveView.snp.updateConstraints { make in
-                    make.width.equalTo(300)
-                    make.height.equalTo(400)
+                    make.height.equalTo(State.large.height)
                 }
                 UIView.animate(withDuration: 0.3, animations: {
                     self.view.layoutIfNeeded()
@@ -60,8 +69,7 @@ class AnimationsViewController: UIViewController {
                 }
             case .large:
                 interactiveView.snp.updateConstraints { make in
-                    make.width.equalTo(200)
-                    make.height.equalTo(150)
+                    make.height.equalTo(State.small.height)
                 }
                 UIView.animate(withDuration: 0.3, animations: {
                     self.view.layoutIfNeeded()
@@ -72,6 +80,35 @@ class AnimationsViewController: UIViewController {
         }
     }
     
+    @objc func handlePan(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: view)
+        
+        switch sender.state {
+        case .began:
+            panBegan()
+        case .changed:
+            panChanged(translation: translation)
+        case .ended:
+            panEnded(translation: translation)
+        default: break
+        }
+    }
+
+    func panBegan() {
+        
+    }
     
+    func panChanged(translation: CGPoint) {
+        let height = max(min(State.small.height - translation.y, State.large.height), State.small.height)
+        
+        self.interactiveView.snp.updateConstraints { make in
+            make.height.equalTo(height)
+        }
+        self.view.layoutIfNeeded()
+    }
+    
+    func panEnded(translation: CGPoint) {
+        
+    }
 
 }
