@@ -10,7 +10,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "# L&#xe9;pe p&#x159;esunout do souboru a zavolat zde jako bash script&#10;# Zde je to jako sou&#x10d;&#xe1;st project file a blb&#x11b; se to verzuje v gitu &#x1f44e; &#10;&#10;COMMITS=`git rev-list HEAD --count`&#10;HEADER_FILE=&quot;$PROJECT_DIR/info_preprocess_header.h&quot;&#10;&#10;echo &quot;// Auto-generated&quot; &gt; $HEADER_FILE&#10;echo &quot;&quot; &gt;&gt; $HEADER_FILE&#10;echo &quot;#define BUILD_NUMBER $COMMITS&quot; &gt;&gt; $HEADER_FILE&#10;&#10;touch $INFOPLIST_FILE&#10;">
+               scriptText = "# L&#xe9;pe p&#x159;esunout do souboru a zavolat zde jako bash script&#10;# Zde je to jako sou&#x10d;&#xe1;st project file a blb&#x11b; se to verzuje v gitu &#x1f44e; &#10;&#10;cd $PROJECT_DIR&#10;COMMITS=`git rev-list HEAD --count`&#10;HEADER_FILE=&quot;$PROJECT_DIR/info_preprocess_header.h&quot;&#10;&#10;echo &quot;// Auto-generated&quot; &gt; $HEADER_FILE&#10;echo &quot;&quot; &gt;&gt; $HEADER_FILE&#10;echo &quot;#define BUILD_NUMBER ${COMMITS}&quot; &gt;&gt; $HEADER_FILE&#10;&#10;touch $INFOPLIST_FILE&#10;cd -&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
