@@ -59,24 +59,21 @@ class AnimationsViewController: UIViewController {
         if sender.state == .ended {
             switch interactiveViewState {
             case .small:
-                interactiveView.snp.updateConstraints { make in
-                    make.height.equalTo(State.large.height)
-                }
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.view.layoutIfNeeded()
-                }) { _ in
-                    self.interactiveViewState = .large
-                }
+                animate(to: .large)
             case .large:
-                interactiveView.snp.updateConstraints { make in
-                    make.height.equalTo(State.small.height)
-                }
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.view.layoutIfNeeded()
-                }) { _ in
-                    self.interactiveViewState = .small
-                }
+                animate(to: .small)
             }
+        }
+    }
+    
+    func animate(to state: State) {
+        interactiveView.snp.updateConstraints { make in
+            make.height.equalTo(state.height)
+        }
+        UIView.animate(withDuration: 0.5, animations: {
+            self.view.layoutIfNeeded()
+        }) { _ in
+            self.interactiveViewState = state
         }
     }
     
@@ -108,7 +105,11 @@ class AnimationsViewController: UIViewController {
     }
     
     func panEnded(translation: CGPoint) {
-        
+        if -translation.y > (State.large.height - State.small.height)/3 {
+            animate(to: .large)
+        } else {
+            animate(to: .small)
+        }
     }
 
 }
