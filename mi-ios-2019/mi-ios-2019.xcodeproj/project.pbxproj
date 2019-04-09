@@ -37,6 +37,7 @@
 		887BDFB7221C672D008C37A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887BDFB5221C672D008C37A4 /* LaunchScreen.storyboard */; };
 		888A33D7221C972C00420C3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 888A33D9221C972C00420C3A /* Localizable.strings */; };
 		888A33E3221CA33000420C3A /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A33E2221CA33000420C3A /* Strings.swift */; };
+		88921B58225CE01D00E7CA48 /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88921B57225CE01D00E7CA48 /* AnimationsViewController.swift */; };
 		88B3CBC82253761D0012E549 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3CBC72253761D0012E549 /* AppFlowCoordinator.swift */; };
 		88B3CBCD225382E00012E549 /* RegisterFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3CBCC225382E00012E549 /* RegisterFlowCoordinator.swift */; };
 		A30023BC2240ECC4007777C9 /* PasswordEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023BA2240ECC3007777C9 /* PasswordEditViewController.swift */; };
@@ -116,6 +117,7 @@
 		888A33D8221C972C00420C3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		888A33DA221C973F00420C3A /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		888A33E2221CA33000420C3A /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		88921B57225CE01D00E7CA48 /* AnimationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsViewController.swift; sourceTree = "<group>"; };
 		88B3CBC72253761D0012E549 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		88B3CBCC225382E00012E549 /* RegisterFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFlowCoordinator.swift; sourceTree = "<group>"; };
 		99A3C458492BB65632BC1743 /* Pods-mi-ios-2019-Unit-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019-Unit-Tests.debug.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019-Unit-Tests/Pods-mi-ios-2019-Unit-Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				B4266CA32237F83800A7722B /* LoginViewModel.swift */,
 				B4266CAB223815A400A7722B /* LogoutViewController.swift */,
 				B4266CAD223817C200A7722B /* LogoutViewModel.swift */,
+				88921B57225CE01D00E7CA48 /* AnimationsViewController.swift */,
 				A30023BA2240ECC3007777C9 /* PasswordEditViewController.swift */,
 				A30023BF2240F0C5007777C9 /* PasswordEditViewModel.swift */,
 				A30023BB2240ECC4007777C9 /* RegistrationViewController.swift */,
@@ -628,6 +631,7 @@
 				A30023C52240F984007777C9 /* UIViewController+ValidationError.swift in Sources */,
 				A30023C02240F0C5007777C9 /* RegistrationViewModel.swift in Sources */,
 				B4266CA12237DC8800A7722B /* LoginViewController.swift in Sources */,
+				88921B58225CE01D00E7CA48 /* AnimationsViewController.swift in Sources */,
 				888A33E3221CA33000420C3A /* Strings.swift in Sources */,
 				A380116122416C8200CDD0DA /* LoginError.swift in Sources */,
 				69E563872225B61400132447 /* CarKind.swift in Sources */,
