@@ -38,6 +38,9 @@ class AnimationsViewController: UIViewController {
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         interactiveView.addGestureRecognizer(tapGestureRecognizer)
+        
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
+        interactiveView.addGestureRecognizer(panGestureRecognizer)
     }
     
     override func viewDidLoad() {
@@ -50,7 +53,7 @@ class AnimationsViewController: UIViewController {
         if sender.state == .ended {
             switch interactiveViewState {
             case .small:
-                animator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 0.8, animations: {
+                animator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 1, animations: {
                     self.interactiveView.snp.updateConstraints { make in
                         make.width.equalTo(300)
                         make.height.equalTo(400)
@@ -76,5 +79,40 @@ class AnimationsViewController: UIViewController {
         }
     }
     
+    @objc func handlePan(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: view)
+        
+        switch sender.state {
+        case .began:
+            panBegan()
+        case .changed:
+            panChanged(translation: translation)
+        case .ended:
+            let velocity = sender.velocity(in: view)
+            panEnded(translation: translation, velocity: velocity)
+        default: break
+        }
+    }
     
+    func panBegan() {
+        
+    }
+    
+    func panChanged(translation: CGPoint) {
+        let height = min(150 - translation.y, 400)
+        let width = min(200 - translation.x, 300)
+        
+        print(height)
+        print(width)
+        
+        self.interactiveView.snp.updateConstraints { make in
+            make.width.equalTo(width)
+            make.height.equalTo(height)
+        }
+        self.view.layoutIfNeeded()
+    }
+    
+    func panEnded(translation: CGPoint, velocity: CGPoint) {
+        
+    }
 }
