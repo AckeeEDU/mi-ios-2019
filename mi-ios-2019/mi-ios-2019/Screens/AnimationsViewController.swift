@@ -64,7 +64,7 @@ class AnimationsViewController: UIViewController {
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            animator = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 1, animations: {
+            animator = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 0.8, animations: {
                 self.setHeight(to: self.interactiveViewState.oposite)
             })
             animator?.addCompletion({ _ in
@@ -90,13 +90,13 @@ class AnimationsViewController: UIViewController {
         case .changed:
             panChanged(translation: translation)
         case .ended:
-            panEnded(translation: translation)
+            panEnded(translation: translation, velocity: sender.velocity(in: view))
         default: break
         }
     }
 
     func panBegan() {
-        animator = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 1, animations: {
+        animator = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 0.8, animations: {
             self.setHeight(to: self.interactiveViewState.oposite)
         })
     }
@@ -113,7 +113,7 @@ class AnimationsViewController: UIViewController {
         animator?.fractionComplete = progress
     }
     
-    func panEnded(translation: CGPoint) {
+    func panEnded(translation: CGPoint, velocity: CGPoint) {
         switch interactiveViewState {
         case .small:
             if -translation.y > (State.large.height - State.small.height)/5 {
@@ -139,7 +139,11 @@ class AnimationsViewController: UIViewController {
             }
         }
         
-        animator?.continueAnimation(withTimingParameters: nil, durationFactor: 1)
+        let velocityVector = CGVector(dx: abs(velocity.x)/100, dy: abs(velocity.y)/100)
+        print(velocityVector)
+        let springParameters = UISpringTimingParameters(dampingRatio: 0.8, initialVelocity: velocityVector)
+        
+        animator?.continueAnimation(withTimingParameters: springParameters, durationFactor: 1)
     }
 
 }
