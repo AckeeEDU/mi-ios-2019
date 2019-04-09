@@ -17,6 +17,8 @@ class AnimationsViewController: UIViewController {
     private(set) weak var interactiveView: UIView!
     var interactiveViewState: State = .small
     
+    var animator: UIViewPropertyAnimator?
+    
     weak var tapGestureRecognizer: UITapGestureRecognizer!
     
     override func loadView() {
@@ -48,15 +50,18 @@ class AnimationsViewController: UIViewController {
         if sender.state == .ended {
             switch interactiveViewState {
             case .small:
-                interactiveView.snp.updateConstraints { make in
-                    make.width.equalTo(300)
-                    make.height.equalTo(400)
-                }
-                UIView.animate(withDuration: 0.3, animations: {
+                animator = UIViewPropertyAnimator(duration: 0.3, dampingRatio: 0.8, animations: {
+                    self.interactiveView.snp.updateConstraints { make in
+                        make.width.equalTo(300)
+                        make.height.equalTo(400)
+                    }
+                    
                     self.view.layoutIfNeeded()
-                }) { _ in
+                })
+                animator?.addCompletion({ _ in
                     self.interactiveViewState = .large
-                }
+                })
+                animator?.startAnimation()
             case .large:
                 interactiveView.snp.updateConstraints { make in
                     make.width.equalTo(200)
