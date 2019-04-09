@@ -19,12 +19,19 @@ class AnimationsViewController: UIViewController {
             case .large: return 600
             }
         }
+        
+        var oposite: State {
+            switch self {
+            case .small: return .large
+            case .large: return .small
+            }
+        }
     }
     
     private(set) weak var interactiveView: UIView!
     var interactiveViewState: State = .small
     
-    weak var tapGestureRecognizer: UITapGestureRecognizer!
+    var animator: UIViewPropertyAnimator?
     
     override func loadView() {
         super.loadView()
@@ -54,27 +61,24 @@ class AnimationsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         if sender.state == .ended {
-            switch interactiveViewState {
-            case .small:
-                animate(to: .large)
-            case .large:
-                animate(to: .small)
-            }
+            animator = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 1, animations: {
+                self.setHeight(to: self.interactiveViewState.oposite)
+            })
+            animator?.addCompletion({ _ in
+                self.interactiveViewState = self.interactiveViewState.oposite
+            })
+            animator?.startAnimation()
         }
     }
     
-    func animate(to state: State) {
+    func setHeight(to state: State) {
         interactiveView.snp.updateConstraints { make in
             make.height.equalTo(state.height)
         }
-        UIView.animate(withDuration: 0.5, animations: {
-            self.view.layoutIfNeeded()
-        }) { _ in
-            self.interactiveViewState = state
-        }
+        self.view.layoutIfNeeded()
     }
     
     @objc func handlePan(_ sender: UIPanGestureRecognizer) {
@@ -106,9 +110,9 @@ class AnimationsViewController: UIViewController {
     
     func panEnded(translation: CGPoint) {
         if -translation.y > (State.large.height - State.small.height)/3 {
-            animate(to: .large)
+            setHeight(to: .large)
         } else {
-            animate(to: .small)
+            setHeight(to: .small)
         }
     }
 
