@@ -96,24 +96,50 @@ class AnimationsViewController: UIViewController {
     }
 
     func panBegan() {
-        
+        animator = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 1, animations: {
+            self.setHeight(to: self.interactiveViewState.oposite)
+        })
     }
     
     func panChanged(translation: CGPoint) {
-        let height = max(min(State.small.height - translation.y, State.large.height), State.small.height)
+        var progress = translation.y / 500
         
-        self.interactiveView.snp.updateConstraints { make in
-            make.height.equalTo(height)
+        if interactiveViewState == .small {
+            progress = -1 * progress
         }
-        self.view.layoutIfNeeded()
+        
+        progress = max(CGFloat.leastNonzeroMagnitude, min(1-CGFloat.leastNonzeroMagnitude, progress))
+        
+        animator?.fractionComplete = progress
     }
     
     func panEnded(translation: CGPoint) {
-        if -translation.y > (State.large.height - State.small.height)/3 {
-            setHeight(to: .large)
-        } else {
-            setHeight(to: .small)
+        switch interactiveViewState {
+        case .small:
+            if -translation.y > (State.large.height - State.small.height)/5 {
+                animator?.addCompletion { _ in
+                    self.interactiveViewState = self.interactiveViewState.oposite
+                }
+            } else {
+                animator?.isReversed = true
+                animator?.addCompletion { _ in
+                    self.setHeight(to: self.interactiveViewState)
+                }
+            }
+        case .large:
+            if translation.y < (State.large.height - State.small.height)/5 {
+                animator?.isReversed = true
+                animator?.addCompletion { _ in
+                    self.setHeight(to: self.interactiveViewState)
+                }
+            } else {
+                animator?.addCompletion { _ in
+                    self.interactiveViewState = self.interactiveViewState.oposite
+                }
+            }
         }
+        
+        animator?.continueAnimation(withTimingParameters: nil, durationFactor: 1)
     }
 
 }
