@@ -10,6 +10,8 @@ import UIKit
 
 class AppFlowCoordinator: BaseFlowCoordinator {
     
+    let popupTransitionController = PopupTransitionController()
+    
     public var childCoordinators = [BaseFlowCoordinator]()
     
     weak var navigationController: UINavigationController!
@@ -43,7 +45,11 @@ class AppFlowCoordinator: BaseFlowCoordinator {
 extension AppFlowCoordinator: LogoutFlowDelegate {
     func animationsTapped(in viewController: LogoutViewController) {
         let vc = AnimationsViewController()
-        navigationController.pushViewController(vc, animated: true)
+        
+        vc.modalPresentationStyle = .custom
+        vc.transitioningDelegate = popupTransitionController
+        
+        viewController.present(vc, animated: true)
     }
     
     func changePasswordTapped(in viewController: LogoutViewController) {

@@ -40,6 +40,7 @@
 		88921B58225CE01D00E7CA48 /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88921B57225CE01D00E7CA48 /* AnimationsViewController.swift */; };
 		88B3CBC82253761D0012E549 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3CBC72253761D0012E549 /* AppFlowCoordinator.swift */; };
 		88B3CBCD225382E00012E549 /* RegisterFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3CBCC225382E00012E549 /* RegisterFlowCoordinator.swift */; };
+		88DBE81B226714B700C5F8A0 /* PopupTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DBE81A226714B700C5F8A0 /* PopupTransitionController.swift */; };
 		A30023BC2240ECC4007777C9 /* PasswordEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023BA2240ECC3007777C9 /* PasswordEditViewController.swift */; };
 		A30023BD2240ECC4007777C9 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023BB2240ECC4007777C9 /* RegistrationViewController.swift */; };
 		A30023C02240F0C5007777C9 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023BE2240F0C4007777C9 /* RegistrationViewModel.swift */; };
@@ -120,6 +121,7 @@
 		88921B57225CE01D00E7CA48 /* AnimationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsViewController.swift; sourceTree = "<group>"; };
 		88B3CBC72253761D0012E549 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		88B3CBCC225382E00012E549 /* RegisterFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFlowCoordinator.swift; sourceTree = "<group>"; };
+		88DBE81A226714B700C5F8A0 /* PopupTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTransitionController.swift; sourceTree = "<group>"; };
 		99A3C458492BB65632BC1743 /* Pods-mi-ios-2019-Unit-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019-Unit-Tests.debug.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019-Unit-Tests/Pods-mi-ios-2019-Unit-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9AFC1CB71F3F3E687778A233 /* Pods_mi_ios_2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mi_ios_2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC3BB5D422D3622CBB1B0A0 /* Pods-mi-ios-2019-UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019-UITests.release.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019-UITests/Pods-mi-ios-2019-UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				887BDFAE221C672C008C37A4 /* ViewController.swift */,
 				69E563832225ACBE00132447 /* PickerViewController.swift */,
 				69E563932225D8D900132447 /* PickerHandler.swift */,
+				88DBE81A226714B700C5F8A0 /* PopupTransitionController.swift */,
 				887BDFB0221C672C008C37A4 /* Main.storyboard */,
 				887BDFB3221C672D008C37A4 /* Assets.xcassets */,
 				887BDFB5221C672D008C37A4 /* LaunchScreen.storyboard */,
@@ -655,6 +658,7 @@
 				A30023C12240F0C5007777C9 /* PasswordEditViewModel.swift in Sources */,
 				A30023BD2240ECC4007777C9 /* RegistrationViewController.swift in Sources */,
 				88B3CBCD225382E00012E549 /* RegisterFlowCoordinator.swift in Sources */,
+				88DBE81B226714B700C5F8A0 /* PopupTransitionController.swift in Sources */,
 				B4266CAA22380DC100A7722B /* UserRepository.swift in Sources */,
 				887BDFAD221C672C008C37A4 /* AppDelegate.swift in Sources */,
 			);

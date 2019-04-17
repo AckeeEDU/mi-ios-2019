@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnimationsViewController: UIViewController {
+class AnimationsViewController: BaseViewController {
 
     enum State {
         case small, large
@@ -54,12 +54,25 @@ class AnimationsViewController: UIViewController {
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
         interactiveView.addGestureRecognizer(panGestureRecognizer)
 
+        
+        let closeButton = UIButton()
+        closeButton.setTitle("Close", for: [])
+        closeButton.setTitleColor(.blue, for: [])
+        view.addSubview(closeButton)
+        closeButton.snp.makeConstraints { make in
+            make.leading.top.equalTo(view.safeAreaLayoutGuide).inset(20)
+        }
+        closeButton.addTarget(self, action: #selector(closeTapped(_:)), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func closeTapped(_ sender: UIButton) {
+        dismiss(animated: true) // patří do FC!!!!
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
