@@ -80,4 +80,40 @@ _TODO_
 
 ## 09. Push notifications & App Extensions
 
-_TODO_
+branch: `09-pushes+extensions`
+
+### Push notifications
+
+- vyžadují explicitní App ID
+- lze testovat pouze na reálném zařizení (nelze v simulátoru)
+- nelze vyvíjet s free developer accountem
+- request permissions od uživatele
+- payload notifikace
+- zasílání testovacích notifikací přes [test appku](https://github.com/onmyway133/PushNotifications)
+- handling reakce na otevření notifikace
+- přidání custom actions pomocí kategorií
+
+Example payload notifikace pro náš projekt:
+```json
+{
+    "aps":{
+       "alert":{
+          "title":"Push title",
+          "body":"Push body"
+       },
+       "sound": "default",
+       "category": "CATEGORY"
+    },
+    "alertTitle": "Title",
+    "alertMessage": "Message",
+    "buttonText": "OK"
+ }
+```
+
+### App Extensions
+
+- example push notification service extension
+- example iMessage extension
+- sdílení dat mezi iOS app a její extension pomocí App Group
+    - vyžaduje explicitní App ID
+    - nelze s free developer accountem
