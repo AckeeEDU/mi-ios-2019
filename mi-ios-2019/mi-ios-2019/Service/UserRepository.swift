@@ -40,11 +40,11 @@ final class UserRepository: UserRepositoring {
     }
 
     func clearData() {
-        UserDefaults.standard.removeObject(forKey: "currentUser")
+        UserDefaults.groupStandard.removeObject(forKey: "currentUser")
     }
 
     private func retrieveUser() -> User? {
-        if let data = UserDefaults.standard.value(forKey: "currentUser") as? Data,
+        if let data = UserDefaults.groupStandard.value(forKey: "currentUser") as? Data,
             let user = try? PropertyListDecoder().decode(User.self, from: data) {
             return user
         }
@@ -52,12 +52,12 @@ final class UserRepository: UserRepositoring {
     }
 
     func changePassword(_ password: String) {
-        if let data = UserDefaults.standard.value(forKey: "currentUser") as? Data,
+        if let data = UserDefaults.groupStandard.value(forKey: "currentUser") as? Data,
             var user = try? PropertyListDecoder().decode(User.self, from: data) {
             user.password = password
             
             let encodedUser = try? PropertyListEncoder().encode(user)
-            UserDefaults.standard.set(encodedUser, forKey: "currentUser")
+            UserDefaults.groupStandard.set(encodedUser, forKey: "currentUser")
             
             currentUser.value = user
         }
@@ -65,7 +65,7 @@ final class UserRepository: UserRepositoring {
     
     func register(_ user: User) {
         let encodedUser = try? PropertyListEncoder().encode(user)
-        UserDefaults.standard.set(encodedUser, forKey: "currentUser")
+        UserDefaults.groupStandard.set(encodedUser, forKey: "currentUser")
     }
 
 }
