@@ -24,6 +24,8 @@
 		02A5FF3AE73B6DF3CAB2A7AD /* libPods-mi-ios-2019-Unit-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAAD15C9CF13EC7913960B9 /* libPods-mi-ios-2019-Unit-Tests.a */; };
 		69A43FE522703CC7005CC448 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A43FE422703CC7005CC448 /* PushManager.swift */; };
 		69A43FE822704669005CC448 /* AlertNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A43FE722704669005CC448 /* AlertNotification.swift */; };
+		69A4400822704C71005CC448 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A4400722704C71005CC448 /* NotificationService.swift */; };
+		69A4400C22704C71005CC448 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 69A4400522704C71005CC448 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		69E563842225ACBE00132447 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563832225ACBE00132447 /* PickerViewController.swift */; };
 		69E563872225B61400132447 /* CarKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563862225B61400132447 /* CarKind.swift */; };
 		69E5638A2225B78000132447 /* UIAlertActionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563892225B78000132447 /* UIAlertActionExtensions.swift */; };
@@ -80,6 +82,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		69A4400A22704C71005CC448 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 887BDFA1221C672C008C37A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69A4400422704C71005CC448;
+			remoteInfo = NotificationService;
+		};
 		A380114F224168C300CDD0DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 887BDFA1221C672C008C37A4 /* Project object */;
@@ -96,6 +105,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		69A4401122704C71005CC448 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				69A4400C22704C71005CC448 /* NotificationService.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4BA6B2BF11B86034C99864EF /* Pods-mi-ios-2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019.debug.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.debug.xcconfig"; sourceTree = "<group>"; };
 		4D067956248C098F7B8394F3 /* Pods-mi-ios-2019-UITests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019-UITests.adhoc.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019-UITests/Pods-mi-ios-2019-UITests.adhoc.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +127,9 @@
 		69A43FE422703CC7005CC448 /* PushManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushManager.swift; sourceTree = "<group>"; };
 		69A43FE622703FBF005CC448 /* mi-ios-2019.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mi-ios-2019.entitlements"; sourceTree = "<group>"; };
 		69A43FE722704669005CC448 /* AlertNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotification.swift; sourceTree = "<group>"; };
+		69A4400522704C71005CC448 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		69A4400722704C71005CC448 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		69A4400922704C71005CC448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69E563832225ACBE00132447 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		69E563862225B61400132447 /* CarKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarKind.swift; sourceTree = "<group>"; };
 		69E563892225B78000132447 /* UIAlertActionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionExtensions.swift; sourceTree = "<group>"; };
@@ -164,6 +190,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		69A4400222704C71005CC448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		887BDFA6221C672C008C37A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,6 +240,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		69A4400622704C71005CC448 /* NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				69A4400722704C71005CC448 /* NotificationService.swift */,
+				69A4400922704C71005CC448 /* Info.plist */,
+			);
+			path = NotificationService;
+			sourceTree = "<group>";
+		};
 		69E563852225B5E900132447 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +278,7 @@
 				887BDFAB221C672C008C37A4 /* mi-ios-2019 */,
 				A380114B224168C300CDD0DA /* mi-ios-2019-Unit-Tests */,
 				A380116A224170A700CDD0DA /* mi-ios-2019-UITests */,
+				69A4400622704C71005CC448 /* NotificationService */,
 				887BDFAA221C672C008C37A4 /* Products */,
 				11DDA58B3D04E1B0908875F1 /* Pods */,
 				B2DF619E97AC5AA7500897BF /* Frameworks */,
@@ -248,6 +291,7 @@
 				887BDFA9221C672C008C37A4 /* mi-ios-2019.app */,
 				A380114A224168C200CDD0DA /* mi-ios-2019-Unit-Tests.xctest */,
 				A3801169224170A600CDD0DA /* mi-ios-2019-UITests.xctest */,
+				69A4400522704C71005CC448 /* NotificationService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -359,6 +403,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		69A4400422704C71005CC448 /* NotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69A4401022704C71005CC448 /* Build configuration list for PBXNativeTarget "NotificationService" */;
+			buildPhases = (
+				69A4400122704C71005CC448 /* Sources */,
+				69A4400222704C71005CC448 /* Frameworks */,
+				69A4400322704C71005CC448 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationService;
+			productName = NotificationService;
+			productReference = 69A4400522704C71005CC448 /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		887BDFA8221C672C008C37A4 /* mi-ios-2019 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 887BDFBB221C672D008C37A4 /* Build configuration list for PBXNativeTarget "mi-ios-2019" */;
@@ -369,10 +430,12 @@
 				887BDFA6221C672C008C37A4 /* Frameworks */,
 				887BDFA7221C672C008C37A4 /* Resources */,
 				09EDFA2652A73F048BAE788D /* [CP] Embed Pods Frameworks */,
+				69A4401122704C71005CC448 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				69A4400B22704C71005CC448 /* PBXTargetDependency */,
 			);
 			name = "mi-ios-2019";
 			productName = "mi-ios-2019";
@@ -423,10 +486,13 @@
 		887BDFA1221C672C008C37A4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "ČVUT";
 				TargetAttributes = {
+					69A4400422704C71005CC448 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 					887BDFA8221C672C008C37A4 = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
@@ -466,11 +532,19 @@
 				888A33DB221C9EB100420C3A /* Localization */,
 				A3801149224168C200CDD0DA /* mi-ios-2019-Unit-Tests */,
 				A3801168224170A600CDD0DA /* mi-ios-2019-UITests */,
+				69A4400422704C71005CC448 /* NotificationService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		69A4400322704C71005CC448 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		887BDFA7221C672C008C37A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -638,6 +712,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		69A4400122704C71005CC448 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69A4400822704C71005CC448 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		887BDFA5221C672C008C37A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -711,6 +793,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		69A4400B22704C71005CC448 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69A4400422704C71005CC448 /* NotificationService */;
+			targetProxy = 69A4400A22704C71005CC448 /* PBXContainerItemProxy */;
+		};
 		A3801150224168C300CDD0DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 887BDFA8221C672C008C37A4 /* mi-ios-2019 */;
@@ -752,6 +839,75 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		69A4400D22704C71005CC448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = PXDF48X6VX;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_PREFIX_HEADER = "$(PROJECT_DIR)/info_preprocess_header.h";
+				INFOPLIST_PREPROCESS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios2019.dev.NotificationService";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "MI IOS 2019 Wildcard DEV";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69A4400E22704C71005CC448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_PREFIX_HEADER = "$(PROJECT_DIR)/info_preprocess_header.h";
+				INFOPLIST_PREPROCESS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios2019.NotificationService";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		69A4400F22704C71005CC448 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_PREFIX_HEADER = "$(PROJECT_DIR)/info_preprocess_header.h";
+				INFOPLIST_PREPROCESS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios2019.beta.NotificationService";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = AdHoc;
+		};
 		887BDFB9221C672D008C37A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -878,6 +1034,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4BA6B2BF11B86034C99864EF /* Pods-mi-ios-2019.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "mi-ios-2019/mi-ios-2019.entitlements";
 				CODE_SIGN_STYLE = Manual;
@@ -900,6 +1057,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D1473B44E24DD0A17289E5A /* Pods-mi-ios-2019.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "mi-ios-2019/mi-ios-2019.entitlements";
 				CODE_SIGN_STYLE = Manual;
@@ -980,6 +1138,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AAA5668B71824F04B9618A0D /* Pods-mi-ios-2019.adhoc.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "mi-ios-2019/mi-ios-2019.entitlements";
 				CODE_SIGN_STYLE = Manual;
@@ -1142,6 +1301,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		69A4401022704C71005CC448 /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69A4400D22704C71005CC448 /* Debug */,
+				69A4400E22704C71005CC448 /* Release */,
+				69A4400F22704C71005CC448 /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		887BDFA4221C672C008C37A4 /* Build configuration list for PBXProject "mi-ios-2019" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
