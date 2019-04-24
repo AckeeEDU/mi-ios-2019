@@ -31,6 +31,8 @@
 		6954865622704EBD00432F73 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6954865522704EBD00432F73 /* MessagesViewController.swift */; };
 		6954865B22704EBE00432F73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6954865A22704EBE00432F73 /* Assets.xcassets */; };
 		6954865F22704EBE00432F73 /* iMessageApp.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6954865122704EBD00432F73 /* iMessageApp.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6987EAA32270945000A43CDC /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69103FB62270572600075D00 /* UserDefaultsExtensions.swift */; };
+		6987EAA42270945100A43CDC /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69103FB62270572600075D00 /* UserDefaultsExtensions.swift */; };
 		69A43FE522703CC7005CC448 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A43FE422703CC7005CC448 /* PushManager.swift */; };
 		69A43FE822704669005CC448 /* AlertNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A43FE722704669005CC448 /* AlertNotification.swift */; };
 		69A4400822704C71005CC448 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A4400722704C71005CC448 /* NotificationService.swift */; };
@@ -951,6 +953,7 @@
 				A3801157224169BF00CDD0DA /* Validations.swift in Sources */,
 				A380115E22416C5400CDD0DA /* UserRepository.swift in Sources */,
 				A380115F22416C5C00CDD0DA /* User.swift in Sources */,
+				6987EAA32270945000A43CDC /* UserDefaultsExtensions.swift in Sources */,
 				A380115D22416C2D00CDD0DA /* PasswordEditViewModel.swift in Sources */,
 				A380116422416D5100CDD0DA /* TestDependency.swift in Sources */,
 				A380115B22416B8700CDD0DA /* RegistrationViewModelTests.swift in Sources */,
@@ -965,6 +968,7 @@
 			files = (
 				A3801177224171AA00CDD0DA /* UserRepository.swift in Sources */,
 				A38011752241714900CDD0DA /* LoginUITests.swift in Sources */,
+				6987EAA42270945100A43CDC /* UserDefaultsExtensions.swift in Sources */,
 				A380117B2241734200CDD0DA /* LoginError.swift in Sources */,
 				A380117A224171BE00CDD0DA /* TestDependency.swift in Sources */,
 				A3801178224171AD00CDD0DA /* User.swift in Sources */,
