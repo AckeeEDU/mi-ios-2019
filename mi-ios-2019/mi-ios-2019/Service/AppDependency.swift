@@ -17,8 +17,10 @@ final class AppDependency: HasNoDependency {
     lazy var userRepository: UserRepositoring = UserRepository()
     lazy var phoneValidator: PhoneValidating = PhoneValidator()
     lazy var emailValidator: EmailValidating = EmailValidator()
+    lazy var pushManager: PushManaging = PushManager(dependencies: self)
 }
 
 extension AppDependency: HasUserRepository { }
 extension AppDependency: HasPhoneValidator { }
 extension AppDependency: HasEmailValidator { }
+extension AppDependency: HasPushManager { }

@@ -11,6 +11,7 @@ import ReactiveSwift
 
 protocol LogoutFlowDelegate: class {
     func changePasswordTapped(in viewController: LogoutViewController)
+    func animationsTapped(in viewController: LogoutViewController)
 }
 
 final class LogoutViewController: BaseViewController {
@@ -21,6 +22,7 @@ final class LogoutViewController: BaseViewController {
     private weak var passwordLabel: UILabel!
     private weak var logoutButton: UIButton!
     private weak var changePasswordButton: UIButton!
+    private weak var animationsButton: UIButton!
     
     weak var flowDelegate: LogoutFlowDelegate?
     private let viewModel: LogoutViewModeling
@@ -60,13 +62,17 @@ final class LogoutViewController: BaseViewController {
         changePasswordButton.setTitle("Change password", for: .normal)
         self.changePasswordButton = changePasswordButton
         
+        let animationsButton = UIButton(type: .custom)
+        animationsButton.setTitle("Go to animations", for: .normal)
+        self.animationsButton = animationsButton
+        
         let logoutButton = UIButton(type: .custom)
         logoutButton.setTitle("Logout", for: .normal)
         logoutButton.setTitleColor(.red, for: .disabled)
         self.logoutButton = logoutButton
 
         // ----- Stack View -----
-        let stackView = UIStackView(arrangedSubviews: [nameLabel, usernameLabel, phoneLabel, passwordLabel, changePasswordButton, logoutButton])
+        let stackView = UIStackView(arrangedSubviews: [nameLabel, usernameLabel, phoneLabel, passwordLabel, animationsButton, changePasswordButton, logoutButton])
         stackView.axis = .vertical
         stackView.spacing = 30
         view.addSubview(stackView)
@@ -80,6 +86,7 @@ final class LogoutViewController: BaseViewController {
         super.viewDidLoad()
 
         changePasswordButton.addTarget(self, action: #selector(changePasswordButtonTapped(_:)), for: .touchUpInside)
+        animationsButton.addTarget(self, action: #selector(animationsButtonTapped(_:)), for: .touchUpInside)
         logoutButton.addTarget(self, action: #selector(logoutButtonTapped(_:)), for: .touchUpInside)
 
         setupBindings()
@@ -89,6 +96,10 @@ final class LogoutViewController: BaseViewController {
 
     @objc private func changePasswordButtonTapped(_ sender: UIButton) {
         flowDelegate?.changePasswordTapped(in: self)
+    }
+    
+    @objc private func animationsButtonTapped(_ sender: UIButton) {
+        flowDelegate?.animationsTapped(in: self)
     }
     
     @objc
@@ -103,6 +114,14 @@ final class LogoutViewController: BaseViewController {
         usernameLabel.reactive.text <~ viewModel.username
         phoneLabel.reactive.text <~ viewModel.phone
         passwordLabel.reactive.text <~ viewModel.password
+        
+        viewModel.alertNotifications.take(duringLifetimeOf: self).observe(on: UIScheduler())
+            .observeValues { [weak self] notification in
+                let alertVC = UIAlertController(title: notification.alertTitle, message: notification.alertMessage, preferredStyle: .alert)
+                let buttonAction = UIAlertAction(title: notification.buttonText, style: .default)
+                alertVC.addAction(buttonAction)
+                self?.present(alertVC, animated: true)
+        }
     }
 
 }

@@ -21,7 +21,22 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		02A5FF3AE73B6DF3CAB2A7AD /* libPods-mi-ios-2019-Unit-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAAD15C9CF13EC7913960B9 /* libPods-mi-ios-2019-Unit-Tests.a */; };
+		5F9C01CBD6259B111C76446A /* Pods_iMessageApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D820B9191F18FAD273465A58 /* Pods_iMessageApp.framework */; };
+		69103FB72270572600075D00 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69103FB62270572600075D00 /* UserDefaultsExtensions.swift */; };
+		69103FB82270584F00075D00 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA922380DC100A7722B /* UserRepository.swift */; };
+		69103FB92270588C00075D00 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69103FB62270572600075D00 /* UserDefaultsExtensions.swift */; };
+		69103FBA227058BF00075D00 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CA52237FC0400A7722B /* User.swift */; };
+		69103FBB227058CA00075D00 /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A380116022416C8200CDD0DA /* LoginError.swift */; };
+		6954865322704EBD00432F73 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6954865222704EBD00432F73 /* Messages.framework */; };
+		6954865622704EBD00432F73 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6954865522704EBD00432F73 /* MessagesViewController.swift */; };
+		6954865B22704EBE00432F73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6954865A22704EBE00432F73 /* Assets.xcassets */; };
+		6954865F22704EBE00432F73 /* iMessageApp.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6954865122704EBD00432F73 /* iMessageApp.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6987EAA32270945000A43CDC /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69103FB62270572600075D00 /* UserDefaultsExtensions.swift */; };
+		6987EAA42270945100A43CDC /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69103FB62270572600075D00 /* UserDefaultsExtensions.swift */; };
+		69A43FE522703CC7005CC448 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A43FE422703CC7005CC448 /* PushManager.swift */; };
+		69A43FE822704669005CC448 /* AlertNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A43FE722704669005CC448 /* AlertNotification.swift */; };
+		69A4400822704C71005CC448 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A4400722704C71005CC448 /* NotificationService.swift */; };
+		69A4400C22704C71005CC448 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 69A4400522704C71005CC448 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		69E563842225ACBE00132447 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563832225ACBE00132447 /* PickerViewController.swift */; };
 		69E563872225B61400132447 /* CarKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563862225B61400132447 /* CarKind.swift */; };
 		69E5638A2225B78000132447 /* UIAlertActionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563892225B78000132447 /* UIAlertActionExtensions.swift */; };
@@ -30,6 +45,7 @@
 		69E563902225D4BD00132447 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E5638F2225D4BD00132447 /* Animal.swift */; };
 		69E563942225D8D900132447 /* PickerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563932225D8D900132447 /* PickerHandler.swift */; };
 		69E563962225EC3E00132447 /* Playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563952225EC3E00132447 /* Playground.swift */; };
+		83B8550F09DB4BE4AA7C0352 /* Pods_mi_ios_2019_Unit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E744D9F44D5A995B5A23194 /* Pods_mi_ios_2019_Unit_Tests.framework */; };
 		887BDFAD221C672C008C37A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887BDFAC221C672C008C37A4 /* AppDelegate.swift */; };
 		887BDFAF221C672C008C37A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887BDFAE221C672C008C37A4 /* ViewController.swift */; };
 		887BDFB2221C672C008C37A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887BDFB0221C672C008C37A4 /* Main.storyboard */; };
@@ -37,8 +53,10 @@
 		887BDFB7221C672D008C37A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887BDFB5221C672D008C37A4 /* LaunchScreen.storyboard */; };
 		888A33D7221C972C00420C3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 888A33D9221C972C00420C3A /* Localizable.strings */; };
 		888A33E3221CA33000420C3A /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888A33E2221CA33000420C3A /* Strings.swift */; };
+		88921B58225CE01D00E7CA48 /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88921B57225CE01D00E7CA48 /* AnimationsViewController.swift */; };
 		88B3CBC82253761D0012E549 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3CBC72253761D0012E549 /* AppFlowCoordinator.swift */; };
 		88B3CBCD225382E00012E549 /* RegisterFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B3CBCC225382E00012E549 /* RegisterFlowCoordinator.swift */; };
+		88DBE81B226714B700C5F8A0 /* PopupTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DBE81A226714B700C5F8A0 /* PopupTransitionController.swift */; };
 		A30023BC2240ECC4007777C9 /* PasswordEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023BA2240ECC3007777C9 /* PasswordEditViewController.swift */; };
 		A30023BD2240ECC4007777C9 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023BB2240ECC4007777C9 /* RegistrationViewController.swift */; };
 		A30023C02240F0C5007777C9 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30023BE2240F0C4007777C9 /* RegistrationViewModel.swift */; };
@@ -72,10 +90,24 @@
 		B4266CAE223817C200A7722B /* LogoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CAD223817C200A7722B /* LogoutViewModel.swift */; };
 		B4266CB0223833C200A7722B /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4266CAF223833C200A7722B /* Base.swift */; };
 		B5F551874FA33172116FF089 /* Pods_mi_ios_2019.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFC1CB71F3F3E687778A233 /* Pods_mi_ios_2019.framework */; };
-		C261089A21733098D7F96BF6 /* libPods-mi-ios-2019-UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61ECA854F69DA3CFECFDB210 /* libPods-mi-ios-2019-UITests.a */; };
+		D20D35E31241CB4C09645B6E /* Pods_mi_ios_2019_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6502A11DE20E8D4C271138DB /* Pods_mi_ios_2019_UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6954865D22704EBE00432F73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 887BDFA1221C672C008C37A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6954865022704EBD00432F73;
+			remoteInfo = iMessageApp;
+		};
+		69A4400A22704C71005CC448 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 887BDFA1221C672C008C37A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69A4400422704C71005CC448;
+			remoteInfo = NotificationService;
+		};
 		A380114F224168C300CDD0DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 887BDFA1221C672C008C37A4 /* Project object */;
@@ -92,11 +124,42 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		69A4401122704C71005CC448 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6954865F22704EBE00432F73 /* iMessageApp.appex in Embed App Extensions */,
+				69A4400C22704C71005CC448 /* NotificationService.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0CB017383C64381BF5517015 /* Pods-iMessageApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMessageApp.release.xcconfig"; path = "Target Support Files/Pods-iMessageApp/Pods-iMessageApp.release.xcconfig"; sourceTree = "<group>"; };
+		3B9A6C43A66AE1208E80BCCE /* Pods-iMessageApp.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMessageApp.adhoc.xcconfig"; path = "Target Support Files/Pods-iMessageApp/Pods-iMessageApp.adhoc.xcconfig"; sourceTree = "<group>"; };
 		4BA6B2BF11B86034C99864EF /* Pods-mi-ios-2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019.debug.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.debug.xcconfig"; sourceTree = "<group>"; };
 		4D067956248C098F7B8394F3 /* Pods-mi-ios-2019-UITests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019-UITests.adhoc.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019-UITests/Pods-mi-ios-2019-UITests.adhoc.xcconfig"; sourceTree = "<group>"; };
 		544B452945D95E5D8093F97D /* Pods-mi-ios-2019-UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019-UITests.debug.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019-UITests/Pods-mi-ios-2019-UITests.debug.xcconfig"; sourceTree = "<group>"; };
-		61ECA854F69DA3CFECFDB210 /* libPods-mi-ios-2019-UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mi-ios-2019-UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E744D9F44D5A995B5A23194 /* Pods_mi_ios_2019_Unit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mi_ios_2019_Unit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6502A11DE20E8D4C271138DB /* Pods_mi_ios_2019_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mi_ios_2019_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69103FB52270562E00075D00 /* iMessageApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iMessageApp.entitlements; sourceTree = "<group>"; };
+		69103FB62270572600075D00 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
+		6954865122704EBD00432F73 /* iMessageApp.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iMessageApp.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6954865222704EBD00432F73 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		6954865522704EBD00432F73 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		6954865A22704EBE00432F73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6954865C22704EBE00432F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69A43FE422703CC7005CC448 /* PushManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushManager.swift; sourceTree = "<group>"; };
+		69A43FE622703FBF005CC448 /* mi-ios-2019.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mi-ios-2019.entitlements"; sourceTree = "<group>"; };
+		69A43FE722704669005CC448 /* AlertNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotification.swift; sourceTree = "<group>"; };
+		69A4400522704C71005CC448 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		69A4400722704C71005CC448 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		69A4400922704C71005CC448 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69E563832225ACBE00132447 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		69E563862225B61400132447 /* CarKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarKind.swift; sourceTree = "<group>"; };
 		69E563892225B78000132447 /* UIAlertActionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionExtensions.swift; sourceTree = "<group>"; };
@@ -106,6 +169,7 @@
 		69E563932225D8D900132447 /* PickerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerHandler.swift; sourceTree = "<group>"; };
 		69E563952225EC3E00132447 /* Playground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playground.swift; sourceTree = "<group>"; };
 		6D1473B44E24DD0A17289E5A /* Pods-mi-ios-2019.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019.release.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019.release.xcconfig"; sourceTree = "<group>"; };
+		885BD9390190389635790178 /* Pods-iMessageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMessageApp.debug.xcconfig"; path = "Target Support Files/Pods-iMessageApp/Pods-iMessageApp.debug.xcconfig"; sourceTree = "<group>"; };
 		887BDFA9221C672C008C37A4 /* mi-ios-2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mi-ios-2019.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		887BDFAC221C672C008C37A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		887BDFAE221C672C008C37A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,8 +180,10 @@
 		888A33D8221C972C00420C3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		888A33DA221C973F00420C3A /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		888A33E2221CA33000420C3A /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		88921B57225CE01D00E7CA48 /* AnimationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsViewController.swift; sourceTree = "<group>"; };
 		88B3CBC72253761D0012E549 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		88B3CBCC225382E00012E549 /* RegisterFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFlowCoordinator.swift; sourceTree = "<group>"; };
+		88DBE81A226714B700C5F8A0 /* PopupTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTransitionController.swift; sourceTree = "<group>"; };
 		99A3C458492BB65632BC1743 /* Pods-mi-ios-2019-Unit-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019-Unit-Tests.debug.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019-Unit-Tests/Pods-mi-ios-2019-Unit-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9AFC1CB71F3F3E687778A233 /* Pods_mi_ios_2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mi_ios_2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC3BB5D422D3622CBB1B0A0 /* Pods-mi-ios-2019-UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019-UITests.release.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019-UITests/Pods-mi-ios-2019-UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,10 +217,26 @@
 		B4266CAF223833C200A7722B /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		B44610490FD5D36EFD3C6E5A /* Pods-mi-ios-2019-Unit-Tests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019-Unit-Tests.adhoc.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019-Unit-Tests/Pods-mi-ios-2019-Unit-Tests.adhoc.xcconfig"; sourceTree = "<group>"; };
 		BD2B32B90FD9B657BD0582D6 /* Pods-mi-ios-2019-Unit-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019-Unit-Tests.release.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019-Unit-Tests/Pods-mi-ios-2019-Unit-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		CDAAD15C9CF13EC7913960B9 /* libPods-mi-ios-2019-Unit-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mi-ios-2019-Unit-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D820B9191F18FAD273465A58 /* Pods_iMessageApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMessageApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6954864E22704EBD00432F73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6954865322704EBD00432F73 /* Messages.framework in Frameworks */,
+				5F9C01CBD6259B111C76446A /* Pods_iMessageApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69A4400222704C71005CC448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		887BDFA6221C672C008C37A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,7 +249,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02A5FF3AE73B6DF3CAB2A7AD /* libPods-mi-ios-2019-Unit-Tests.a in Frameworks */,
+				83B8550F09DB4BE4AA7C0352 /* Pods_mi_ios_2019_Unit_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +257,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C261089A21733098D7F96BF6 /* libPods-mi-ios-2019-UITests.a in Frameworks */,
+				D20D35E31241CB4C09645B6E /* Pods_mi_ios_2019_UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,8 +276,31 @@
 				544B452945D95E5D8093F97D /* Pods-mi-ios-2019-UITests.debug.xcconfig */,
 				9DC3BB5D422D3622CBB1B0A0 /* Pods-mi-ios-2019-UITests.release.xcconfig */,
 				4D067956248C098F7B8394F3 /* Pods-mi-ios-2019-UITests.adhoc.xcconfig */,
+				885BD9390190389635790178 /* Pods-iMessageApp.debug.xcconfig */,
+				0CB017383C64381BF5517015 /* Pods-iMessageApp.release.xcconfig */,
+				3B9A6C43A66AE1208E80BCCE /* Pods-iMessageApp.adhoc.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6954865422704EBD00432F73 /* iMessageApp */ = {
+			isa = PBXGroup;
+			children = (
+				69103FB52270562E00075D00 /* iMessageApp.entitlements */,
+				6954865522704EBD00432F73 /* MessagesViewController.swift */,
+				6954865A22704EBE00432F73 /* Assets.xcassets */,
+				6954865C22704EBE00432F73 /* Info.plist */,
+			);
+			path = iMessageApp;
+			sourceTree = "<group>";
+		};
+		69A4400622704C71005CC448 /* NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				69A4400722704C71005CC448 /* NotificationService.swift */,
+				69A4400922704C71005CC448 /* Info.plist */,
+			);
+			path = NotificationService;
 			sourceTree = "<group>";
 		};
 		69E563852225B5E900132447 /* Model */ = {
@@ -205,6 +310,7 @@
 				69E5638B2225B92B00132447 /* KnownManufacturer.swift */,
 				69E5638F2225D4BD00132447 /* Animal.swift */,
 				B4266CA52237FC0400A7722B /* User.swift */,
+				69A43FE722704669005CC448 /* AlertNotification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +322,7 @@
 				A30023C42240F984007777C9 /* UIViewController+ValidationError.swift */,
 				B4266CA72238027C00A7722B /* Reactive+TextField.swift */,
 				B4266CAF223833C200A7722B /* Base.swift */,
+				69103FB62270572600075D00 /* UserDefaultsExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -226,6 +333,8 @@
 				887BDFAB221C672C008C37A4 /* mi-ios-2019 */,
 				A380114B224168C300CDD0DA /* mi-ios-2019-Unit-Tests */,
 				A380116A224170A700CDD0DA /* mi-ios-2019-UITests */,
+				69A4400622704C71005CC448 /* NotificationService */,
+				6954865422704EBD00432F73 /* iMessageApp */,
 				887BDFAA221C672C008C37A4 /* Products */,
 				11DDA58B3D04E1B0908875F1 /* Pods */,
 				B2DF619E97AC5AA7500897BF /* Frameworks */,
@@ -238,6 +347,8 @@
 				887BDFA9221C672C008C37A4 /* mi-ios-2019.app */,
 				A380114A224168C200CDD0DA /* mi-ios-2019-Unit-Tests.xctest */,
 				A3801169224170A600CDD0DA /* mi-ios-2019-UITests.xctest */,
+				69A4400522704C71005CC448 /* NotificationService.appex */,
+				6954865122704EBD00432F73 /* iMessageApp.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,6 +356,7 @@
 		887BDFAB221C672C008C37A4 /* mi-ios-2019 */ = {
 			isa = PBXGroup;
 			children = (
+				69A43FE622703FBF005CC448 /* mi-ios-2019.entitlements */,
 				A380116022416C8200CDD0DA /* LoginError.swift */,
 				B4266CA22237DD0900A7722B /* Service */,
 				B4266C9F2237DC8100A7722B /* Screens */,
@@ -257,6 +369,7 @@
 				887BDFAE221C672C008C37A4 /* ViewController.swift */,
 				69E563832225ACBE00132447 /* PickerViewController.swift */,
 				69E563932225D8D900132447 /* PickerHandler.swift */,
+				88DBE81A226714B700C5F8A0 /* PopupTransitionController.swift */,
 				887BDFB0221C672C008C37A4 /* Main.storyboard */,
 				887BDFB3221C672D008C37A4 /* Assets.xcassets */,
 				887BDFB5221C672D008C37A4 /* LaunchScreen.storyboard */,
@@ -311,8 +424,10 @@
 			isa = PBXGroup;
 			children = (
 				9AFC1CB71F3F3E687778A233 /* Pods_mi_ios_2019.framework */,
-				CDAAD15C9CF13EC7913960B9 /* libPods-mi-ios-2019-Unit-Tests.a */,
-				61ECA854F69DA3CFECFDB210 /* libPods-mi-ios-2019-UITests.a */,
+				6954865222704EBD00432F73 /* Messages.framework */,
+				D820B9191F18FAD273465A58 /* Pods_iMessageApp.framework */,
+				6502A11DE20E8D4C271138DB /* Pods_mi_ios_2019_UITests.framework */,
+				5E744D9F44D5A995B5A23194 /* Pods_mi_ios_2019_Unit_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -324,6 +439,7 @@
 				B4266CA32237F83800A7722B /* LoginViewModel.swift */,
 				B4266CAB223815A400A7722B /* LogoutViewController.swift */,
 				B4266CAD223817C200A7722B /* LogoutViewModel.swift */,
+				88921B57225CE01D00E7CA48 /* AnimationsViewController.swift */,
 				A30023BA2240ECC3007777C9 /* PasswordEditViewController.swift */,
 				A30023BF2240F0C5007777C9 /* PasswordEditViewModel.swift */,
 				A30023BB2240ECC4007777C9 /* RegistrationViewController.swift */,
@@ -338,6 +454,7 @@
 				A30023C82241198C007777C9 /* AppDependency+Factories.swift */,
 				B4266CA922380DC100A7722B /* UserRepository.swift */,
 				A30023C22240F0F1007777C9 /* Validations.swift */,
+				69A43FE422703CC7005CC448 /* PushManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -345,6 +462,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6954865022704EBD00432F73 /* iMessageApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6954866322704EBE00432F73 /* Build configuration list for PBXNativeTarget "iMessageApp" */;
+			buildPhases = (
+				02B75B4C8574168060562F49 /* [CP] Check Pods Manifest.lock */,
+				6954864D22704EBD00432F73 /* Sources */,
+				6954864E22704EBD00432F73 /* Frameworks */,
+				6954864F22704EBD00432F73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iMessageApp;
+			productName = iMessageApp;
+			productReference = 6954865122704EBD00432F73 /* iMessageApp.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+		69A4400422704C71005CC448 /* NotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69A4401022704C71005CC448 /* Build configuration list for PBXNativeTarget "NotificationService" */;
+			buildPhases = (
+				69A4400122704C71005CC448 /* Sources */,
+				69A4400222704C71005CC448 /* Frameworks */,
+				69A4400322704C71005CC448 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationService;
+			productName = NotificationService;
+			productReference = 69A4400522704C71005CC448 /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		887BDFA8221C672C008C37A4 /* mi-ios-2019 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 887BDFBB221C672D008C37A4 /* Build configuration list for PBXNativeTarget "mi-ios-2019" */;
@@ -355,10 +507,13 @@
 				887BDFA6221C672C008C37A4 /* Frameworks */,
 				887BDFA7221C672C008C37A4 /* Resources */,
 				09EDFA2652A73F048BAE788D /* [CP] Embed Pods Frameworks */,
+				69A4401122704C71005CC448 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				69A4400B22704C71005CC448 /* PBXTargetDependency */,
+				6954865E22704EBE00432F73 /* PBXTargetDependency */,
 			);
 			name = "mi-ios-2019";
 			productName = "mi-ios-2019";
@@ -373,6 +528,7 @@
 				A3801146224168C200CDD0DA /* Sources */,
 				A3801147224168C200CDD0DA /* Frameworks */,
 				A3801148224168C200CDD0DA /* Resources */,
+				079A28CD923BB89CBF9F680E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -392,6 +548,7 @@
 				A3801165224170A600CDD0DA /* Sources */,
 				A3801166224170A600CDD0DA /* Frameworks */,
 				A3801167224170A600CDD0DA /* Resources */,
+				300234927B07894B2681B1DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -409,12 +566,31 @@
 		887BDFA1221C672C008C37A4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "ČVUT";
 				TargetAttributes = {
+					6954865022704EBD00432F73 = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					69A4400422704C71005CC448 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 					887BDFA8221C672C008C37A4 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					888A33DB221C9EB100420C3A = {
 						CreatedOnToolsVersion = 10.1;
@@ -447,11 +623,28 @@
 				888A33DB221C9EB100420C3A /* Localization */,
 				A3801149224168C200CDD0DA /* mi-ios-2019-Unit-Tests */,
 				A3801168224170A600CDD0DA /* mi-ios-2019-UITests */,
+				69A4400422704C71005CC448 /* NotificationService */,
+				6954865022704EBD00432F73 /* iMessageApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6954864F22704EBD00432F73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6954865B22704EBE00432F73 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69A4400322704C71005CC448 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		887BDFA7221C672C008C37A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -480,6 +673,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		02B75B4C8574168060562F49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iMessageApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		079A28CD923BB89CBF9F680E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mi-ios-2019-Unit-Tests/Pods-mi-ios-2019-Unit-Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift-iOS12.1/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result-iOS12.1/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mi-ios-2019-Unit-Tests/Pods-mi-ios-2019-Unit-Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		09EDFA2652A73F048BAE788D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -491,9 +730,9 @@
 				"${PODS_ROOT}/Target Support Files/Pods-mi-ios-2019/Pods-mi-ios-2019-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ACKReactiveExtensions/ACKReactiveExtensions.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveSwift-framework/ReactiveSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result-framework/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift-iOS12.1/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result-iOS12.1/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit-iOS12.1/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -530,6 +769,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		300234927B07894B2681B1DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mi-ios-2019-UITests/Pods-mi-ios-2019-UITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift-iOS12.1/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result-iOS12.1/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mi-ios-2019-UITests/Pods-mi-ios-2019-UITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		315C89989698D09782D72428 /* [CP] Check Pods Manifest.lock */ = {
@@ -619,15 +882,37 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6954864D22704EBD00432F73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69103FBA227058BF00075D00 /* User.swift in Sources */,
+				69103FB82270584F00075D00 /* UserRepository.swift in Sources */,
+				69103FBB227058CA00075D00 /* LoginError.swift in Sources */,
+				6954865622704EBD00432F73 /* MessagesViewController.swift in Sources */,
+				69103FB92270588C00075D00 /* UserDefaultsExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69A4400122704C71005CC448 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69A4400822704C71005CC448 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		887BDFA5221C672C008C37A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69A43FE522703CC7005CC448 /* PushManager.swift in Sources */,
 				A30023C92241198C007777C9 /* AppDependency+Factories.swift in Sources */,
 				887BDFAF221C672C008C37A4 /* ViewController.swift in Sources */,
 				A30023C52240F984007777C9 /* UIViewController+ValidationError.swift in Sources */,
 				A30023C02240F0C5007777C9 /* RegistrationViewModel.swift in Sources */,
 				B4266CA12237DC8800A7722B /* LoginViewController.swift in Sources */,
+				88921B58225CE01D00E7CA48 /* AnimationsViewController.swift in Sources */,
 				888A33E3221CA33000420C3A /* Strings.swift in Sources */,
 				A380116122416C8200CDD0DA /* LoginError.swift in Sources */,
 				69E563872225B61400132447 /* CarKind.swift in Sources */,
@@ -642,6 +927,7 @@
 				A30023BC2240ECC4007777C9 /* PasswordEditViewController.swift in Sources */,
 				69E5638C2225B92B00132447 /* KnownManufacturer.swift in Sources */,
 				B4266CA42237F83800A7722B /* LoginViewModel.swift in Sources */,
+				69A43FE822704669005CC448 /* AlertNotification.swift in Sources */,
 				69E5638E2225C20600132447 /* AlmostEquatable.swift in Sources */,
 				B4266CAE223817C200A7722B /* LogoutViewModel.swift in Sources */,
 				B4266CA82238027C00A7722B /* Reactive+TextField.swift in Sources */,
@@ -651,6 +937,8 @@
 				A30023C12240F0C5007777C9 /* PasswordEditViewModel.swift in Sources */,
 				A30023BD2240ECC4007777C9 /* RegistrationViewController.swift in Sources */,
 				88B3CBCD225382E00012E549 /* RegisterFlowCoordinator.swift in Sources */,
+				88DBE81B226714B700C5F8A0 /* PopupTransitionController.swift in Sources */,
+				69103FB72270572600075D00 /* UserDefaultsExtensions.swift in Sources */,
 				B4266CAA22380DC100A7722B /* UserRepository.swift in Sources */,
 				887BDFAD221C672C008C37A4 /* AppDelegate.swift in Sources */,
 			);
@@ -665,6 +953,7 @@
 				A3801157224169BF00CDD0DA /* Validations.swift in Sources */,
 				A380115E22416C5400CDD0DA /* UserRepository.swift in Sources */,
 				A380115F22416C5C00CDD0DA /* User.swift in Sources */,
+				6987EAA32270945000A43CDC /* UserDefaultsExtensions.swift in Sources */,
 				A380115D22416C2D00CDD0DA /* PasswordEditViewModel.swift in Sources */,
 				A380116422416D5100CDD0DA /* TestDependency.swift in Sources */,
 				A380115B22416B8700CDD0DA /* RegistrationViewModelTests.swift in Sources */,
@@ -679,6 +968,7 @@
 			files = (
 				A3801177224171AA00CDD0DA /* UserRepository.swift in Sources */,
 				A38011752241714900CDD0DA /* LoginUITests.swift in Sources */,
+				6987EAA42270945100A43CDC /* UserDefaultsExtensions.swift in Sources */,
 				A380117B2241734200CDD0DA /* LoginError.swift in Sources */,
 				A380117A224171BE00CDD0DA /* TestDependency.swift in Sources */,
 				A3801178224171AD00CDD0DA /* User.swift in Sources */,
@@ -688,6 +978,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6954865E22704EBE00432F73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6954865022704EBD00432F73 /* iMessageApp */;
+			targetProxy = 6954865D22704EBE00432F73 /* PBXContainerItemProxy */;
+		};
+		69A4400B22704C71005CC448 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69A4400422704C71005CC448 /* NotificationService */;
+			targetProxy = 69A4400A22704C71005CC448 /* PBXContainerItemProxy */;
+		};
 		A3801150224168C300CDD0DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 887BDFA8221C672C008C37A4 /* mi-ios-2019 */;
@@ -729,10 +1029,146 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6954866022704EBE00432F73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 885BD9390190389635790178 /* Pods-iMessageApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = iMessageApp/iMessageApp.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = PXDF48X6VX;
+				INFOPLIST_FILE = iMessageApp/Info.plist;
+				INFOPLIST_PREFIX_HEADER = "$(PROJECT_DIR)/info_preprocess_header.h";
+				INFOPLIST_PREPROCESS = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios2019.dev.iMessage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "MI IOS 2019 iMessage DEV";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6954866122704EBE00432F73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CB017383C64381BF5517015 /* Pods-iMessageApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = iMessageApp/iMessageApp.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = iMessageApp/Info.plist;
+				INFOPLIST_PREFIX_HEADER = "$(PROJECT_DIR)/info_preprocess_header.h";
+				INFOPLIST_PREPROCESS = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios2019.iMessage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6954866222704EBE00432F73 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B9A6C43A66AE1208E80BCCE /* Pods-iMessageApp.adhoc.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = iMessageApp/iMessageApp.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = iMessageApp/Info.plist;
+				INFOPLIST_PREFIX_HEADER = "$(PROJECT_DIR)/info_preprocess_header.h";
+				INFOPLIST_PREPROCESS = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios2019.beta.iMessage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = AdHoc;
+		};
+		69A4400D22704C71005CC448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = PXDF48X6VX;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_PREFIX_HEADER = "$(PROJECT_DIR)/info_preprocess_header.h";
+				INFOPLIST_PREPROCESS = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios2019.dev.NotificationService";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "MI IOS 2019 Wildcard DEV";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69A4400E22704C71005CC448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_PREFIX_HEADER = "$(PROJECT_DIR)/info_preprocess_header.h";
+				INFOPLIST_PREPROCESS = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios2019.NotificationService";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		69A4400F22704C71005CC448 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_PREFIX_HEADER = "$(PROJECT_DIR)/info_preprocess_header.h";
+				INFOPLIST_PREPROCESS = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios2019.beta.NotificationService";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = AdHoc;
+		};
 		887BDFB9221C672D008C37A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APP_GROUP_IDENTIFIER = "group.cz.cvut.mi-ios2019.dev";
 				APP_VERSION = 1.0.0;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -797,6 +1233,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APP_GROUP_IDENTIFIER = "group.cz.cvut.mi-ios2019";
 				APP_VERSION = 1.0.0;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -855,9 +1292,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4BA6B2BF11B86034C99864EF /* Pods-mi-ios-2019.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "mi-ios-2019/mi-ios-2019.entitlements";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = PXDF48X6VX;
 				INFOPLIST_FILE = "mi-ios-2019/Info.plist";
 				INFOPLIST_PREFIX_HEADER = "$(PROJECT_DIR)/info_preprocess_header.h";
 				INFOPLIST_PREPROCESS = YES;
@@ -865,9 +1304,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios.dev";
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios2019.dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "MI IOS 2019 DEV";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -876,7 +1315,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D1473B44E24DD0A17289E5A /* Pods-mi-ios-2019.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "mi-ios-2019/mi-ios-2019.entitlements";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "mi-ios-2019/Info.plist";
@@ -886,7 +1327,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios2019";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -897,6 +1338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APP_GROUP_IDENTIFIER = "group.cz.cvut.mi-ios2019.beta";
 				APP_VERSION = 1.0.0;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -955,7 +1397,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AAA5668B71824F04B9618A0D /* Pods-mi-ios-2019.adhoc.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "mi-ios-2019/mi-ios-2019.entitlements";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "mi-ios-2019/Info.plist";
@@ -965,7 +1409,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios.beta";
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios2019.beta";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1116,6 +1560,26 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6954866322704EBE00432F73 /* Build configuration list for PBXNativeTarget "iMessageApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6954866022704EBE00432F73 /* Debug */,
+				6954866122704EBE00432F73 /* Release */,
+				6954866222704EBE00432F73 /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69A4401022704C71005CC448 /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69A4400D22704C71005CC448 /* Debug */,
+				69A4400E22704C71005CC448 /* Release */,
+				69A4400F22704C71005CC448 /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		887BDFA4221C672C008C37A4 /* Build configuration list for PBXProject "mi-ios-2019" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

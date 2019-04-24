@@ -8,21 +8,24 @@
 
 import ReactiveSwift
 import ACKReactiveExtensions
+import enum Result.NoError
 
 protocol UserInfoViewModeling {
     var name: MutableProperty<String?> { get }
     var username: MutableProperty<String?> { get }
     var phone: MutableProperty<String?> { get }
     var password: MutableProperty<String?> { get }
+    var alertNotifications: Signal<AlertNotification, NoError> { get }
 }
 
 class UserInfoViewModel: BaseViewModel, UserInfoViewModeling {
-    typealias Dependencies = HasUserRepository
+    typealias Dependencies = HasUserRepository & HasPushManager
 
     let name = MutableProperty<String?>(nil)
     let username = MutableProperty<String?>(nil)
     let phone = MutableProperty<String?>(nil)
     let password = MutableProperty<String?>(nil)
+    let alertNotifications: Signal<AlertNotification, NoError>
 
     fileprivate let dependencies: Dependencies
 
@@ -30,6 +33,7 @@ class UserInfoViewModel: BaseViewModel, UserInfoViewModeling {
 
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
+        alertNotifications = dependencies.pushManager.notificationSignal
 
         super.init()
 
