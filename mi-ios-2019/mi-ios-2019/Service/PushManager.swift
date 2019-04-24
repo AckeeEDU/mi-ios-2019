@@ -46,6 +46,10 @@ final class PushManager: NSObject, PushManaging {
             }
         }
         
+        let notificationAction = UNNotificationAction(identifier: "ACTION", title: "Action title", options: [.foreground])
+        let notificationCategory = UNNotificationCategory(identifier: "CATEGORY", actions: [notificationAction], intentIdentifiers: [], hiddenPreviewsBodyPlaceholder: "Hidden placeholder", options: [])
+        
+        UNUserNotificationCenter.current().setNotificationCategories(Set([notificationCategory]))
         UNUserNotificationCenter.current().delegate = self
     }
     
