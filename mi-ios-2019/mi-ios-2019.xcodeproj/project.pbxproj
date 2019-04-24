@@ -22,6 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		02A5FF3AE73B6DF3CAB2A7AD /* libPods-mi-ios-2019-Unit-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAAD15C9CF13EC7913960B9 /* libPods-mi-ios-2019-Unit-Tests.a */; };
+		69A43FE522703CC7005CC448 /* PushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A43FE422703CC7005CC448 /* PushManager.swift */; };
+		69A43FE822704669005CC448 /* AlertNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A43FE722704669005CC448 /* AlertNotification.swift */; };
 		69E563842225ACBE00132447 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563832225ACBE00132447 /* PickerViewController.swift */; };
 		69E563872225B61400132447 /* CarKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563862225B61400132447 /* CarKind.swift */; };
 		69E5638A2225B78000132447 /* UIAlertActionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E563892225B78000132447 /* UIAlertActionExtensions.swift */; };
@@ -99,6 +101,9 @@
 		4D067956248C098F7B8394F3 /* Pods-mi-ios-2019-UITests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019-UITests.adhoc.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019-UITests/Pods-mi-ios-2019-UITests.adhoc.xcconfig"; sourceTree = "<group>"; };
 		544B452945D95E5D8093F97D /* Pods-mi-ios-2019-UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mi-ios-2019-UITests.debug.xcconfig"; path = "Target Support Files/Pods-mi-ios-2019-UITests/Pods-mi-ios-2019-UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		61ECA854F69DA3CFECFDB210 /* libPods-mi-ios-2019-UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mi-ios-2019-UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69A43FE422703CC7005CC448 /* PushManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushManager.swift; sourceTree = "<group>"; };
+		69A43FE622703FBF005CC448 /* mi-ios-2019.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mi-ios-2019.entitlements"; sourceTree = "<group>"; };
+		69A43FE722704669005CC448 /* AlertNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotification.swift; sourceTree = "<group>"; };
 		69E563832225ACBE00132447 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		69E563862225B61400132447 /* CarKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarKind.swift; sourceTree = "<group>"; };
 		69E563892225B78000132447 /* UIAlertActionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertActionExtensions.swift; sourceTree = "<group>"; };
@@ -209,6 +214,7 @@
 				69E5638B2225B92B00132447 /* KnownManufacturer.swift */,
 				69E5638F2225D4BD00132447 /* Animal.swift */,
 				B4266CA52237FC0400A7722B /* User.swift */,
+				69A43FE722704669005CC448 /* AlertNotification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +255,7 @@
 		887BDFAB221C672C008C37A4 /* mi-ios-2019 */ = {
 			isa = PBXGroup;
 			children = (
+				69A43FE622703FBF005CC448 /* mi-ios-2019.entitlements */,
 				A380116022416C8200CDD0DA /* LoginError.swift */,
 				B4266CA22237DD0900A7722B /* Service */,
 				B4266C9F2237DC8100A7722B /* Screens */,
@@ -344,6 +351,7 @@
 				A30023C82241198C007777C9 /* AppDependency+Factories.swift */,
 				B4266CA922380DC100A7722B /* UserRepository.swift */,
 				A30023C22240F0F1007777C9 /* Validations.swift */,
+				69A43FE422703CC7005CC448 /* PushManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -421,6 +429,11 @@
 				TargetAttributes = {
 					887BDFA8221C672C008C37A4 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					888A33DB221C9EB100420C3A = {
 						CreatedOnToolsVersion = 10.1;
@@ -629,6 +642,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69A43FE522703CC7005CC448 /* PushManager.swift in Sources */,
 				A30023C92241198C007777C9 /* AppDependency+Factories.swift in Sources */,
 				887BDFAF221C672C008C37A4 /* ViewController.swift in Sources */,
 				A30023C52240F984007777C9 /* UIViewController+ValidationError.swift in Sources */,
@@ -649,6 +663,7 @@
 				A30023BC2240ECC4007777C9 /* PasswordEditViewController.swift in Sources */,
 				69E5638C2225B92B00132447 /* KnownManufacturer.swift in Sources */,
 				B4266CA42237F83800A7722B /* LoginViewModel.swift in Sources */,
+				69A43FE822704669005CC448 /* AlertNotification.swift in Sources */,
 				69E5638E2225C20600132447 /* AlmostEquatable.swift in Sources */,
 				B4266CAE223817C200A7722B /* LogoutViewModel.swift in Sources */,
 				B4266CA82238027C00A7722B /* Reactive+TextField.swift in Sources */,
@@ -864,8 +879,9 @@
 			baseConfigurationReference = 4BA6B2BF11B86034C99864EF /* Pods-mi-ios-2019.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "mi-ios-2019/mi-ios-2019.entitlements";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = PXDF48X6VX;
 				INFOPLIST_FILE = "mi-ios-2019/Info.plist";
 				INFOPLIST_PREFIX_HEADER = "$(PROJECT_DIR)/info_preprocess_header.h";
 				INFOPLIST_PREPROCESS = YES;
@@ -873,9 +889,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios.dev";
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios2019.dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "MI IOS 2019 DEV";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -885,6 +901,7 @@
 			baseConfigurationReference = 6D1473B44E24DD0A17289E5A /* Pods-mi-ios-2019.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "mi-ios-2019/mi-ios-2019.entitlements";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "mi-ios-2019/Info.plist";
@@ -894,7 +911,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios2019";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -964,6 +981,7 @@
 			baseConfigurationReference = AAA5668B71824F04B9618A0D /* Pods-mi-ios-2019.adhoc.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "mi-ios-2019/mi-ios-2019.entitlements";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "mi-ios-2019/Info.plist";
@@ -973,7 +991,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios.beta";
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.cvut.mi-ios2019.beta";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

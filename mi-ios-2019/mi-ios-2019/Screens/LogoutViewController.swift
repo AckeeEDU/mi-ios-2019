@@ -114,6 +114,14 @@ final class LogoutViewController: BaseViewController {
         usernameLabel.reactive.text <~ viewModel.username
         phoneLabel.reactive.text <~ viewModel.phone
         passwordLabel.reactive.text <~ viewModel.password
+        
+        viewModel.alertNotifications.take(duringLifetimeOf: self).observe(on: UIScheduler())
+            .observeValues { [weak self] notification in
+                let alertVC = UIAlertController(title: notification.alertTitle, message: notification.alertMessage, preferredStyle: .alert)
+                let buttonAction = UIAlertAction(title: notification.buttonText, style: .default)
+                alertVC.addAction(buttonAction)
+                self?.present(alertVC, animated: true)
+        }
     }
 
 }
