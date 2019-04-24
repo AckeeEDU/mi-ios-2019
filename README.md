@@ -69,3 +69,15 @@ branch: `06-ci`
   - verze Xcodu
   - actions _cocoapods_, _scan_, _gym_
   - Fastfile
+
+## 07. Flow coordinators
+
+_TODO_
+
+## 08. Animations & Transitions
+
+_TODO_
+
+## 09. Push notifications & App Extensions
+
+_TODO_
